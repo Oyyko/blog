@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>blog.oyyko.com/</loc>
+    <loc>https://blog.oyyko.com/</loc>
     <lastmod>2022-07-24T01:10:30+08:00</lastmod>
   </url><url>
-    <loc>blog.oyyko.com/posts/</loc>
+    <loc>https://blog.oyyko.com/posts/</loc>
     <lastmod>2022-07-24T01:10:30+08:00</lastmod>
   </url><url>
-    <loc>blog.oyyko.com/posts/test/</loc>
+    <loc>https://blog.oyyko.com/posts/test/</loc>
     <lastmod>2022-07-24T01:10:30+08:00</lastmod>
   </url><url>
-    <loc>blog.oyyko.com/posts/first-post/</loc>
+    <loc>https://blog.oyyko.com/posts/first-post/</loc>
     <lastmod>2022-07-24T00:37:35+08:00</lastmod>
   </url><url>
-    <loc>blog.oyyko.com/categories/</loc>
+    <loc>https://blog.oyyko.com/categories/</loc>
   </url><url>
-    <loc>blog.oyyko.com/tags/</loc>
+    <loc>https://blog.oyyko.com/tags/</loc>
   </url>
 </urlset>
