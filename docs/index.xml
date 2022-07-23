@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oyyko&#39;s Blog</title>
-    <link>http://example.org/</link>
+    <link>blog.oyyko.com/</link>
     <description>Recent content on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Jul 2022 00:37:35 +0800</lastBuildDate>
     
-        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>First Post</title>
-        <link>http://example.org/posts/first-post/</link>
+        <link>blog.oyyko.com/posts/first-post/</link>
         <pubDate>Sun, 24 Jul 2022 00:37:35 +0800</pubDate>
         
-        <guid>http://example.org/posts/first-post/</guid>
-        <description>Oyyko&#39;s Blog http://example.org/posts/first-post/ -&lt;h2 id=&#34;新博客&#34;&gt;新博客&lt;/h2&gt;
+        <guid>blog.oyyko.com/posts/first-post/</guid>
+        <description>Oyyko&#39;s Blog blog.oyyko.com/posts/first-post/ -&lt;h2 id=&#34;新博客&#34;&gt;新博客&lt;/h2&gt;
 &lt;p&gt;决定把博客切换到hugo。也算是人生路上一个新的开始。&lt;/p&gt;
-- http://example.org/posts/first-post/ - </description>
+- blog.oyyko.com/posts/first-post/ - </description>
         </item>
     
     
