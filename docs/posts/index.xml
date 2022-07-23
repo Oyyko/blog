@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jul 2022 00:37:35 +0800</lastBuildDate><atom:link href="blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 01:10:30 +0800</lastBuildDate><atom:link href="blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>blog.oyyko.com/posts/test/</link>
+      <pubDate>Sun, 24 Jul 2022 01:10:30 +0800</pubDate>
+      
+      <guid>blog.oyyko.com/posts/test/</guid>
+      <description>Test</description>
+    </item>
+    
     <item>
       <title>First Post</title>
       <link>blog.oyyko.com/posts/first-post/</link>
