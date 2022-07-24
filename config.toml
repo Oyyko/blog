@@ -1,5 +1,27 @@
 baseURL = 'https://blog.oyyko.com'
-languageCode = 'en-us'
+DefaultContentLanguage = "en"
 title = "Oyyko's Blog"
 theme = "diary"
 publishDir = "docs"
+
+enableUtterances = true
+
+[params.utterances]
+repo="Oyyko/utteranc-comments"
+term="pathname"
+theme="github-light"
+
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 3
+
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 2
+
+[[menu.main]]
+url = "/posts"
+name = "Archive"
+weight = 1
