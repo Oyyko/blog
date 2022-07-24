@@ -1,6 +1,7 @@
 ---
 title: "First Post"
 date: 2022-07-24T00:37:35+08:00
+tags: [Life]
 ---
 
 ## 新博客

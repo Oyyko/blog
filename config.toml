@@ -4,7 +4,11 @@ title = "Oyyko's Blog"
 theme = "diary"
 publishDir = "docs"
 
+[params]
 enableUtterances = true
+
+[taxonomies]
+   tag = "tags"
 
 [params.utterances]
 repo="Oyyko/utteranc-comments"
@@ -12,8 +16,8 @@ term="pathname"
 theme="github-light"
 
 [[menu.main]]
-url = "/categories"
-name = "Categories"
+url = "/about"
+name = "About"
 weight = 3
 
 [[menu.main]]
