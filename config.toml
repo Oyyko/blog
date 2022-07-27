@@ -6,6 +6,7 @@ publishDir = "docs"
 
 [params]
 enableUtterances = true
+Subtitle = "白玉不毁,孰为珪璋"
 
 [taxonomies]
    tag = "tags"
