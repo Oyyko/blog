@@ -5,9 +5,31 @@
     <link>https://blog.oyyko.com/</link>
     <description>Recent content on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 00:37:35 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Aug 2022 21:49:29 +0800</lastBuildDate>
     
         <atom:link href="https://blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Using Cpp17 or higher version of Cpp on Vscode extension Clangd</title>
+        <link>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</link>
+        <pubDate>Sun, 07 Aug 2022 21:49:29 +0800</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/ -&lt;p&gt;Recently I switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.&lt;/p&gt;
+&lt;p&gt;I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.&lt;/p&gt;
+&lt;p&gt;Now, there is a problem. I installed clangd, switched over and everything worked fine. But when I use string_view, clangd told me it didn&amp;rsquo;t recognize this thing. I quickly realized that this is due to the fact that the default Cpp version of clangd is still 14. So changing its default version became something I had to do.&lt;/p&gt;
+&lt;p&gt;I googled but didn&amp;rsquo;t find any useful information.&lt;/p&gt;
+&lt;p&gt;I try to use compile_commands.json file. But on the one hand, it needs to be configured separately for each project, while the effect I expect is to use Cpp17 for any file that is opened at random. On the other hand, it turns out that it does not work. (maybe I didn&amp;rsquo;t configure it properly)&lt;/p&gt;
+&lt;p&gt;So, here is the final solution.&lt;/p&gt;
+&lt;p&gt;Open (create if not already there) &lt;code&gt;~/.config/clangd/config.yaml&lt;/code&gt;
+and write the following information&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;CompileFlags&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;Add&lt;/span&gt;: [-&lt;span style=&#34;color:#ae81ff&#34;&gt;std=c++20]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Cool. Now let&amp;rsquo;s have fun with Cpp20.&lt;/p&gt;
+- https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/ - </description>
+        </item>
     
     
     

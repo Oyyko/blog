@@ -5,7 +5,17 @@
     <link>https://blog.oyyko.com/posts/</link>
     <description>Recent content in Posts on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 00:37:35 +0800</lastBuildDate><atom:link href="https://blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Aug 2022 21:49:29 +0800</lastBuildDate><atom:link href="https://blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Cpp17 or higher version of Cpp on Vscode extension Clangd</title>
+      <link>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</link>
+      <pubDate>Sun, 07 Aug 2022 21:49:29 +0800</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</guid>
+      <description>Recently I switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
+I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.</description>
+    </item>
+    
     <item>
       <title>First Post</title>
       <link>https://blog.oyyko.com/posts/first-post/</link>

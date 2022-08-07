@@ -10,11 +10,28 @@ Subtitle = "白玉不毁,孰为珪璋"
 
 [taxonomies]
    tag = "tags"
+   category = "categories"
 
 [params.utterances]
 repo="Oyyko/utteranc-comments"
 term="pathname"
 theme="github-light"
+
+
+[[menu.main]]
+url = "/categories/Study"
+name = "Study"
+weight = 6
+
+[[menu.main]]
+url = "/categories/Coding"
+name = "Coding"
+weight = 5
+
+[[menu.main]]
+url = "/categories/life"
+name = "Life"
+weight = 4
 
 [[menu.main]]
 url = "/about"
