@@ -2,20 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.oyyko.com/categories/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/clangd/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/categories/coding/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/cpp/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
     <loc>https://blog.oyyko.com/</loc>
     <lastmod>2022-08-07T21:49:29+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/</loc>
     <lastmod>2022-08-07T21:49:29+08:00</lastmod>
   </url><url>
+    <loc>https://blog.oyyko.com/tags/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
     <loc>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</loc>
+    <lastmod>2022-08-07T21:49:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/vscode/</loc>
     <lastmod>2022-08-07T21:49:29+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/about/</loc>
     <lastmod>2022-07-24T16:00:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/categories/</loc>
-    <lastmod>2022-07-24T00:37:35+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/first-post/</loc>
     <lastmod>2022-07-24T00:37:35+08:00</lastmod>
@@ -24,9 +39,6 @@
     <lastmod>2022-07-24T00:37:35+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/categories/life/</loc>
-    <lastmod>2022-07-24T00:37:35+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/tags/</loc>
     <lastmod>2022-07-24T00:37:35+08:00</lastmod>
   </url>
 </urlset>

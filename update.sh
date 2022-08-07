@@ -1,2 +1,2 @@
 #!/usr/bin/zsh
-git add . && git commit -m \"$()\"
+hugo && git add . && git commit -m "new post" && git push 
