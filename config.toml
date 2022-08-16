@@ -6,7 +6,7 @@ publishDir = "docs"
 
 [params]
 enableUtterances = true
-Subtitle = "白玉不毁,孰为珪璋"
+Subtitle = "Are you winning son?"
 
 [taxonomies]
    tag = "tags"
@@ -20,17 +20,17 @@ theme="github-light"
 
 [[menu.main]]
 url = "/categories/Study"
-name = "Study"
+name = ":Study"
 weight = 6
 
 [[menu.main]]
 url = "/categories/Coding"
-name = "Coding"
+name = ":Coding"
 weight = 5
 
 [[menu.main]]
 url = "/categories/life"
-name = "Life"
+name = ":Life"
 weight = 4
 
 [[menu.main]]
