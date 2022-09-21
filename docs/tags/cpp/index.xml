@@ -5,14 +5,25 @@
     <link>https://blog.oyyko.com/tags/cpp/</link>
     <description>Recent content in Cpp on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Aug 2022 21:49:29 +0800</lastBuildDate><atom:link href="https://blog.oyyko.com/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 15:20:51 +0800</lastBuildDate><atom:link href="https://blog.oyyko.com/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Value_categories_in_Cpp</title>
+      <link>https://blog.oyyko.com/posts/value_categories_in_cpp/</link>
+      <pubDate>Tue, 23 Aug 2022 15:20:51 +0800</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/value_categories_in_cpp/</guid>
+      <description>Intro 1 2 3 4 5 6 #define IS_XVALUE(expr) \ (is_rvalue_reference&amp;lt;decltype((expr))&amp;gt;{}) #define IS_PRVALUE(expr) \ (!is_reference&amp;lt;decltype((expr))&amp;gt;{}) #define IS_LVALUE(expr) \ (is_lvalue_reference&amp;lt;decltype((expr))&amp;gt;{}) This is a method I recently discovered to determine which value category an expression is. I&amp;rsquo;ll explain why it works later.
+First, let&amp;rsquo;s take a look at value categories in C++.
+One of the most important things you should notice before you start is that value categories are not a property about values, but rather a property about expressions.</description>
+    </item>
+    
     <item>
       <title>Using Cpp17 or higher version of Cpp on Vscode extension Clangd</title>
       <link>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</link>
       <pubDate>Sun, 07 Aug 2022 21:49:29 +0800</pubDate>
       
       <guid>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</guid>
-      <description>Recently I switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
+      <description>Recently I&amp;rsquo;ve switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
 I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.</description>
     </item>
     

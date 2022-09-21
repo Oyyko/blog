@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Revisit_OS</title>
+<title>Value_categories_in_Cpp</title>
 
 
 
@@ -196,8 +196,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#hardlink-and-softlink" onclick="onNavClick(`#hardlink-and-softlink-nav`)" id="hardlink-and-softlink-nav">
-									hardlink and softlink
+								<a href="#intro" onclick="onNavClick(`#intro-nav`)" id="intro-nav">
+									Intro
 								</a>
 							</li>
 						
@@ -214,8 +214,44 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#file-system" onclick="onNavClick(`#file-system-nav`)" id="file-system-nav">
-									file system
+								<a href="#temporary-materialization" onclick="onNavClick(`#temporary-materialization-nav`)" id="temporary-materialization-nav">
+									Temporary materialization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decltype-and-value-categories" onclick="onNavClick(`#decltype-and-value-categories-nav`)" id="decltype-and-value-categories-nav">
+									Decltype and value categories
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#stdmove" onclick="onNavClick(`#stdmove-nav`)" id="stdmove-nav">
+									std::move
 								</a>
 							</li>
 						
@@ -342,8 +378,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#hardlink-and-softlink" onclick="onNavClick(`#hardlink-and-softlink-nav`)" id="hardlink-and-softlink-nav">
-									hardlink and softlink
+								<a href="#intro" onclick="onNavClick(`#intro-nav`)" id="intro-nav">
+									Intro
 								</a>
 							</li>
 						
@@ -360,8 +396,44 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#file-system" onclick="onNavClick(`#file-system-nav`)" id="file-system-nav">
-									file system
+								<a href="#temporary-materialization" onclick="onNavClick(`#temporary-materialization-nav`)" id="temporary-materialization-nav">
+									Temporary materialization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decltype-and-value-categories" onclick="onNavClick(`#decltype-and-value-categories-nav`)" id="decltype-and-value-categories-nav">
+									Decltype and value categories
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#stdmove" onclick="onNavClick(`#stdmove-nav`)" id="stdmove-nav">
+									std::move
 								</a>
 							</li>
 						
@@ -424,12 +496,12 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
             >
                 <div class="post-title">
-                    Revisit_OS
+                    Value_categories_in_Cpp
                     
                     <div class="post-meta">
                         
                         <time itemprop="datePublished">
-                            2022-08-20 16:05
+                            2022-08-23 15:20
                         </time>
                         
 
@@ -442,7 +514,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                         
                             <i class="material-icons" style="">label</i>
                             
-                                <a href="/tags/os">OS</a>
+                                <a href="/tags/cpp">Cpp</a>
                                 &nbsp;
                             
                         
@@ -455,59 +527,72 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <div class="post-body" v-pre>
                 
-                    <p>For some reason, I&rsquo;ve been reviewing OS related stuff lately.</p>
-<h2 id="hardlink-and-softlink">hardlink and softlink</h2>
-<p><img src="../hardlink.jpg" alt="hardlink and softlink"></p>
-<p><code>ln</code> creates hark links.
-<code>ln -s</code> creates soft (a.k.a symbolic) links.</p>
-<p><code>ln -l</code> show the number of hardlinks points to the same inode.</p>
-<p>hardlink points to the inode.
-softlink points to the path.</p>
-<p>pros and cons:
-hardlink must be on the same partition, can only link to files.
-softlink can link to a file or directory, no partition limitation.</p>
-<p>Hard links are only valid within the same File System. Symbolic links can span file systems as they are simply the name of another file.</p>
-<p>Underneath the file system, files are represented by inodes.</p>
-<p>A file in the file system is basically a link to an inode.
-A hard link, then, just creates another file with a link to the same underlying inode.</p>
-<p>When you delete a file, it removes one link to the underlying inode. The inode is only deleted (or deletable/over-writable) when all links to the inode have been deleted.</p>
-<p>A symbolic link is a link to another name in the file system.</p>
-<p>Once a hard link has been made the link is to the inode. Deleting, renaming, or moving the original file will not affect the hard link as it links to the underlying inode. Any changes to the data on the inode is reflected in all files that refer to that inode.</p>
+                    <h2 id="intro">Intro</h2>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ touch <span style="color:#666">111</span> <span style="color:#666">222</span>
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ <span style="color:#a2f">echo</span> <span style="color:#666">111</span> &gt; <span style="color:#666">111</span>
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ <span style="color:#a2f">echo</span> <span style="color:#666">222</span> &gt; <span style="color:#666">222</span>
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ ln <span style="color:#666">111</span> l111   
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ ln -s <span style="color:#666">222</span> s222
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ ls            
-</span></span><span style="display:flex;"><span><span style="color:#666">111</span>  <span style="color:#666">222</span>  l111  s222
-</span></span><span style="display:flex;"><span>➜  <span style="color:#a2f">test</span> git:<span style="color:#666">(</span>main<span style="color:#666">)</span> ✗ ls -l
-</span></span><span style="display:flex;"><span>总计 <span style="color:#666">12</span>
-</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#666">2</span> zhangjia zhangjia <span style="color:#666">4</span>  8月20日 16:46 <span style="color:#666">111</span>
-</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#666">1</span> zhangjia zhangjia <span style="color:#666">4</span>  8月20日 16:46 <span style="color:#666">222</span>
-</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#666">2</span> zhangjia zhangjia <span style="color:#666">4</span>  8月20日 16:46 l111
-</span></span><span style="display:flex;"><span>lrwxrwxrwx <span style="color:#666">1</span> zhangjia zhangjia <span style="color:#666">3</span>  8月20日 16:46 s222 -&gt; <span style="color:#666">222</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080">#define IS_XVALUE(expr) \
+</span></span></span><span style="display:flex;"><span><span style="color:#080">(is_rvalue_reference&lt;decltype((expr))&gt;{})
+</span></span></span><span style="display:flex;"><span><span style="color:#080">#define IS_PRVALUE(expr) \
+</span></span></span><span style="display:flex;"><span><span style="color:#080">(!is_reference&lt;decltype((expr))&gt;{})
+</span></span></span><span style="display:flex;"><span><span style="color:#080">#define IS_LVALUE(expr) \
+</span></span></span><span style="display:flex;"><span><span style="color:#080">(is_lvalue_reference&lt;decltype((expr))&gt;{})
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>This is a method I recently discovered to determine which value category an <strong>expression</strong> is. I&rsquo;ll explain why it works later.</p>
+<p>First, let&rsquo;s take a look at value categories in C++.</p>
+<p>One of the most important things you should notice before you start is that value categories are not a property about <strong>values</strong>, but rather a property about <strong>expressions</strong>. Actually it depends on how you understand <strong>value</strong>, I looked through the C++ standard but <strong>it seems they don&rsquo;t define what the term value means</strong>. However, we all know what an expression is. (in case you don&rsquo;t know, you can refer to cppreference)</p>
+<p>Anyway, there are 3 kinds of value categories. They are called LVALUE, PRVALUE, XVALUE.</p>
+<p>We know you can write x=3 but not 3=x. Since 3 and x are both expressions, there must be some qualitative difference between them. Since x can be placed to the left of the equals sign(assignment sign), so we call it an lvalue. 3 is called an rvalue accordingly.</p>
+<p>OK. Now I know the difference between LVALUE and RVALUE, but what is PRVALUE and XVALUE?</p>
+<p>Well, there are two dimensions to the form of expressions. 1. Does the expression have an identity? 2. Can the expression be moved?</p>
+<p>The one that has identity and can be moved is called XVALUE (eXpiring value).
+The one that has identity but cannot be moved is called LVALUE.
+The one that has no identity but can be moved is called PRVALUE.</p>
+<p>For example, these are examples for XVALUE:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#666">::</span>move(x);
+</span></span><span style="display:flex;"><span>a.m, the member of object expression, where a is an rvalue and m is a non<span style="color:#666">-</span><span style="color:#a2f;font-weight:bold">static</span> data member of non<span style="color:#666">-</span>reference type;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now, why the soft link&rsquo;s file mode is lrwxrwxrwx.</p>
-<p><code>l</code> means soft link. The rest is same to a normal file mode.</p>
-<h2 id="file-system">file system</h2>
+</div><h2 id="temporary-materialization">Temporary materialization</h2>
+<p>The most useful example to help you understand XVALUE is: Temporary materialization.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">struct</span> <span style="color:#00f">S</span> { <span style="color:#0b0;font-weight:bold">int</span> m; };
+</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> S().m; <span style="color:#080;font-style:italic">// member access expects glvalue as of C++17;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>               <span style="color:#080;font-style:italic">// S() prvalue is converted to xvalue
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>As the cppreference goes: A prvalue of any complete type T can be converted to an xvalue of the same type T. This conversion initializes a temporary object of type T from the prvalue by evaluating the prvalue with the temporary object as its result object, and produces an xvalue denoting the temporary object. If T is a class or array of class type, it must have an accessible and non-deleted destructor.</p>
+<p>So the key difference between XVALUE and PRVALUE is that can we <strong>reuse</strong> the resources of it. We cannot reuse the number 3 or 3.7 but <strong>we can reuse the memory allocated for a temporary string object</strong>.</p>
+<h2 id="decltype-and-value-categories">Decltype and value categories</h2>
+<p>Decltype is a good tool to help us determine the category of an expression.</p>
+<p>Because its behavior is to generate an rvalue reference for XVALUE, an unreferenced type for PRVALUE, and an lvalue reference for LVALUE.</p>
+<p>Well, someone may argue that if <code>int x=3;</code> then <code>x is an LVALUE but decltype(x) is int itself rather than int&amp;.</code> That&rsquo;s because the special case for id-expr in the behavior of decltype.</p>
+<p>If the argument is an unparenthesized id-expression or an unparenthesized class member access expression, then decltype yields the type of the entity named by this expression. If there is no such entity, or if the argument names a set of overloaded functions, the program is ill-formed.</p>
+<p>So the right way is <code>int x=3; decltype((x)) xref=x;</code>. Here the type of <code>xref</code> is <code>int&amp;</code>.</p>
+<h2 id="stdmove">std::move</h2>
+<p>The famous function <code>move</code> actually does nothing to do with &ldquo;move something&rdquo;. Actually, it just change the value category of the parameter from LVALUE to XVALUE. In the most cases, you should call move using an LVALUE.</p>
+<p>std::move is used to <strong>indicate</strong> that an object t may be &ldquo;moved from&rdquo;, i.e. allowing the efficient transfer of resources from t to another object.</p>
+<p>In particular, std::move produces an xvalue expression that identifies its argument t. It is exactly equivalent to a static_cast to an rvalue reference type.</p>
 
                     
                     <HR width="100%" id="EOF">
@@ -520,14 +605,14 @@ A hard link, then, just creates another file with a link to the same underlying 
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="https://blog.oyyko.com/posts/value_categories_in_cpp/">
-			Next<br>Value_categories_in_Cpp
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
                 
                 
                 
-                <a class="older-posts" href="https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/">
-			Previous<br>Using Cpp17 or higher version of Cpp on Vscode extension Clangd
+                <a class="older-posts" href="https://blog.oyyko.com/posts/revisit_os/">
+			Previous<br>Revisit_OS
                 </a>
                 
             </nav>

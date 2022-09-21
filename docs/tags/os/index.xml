@@ -12,7 +12,11 @@
       <pubDate>Sat, 20 Aug 2022 16:05:28 +0800</pubDate>
       
       <guid>https://blog.oyyko.com/posts/revisit_os/</guid>
-      <description>For some reason, I&amp;rsquo;ve been reviewing OS related stuff lately.</description>
+      <description>For some reason, I&amp;rsquo;ve been reviewing OS related stuff lately.
+hardlink and softlink ln creates hark links. ln -s creates soft (a.k.a symbolic) links.
+ln -l show the number of hardlinks points to the same inode.
+hardlink points to the inode. softlink points to the path.
+pros and cons: hardlink must be on the same partition, can only link to files. softlink can link to a file or directory, no partition limitation.</description>
     </item>
     
   </channel>
