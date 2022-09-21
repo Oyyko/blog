@@ -3,10 +3,11 @@ DefaultContentLanguage = "en"
 title = "Oyyko's Blog"
 theme = "diary"
 publishDir = "docs"
+enableGitInfo = true
 
 [params]
 enableUtterances = true
-Subtitle = "Are you winning son?"
+Subtitle = "Memento mori"
 
 [taxonomies]
    tag = "tags"
@@ -47,3 +48,15 @@ weight = 2
 url = "/posts"
 name = "Archive"
 weight = 1
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "emacs"
+    tabWidth = 4

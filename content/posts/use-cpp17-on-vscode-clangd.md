@@ -4,7 +4,7 @@ date: 2022-08-07T21:49:29+08:00
 tags: [clangd, VSCode, Cpp]
 categories: Coding
 ---
-Recently I switched my code completion tool in VScode from Microsoft's official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
+Recently I've switched my code completion tool in VScode from Microsoft's official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
 
 I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.
 

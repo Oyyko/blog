@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on Oyyko&#39;s Blog</title>
+    <link>https://blog.oyyko.com/tags/os/</link>
+    <description>Recent content in OS on Oyyko&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 20 Aug 2022 16:05:28 +0800</lastBuildDate><atom:link href="https://blog.oyyko.com/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Revisit_OS</title>
+      <link>https://blog.oyyko.com/posts/revisit_os/</link>
+      <pubDate>Sat, 20 Aug 2022 16:05:28 +0800</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/revisit_os/</guid>
+      <description>For some reason, I&amp;rsquo;ve been reviewing OS related stuff lately.</description>
+    </item>
+    
+  </channel>
+</rss>
