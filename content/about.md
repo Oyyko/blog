@@ -5,6 +5,8 @@ date: 2022-07-24T16:00:55+08:00
 
 hi. Oyyko here.
 
+One of my favorite Latin aphorisms is: "Memento mori". It means remember you are mortal.
+
 Below is an introduction to this blog. If you want to see my profile, please see https://oyyko.com/.
  
 The "Archive" page shows all posts in chronological order.
