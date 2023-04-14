@@ -1,0 +1,1143 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oyyko&#39;s Blog</title>
+    <link>https://blog.oyyko.com/</link>
+    <description>Recent content on Oyyko&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Aug 2022 15:20:51 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>A strange way to compute GCD</title>
+        <link>https://blog.oyyko.com/posts/gcd/</link>
+        <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/gcd/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/gcd/ -&lt;p&gt;A strange way to compute GCD in one line&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;gcd&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x, &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (x &lt;span style=&#34;color:#666&#34;&gt;^=&lt;/span&gt; y &lt;span style=&#34;color:#666&#34;&gt;^=&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;^=&lt;/span&gt; y &lt;span style=&#34;color:#666&#34;&gt;%=&lt;/span&gt; x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; y;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;有趣的是：这种写法在CPP17之前是ub（在同一个语句中多次改变一个变量的值，且反复使用该变量的值，为ub 因为标准没有规定求值的顺序），在CPP17中，对于求值的顺序做了进一步的规定，从而这种写法具备了可移植性。&lt;/p&gt;- https://blog.oyyko.com/posts/gcd/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>ICS Note 2</title>
+        <link>https://blog.oyyko.com/posts/ics2/</link>
+        <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/ics2/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/ics2/ -&lt;p&gt;This is my notes for ICS. Source: book
+计算系统概论笔记2 来自课本&lt;/p&gt;
+&lt;h2 id=&#34;control-instructions&#34;&gt;Control Instructions&lt;/h2&gt;
+&lt;p&gt;5种可以改变顺序的指令。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;conditional &lt;strong&gt;branch&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;unconditional &lt;strong&gt;jump&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;subroutine call&lt;/li&gt;
+&lt;li&gt;TRAP (service call)&lt;/li&gt;
+&lt;li&gt;RTI (return from trap or interrupt)&lt;/li&gt;
+&lt;/ul&gt;- https://blog.oyyko.com/posts/ics2/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>ICS Note 1</title>
+        <link>https://blog.oyyko.com/posts/ics1/</link>
+        <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/ics1/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/ics1/ -&lt;p&gt;This is my notes for ICS. Source: ppt
+计算系统概论笔记1 来自PPT&lt;/p&gt;
+&lt;h2 id=&#34;centernamescenter&#34;&gt;&lt;!-- raw HTML omitted --&gt;NAMES&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;MAR: Memory Address Register
+MDR: Memory Data Register
+(联想Lisp的 CAR,CDR)&lt;/p&gt;
+&lt;h2 id=&#34;centerlc-3center&#34;&gt;&lt;!-- raw HTML omitted --&gt;LC-3&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;ALU: ADD,AND,NOT&lt;/p&gt;
+&lt;p&gt;Registers: 8 registers. R0,R1,&amp;hellip;,R7&lt;/p&gt;
+&lt;p&gt;Word Size:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of bits normally processed by ALU in one instruction&lt;/li&gt;
+&lt;li&gt;also width of registers&lt;/li&gt;
+&lt;li&gt;LC-3 is 16 bits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I/O:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Devices for getting data into and out of computer memory&lt;/li&gt;
+&lt;li&gt;Each device has its own interface, usually a set of registers like the memory’s MAR and MDR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;LC-3:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I/O: keyboard, console&lt;/li&gt;
+&lt;li&gt;keyboard: data register(KBDR) and status reg (KBSR)&lt;/li&gt;
+&lt;li&gt;console: data reg(CRTDR) and status reg(CRTSR)&lt;/li&gt;
+&lt;li&gt;frame buffer: memory-mapped pixels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CRT: cathode ray tube (CRT) 阴极射线管
+Program that controls access to a device is usually called a &lt;strong&gt;driver&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;centercontrol-unitcenter&#34;&gt;&lt;!-- raw HTML omitted --&gt;CONTROL UNIT&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Instruction Register (IR) contains the current instruction.
+Program Counter (PC) contains the &lt;strong&gt;address&lt;/strong&gt; of the next instruction to be executed.&lt;/p&gt;
+&lt;p&gt;Control unit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;reads an instruction from memory&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the instruction’s address is in the PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;interprets the instruction, generating signals that tell the other components what to do&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;an instruction may take many machine cycles to complete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.oyyko.com/images/ICS1-1.png&#34; alt=&#34;Insturction Processing&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;instruction&#34;&gt;Instruction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The instruction is the fundamental unit of work.&lt;/li&gt;
+&lt;li&gt;Specifies two things:
+&lt;ul&gt;
+&lt;li&gt;opcode: operation to be performed&lt;/li&gt;
+&lt;li&gt;operands: data/locations to be used for operation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;An instruction is encoded as a sequence of bits.  (Just like data!)&lt;/li&gt;
+&lt;li&gt;Often, but not always, instructions have a fixed length, such as 16 or 32 bits.&lt;/li&gt;
+&lt;li&gt;Control unit interprets instruction: generates sequence of control signals to carry out operation.&lt;/li&gt;
+&lt;li&gt;Operation is either executed completely, or not at all. (原子性)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原子性： 比如：从账户A向账户B转1000元，那么必然包括2个操作：从账户A减去1000元，往账户B加上1000元。这2个操作必须要具备原子性才能保证不出现一些意外的问题。
+原子性定义： 一个操作或者多个操作，要么全部执行并且不被打断，要么就都不执行。&lt;/p&gt;
+&lt;p&gt;JAVA中volatile关键字的含义之一： 使得JVM保证每次都从内存里面读取，而不会从CPU缓存中读取。
+这被称为可见性：当一个线程修改了共享变量的值，其他线程会马上知道这个修改。当其他线程要读取这个变量的时候，最终会去内存中读取，而不是从缓存中读取。&lt;/p&gt;
+&lt;p&gt;有序性: 虚拟机在进行代码编译时，对于那些改变顺序之后不会对最终结果造成影响的代码，虚拟机不一定会按照我们写的代码的顺序来执行，有可能将他们重排序。实际上，对于有些代码进行重排序之后，虽然对变量的值没有造成影响，但有可能会出现线程安全问题。而&lt;strong&gt;volatile&lt;/strong&gt;本身就包含了禁止指令重排序的语义。而synchronized关键字是由“一个变量在同一时刻只允许一条线程对其进行lock操作”这条规则明确的。&lt;/p&gt;
+&lt;p&gt;小结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;synchronized关键字同时满足以上三种特性，但是volatile关键字不满足原子性。&lt;/li&gt;
+&lt;li&gt;在某些情况下，volatile的同步机制的性能确实要优于锁(使用synchronized关键字或java.util.concurrent包里面的锁)，因为volatile的总开销要比锁低。&lt;/li&gt;
+&lt;li&gt;我们判断使用volatile还是加锁的唯一依据就是volatile的语义能否满足使用的场景(原子性)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A computer’s instructions and their formats is known as its &lt;strong&gt;Instruction Set Architecture&lt;/strong&gt; (ISA).&lt;/p&gt;
+&lt;h2 id=&#34;lc3-isa&#34;&gt;LC3 ISA&lt;/h2&gt;
+&lt;h3 id=&#34;add0001&#34;&gt;ADD(0001):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;opcode[15:12] Dst[11:9] Src1[8:6] ???[5:3] Src2[2:0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ldr0110&#34;&gt;LDR(0110)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;opcode[15:12] Dst[11:9] Base[8:6] Offset[5:0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jmp1100&#34;&gt;JMP(1100)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;opcode[15:12] ???[11:9] Base[8:6] ???[5:0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;means: load the content of &amp;lsquo;Base&amp;rsquo; reg into PC&lt;/p&gt;
+&lt;h3 id=&#34;br0000&#34;&gt;BR(0000)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;opcode[15:12] nzp[11:9] PCoffset[8:0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;nzp: negative, zero, positive&lt;/p&gt;
+&lt;h2 id=&#34;process&#34;&gt;Process&lt;/h2&gt;
+&lt;h3 id=&#34;fetch&#34;&gt;FETCH&lt;/h3&gt;
+&lt;p&gt;Load next instruction (at address stored in PC) from memory into Instruction Register (IR).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Load contents of PC into MAR.&lt;/li&gt;
+&lt;li&gt;Send “read” signal to memory.&lt;/li&gt;
+&lt;li&gt;Read contents of MDR, store in IR.
+Then increment PC, so that it points to the next instruction in sequence.&lt;/li&gt;
+&lt;li&gt;PC becomes PC+1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;decode&#34;&gt;DECODE&lt;/h3&gt;
+&lt;p&gt;First identify the opcode.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In LC-3, this is always the first four bits of instruction.&lt;/li&gt;
+&lt;li&gt;A 4-to-16 decoder asserts a control line corresponding to the desired opcode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depending on opcode, identify other operands from the remaining bits.
+Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for ADD, last three bits is source operand #2&lt;/li&gt;
+&lt;li&gt;for LDR, last six bits is offset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;evaluate-address&#34;&gt;EVALUATE ADDRESS&lt;/h3&gt;
+&lt;p&gt;For instructions that require memory access, compute address used for access.
+Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add offset to base register (as in LDR)&lt;/li&gt;
+&lt;li&gt;add offset to PC (or to part of PC)&lt;/li&gt;
+&lt;li&gt;add offset to zero&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fetch-operands&#34;&gt;FETCH OPERANDS&lt;/h3&gt;
+&lt;p&gt;Obtain source operands needed to perform operation.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;read data from register file (ADD)&lt;/li&gt;
+&lt;li&gt;load data from memory (LDR)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;execute&#34;&gt;EXECUTE&lt;/h3&gt;
+&lt;p&gt;Perform the operation, using the source operands.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;send operands to ALU and assert ADD signal&lt;/li&gt;
+&lt;li&gt;do nothing (e.g., for loads and stores)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;store&#34;&gt;STORE&lt;/h2&gt;
+&lt;p&gt;Write results to destination. (register or memory)&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;result of ADD is placed in destination register&lt;/li&gt;
+&lt;li&gt;result of memory load is placed in destination register&lt;/li&gt;
+&lt;li&gt;for store instruction, data is stored to memory
+&lt;ul&gt;
+&lt;li&gt;write address to MAR, data to MDR&lt;/li&gt;
+&lt;li&gt;assert WRITE signal to memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;changing-the-sequence-of-instructions&#34;&gt;Changing the Sequence of Instructions&lt;/h2&gt;
+&lt;p&gt;In the FETCH phase, we incremented the Program Counter by 1.&lt;/p&gt;
+&lt;p&gt;What if we don’t want to always execute the instruction that follows this one?
+examples: loop, if-then-else, function call
+Need special instructions that change the contents of the PC.
+These are called jumps and branches.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;jumps are unconditional &amp;ndash; they always change the PC&lt;/li&gt;
+&lt;li&gt;branches are conditional &amp;ndash; they change the PC only if some condition is true (e.g., the contents of a register is zero)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;misc&#34;&gt;MISC&lt;/h2&gt;
+&lt;p&gt;The clock is a signal that keeps the control unit moving.
+Clock cycle (or machine cycle) &amp;ndash; rising edge to rising edge.
+Clock generator circuit: based on crystal oscillator.&lt;/p&gt;
+&lt;p&gt;The control unit is a state machine.&lt;/p&gt;
+&lt;p&gt;Control unit will repeat instruction processing sequence as long as clock is running.
+If not processing instructions from your application, then it is processing instructions from the Operating System (OS).
+The OS is a special program that manages processor and other resources.&lt;/p&gt;
+&lt;p&gt;To stop the computer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AND the clock generator signal with ZERO&lt;/li&gt;
+&lt;li&gt;when control unit stops seeing the CLOCK signal, it stops processing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Instructions look just like data &amp;ndash; it’s all interpretation.
+Three basic kinds of instructions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;computational instructions (ADD, AND, …)&lt;/li&gt;
+&lt;li&gt;data movement instructions (LD, ST, …)&lt;/li&gt;
+&lt;li&gt;control instructions (JMP, BRnz, …)
+Six basic phases of instruction processing:&lt;/li&gt;
+&lt;li&gt;not all phases are needed by every instruction&lt;/li&gt;
+&lt;li&gt;phases may take variable number of machine cycles&lt;/li&gt;
+&lt;/ul&gt;- https://blog.oyyko.com/posts/ics1/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>The language UNIMODAL is not context free</title>
+        <link>https://blog.oyyko.com/posts/unimodal/</link>
+        <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/unimodal/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/unimodal/ -&lt;p&gt;In this article, we will prove that: the language &amp;lsquo;UNIMODAL&amp;rsquo; is not cfg. Also, we will prove that cfg can not be used to compare binary number.&lt;/p&gt;
+&lt;h2 id=&#34;proposition-onebinary-equal&#34;&gt;proposition one:&amp;ldquo;BINARY EQUAL&amp;rdquo;：&lt;/h2&gt;
+&lt;p&gt;Alphabet：{S,0,1}&lt;/p&gt;
+&lt;p&gt;language BINARY_EQUAL：string such as ${(0|1)^* S (0|1)^*}$，AND the binary number before &amp;lsquo;#&amp;rsquo; is equal to the the latter one.&lt;/p&gt;
+&lt;p&gt;statement： BINARY_EQUAL is not context free grammar&lt;/p&gt;
+&lt;p&gt;Prove: Assume that BINARY_EQUAL is cfl(context free language), then use the pump lemma.&lt;/p&gt;
+&lt;p&gt;For a string s=&amp;ldquo;xxxx&amp;hellip;xxxx#yyyy&amp;hellip;yyyy&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;$$
+\exists uvwxy, \text{such that} \ s=uvwxy\ ,\text{and}\ \ \forall i\ge 0, uv^iwx^iy\in \mathbb{BINARY_EQUAL}
+$$&lt;/p&gt;
+&lt;p&gt;We choose a special string: $s=1^k0^kS0^k1^k$, so when k is large enough, the v and x must be different. Hence, the pumped string is not BINARY_EQUAL. So the proposition is right.&lt;/p&gt;
+&lt;h2 id=&#34;proposition-twobinary-bigger&#34;&gt;proposition two:&amp;ldquo;BINARY BIGGER&amp;rdquo;:&lt;/h2&gt;
+&lt;p&gt;Alphabet：{S,0,1}
+language BINARY_EQUAL：string such as ${(0|1)^* S (0|1)^*}$，AND the binary number before &amp;lsquo;#&amp;rsquo; is &lt;strong&gt;BIGGER&lt;/strong&gt; to the the latter one.
+statement： BINARY_BIGGER is not context free grammar&lt;/p&gt;
+&lt;p&gt;Prove: Assume that BINARY_BIGGER is cfl, use the pump lemma for the string $1^k0^{k-1}1S1^k0^k$.&lt;/p&gt;
+&lt;p&gt;If v and x are both in the left number, the pump down it.(pump down means that we choose the $i$ in the pump lemma as 0. a.k.a $i=0$) then the digits of left num is 2k-2, while the right is 2k, so the right number is bigger than the left.&lt;/p&gt;
+&lt;p&gt;If v and x are both in the right number, just choose i as much as you need. Then the right is obvious larger than the left.&lt;/p&gt;
+&lt;p&gt;If v and x are in different sides:
+(1) If v is &amp;lsquo;1&amp;rsquo; and x is &amp;lsquo;1&amp;rsquo;,pump down it. Then two num should be equal
+(2) If v is &amp;lsquo;00&amp;hellip;1&amp;rsquo;, and x is &amp;lsquo;11&amp;hellip;1&amp;rsquo; then pump up it and the right num should be larger.&lt;/p&gt;
+&lt;p&gt;So, the proposition is true.&lt;/p&gt;
+&lt;h2 id=&#34;proposition-threeunimodal&#34;&gt;proposition three:&amp;ldquo;UNIMODAL&amp;rdquo;:&lt;/h2&gt;
+&lt;p&gt;Alphabet：{S,0,1}
+language UNIMODAL：string such as ${(0|1)^* S (0|1)^&lt;em&gt;(S(0|1)^&lt;/em&gt;)^*}$. This string will be considered as an array of binary number. And when and only when the array is UNIMODAL. The string belongs to the language.&lt;/p&gt;
+&lt;p&gt;For example: 1 3 5 3 1 is a unimodal array. The form in binary is 1#11#101#11#1. So the string &amp;lsquo;1#11#101#11#1&amp;rsquo; is unimodal.
+statement： UNIMODAL is not context free grammar&lt;/p&gt;
+&lt;p&gt;Prove: use pump lemma. s=uvwxy. Let s be &amp;lsquo;$1^K0^KS1^K0^KS1^K0^KS1^K0^KS1^K0^K$&amp;rsquo;, Actually, we need $1^K0^KS1^K0^K(S1^K0^K)^k$. Because every num in this array is equal. It&amp;rsquo;s a UNIMODAL string. And if v and x belongs to one num, then pump down it. We get a decrease then increase, hence a controdiction.&lt;/p&gt;
+&lt;p&gt;And if v and x belongs to different num. Then v is &amp;lsquo;000&amp;hellip;&amp;rsquo;, x is &amp;lsquo;111&amp;hellip;&amp;rsquo;,(because we let the k be large enough). Hence,we pump down, we we will get a decrease and then increase and then decrease. Controdiction!&lt;/p&gt;- https://blog.oyyko.com/posts/unimodal/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>VSCODE 使用笔记</title>
+        <link>https://blog.oyyko.com/posts/vscode/</link>
+        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/vscode/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/vscode/ -&lt;p&gt;工欲善其事，必先利其器。&lt;/p&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
+&lt;h3 id=&#34;ck&#34;&gt;CK&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;C-K C-F&lt;/code&gt;为格式化当前段落 (Format as F)
+&lt;code&gt;C-K C-T&lt;/code&gt; is to choose theme&lt;/p&gt;
+&lt;h3 id=&#34;cs&#34;&gt;CS&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;C+S-I&lt;/code&gt; is to format all the doc
+&lt;code&gt;C+S-K&lt;/code&gt; is to kill the current line
+&lt;code&gt;C+S+[&lt;/code&gt; is to fold&lt;/p&gt;
+&lt;h3 id=&#34;s&#34;&gt;S&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;S+A&lt;/code&gt; is multi-cursor&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;C&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;C-SPACE&lt;/code&gt; is intellisense
+&lt;code&gt;C+[&lt;/code&gt; is to tab the current line.&lt;/p&gt;
+&lt;h3 id=&#34;f&#34;&gt;F&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;F2&lt;/code&gt; is to rename symbol
+&lt;code&gt;F8&lt;/code&gt; is to detect errors&lt;/p&gt;- https://blog.oyyko.com/posts/vscode/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>CCPC华为的一道趣题</title>
+        <link>https://blog.oyyko.com/posts/ccpc_huawei/</link>
+        <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/ccpc_huawei/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/ccpc_huawei/ -&lt;p&gt;本文记录了CCPC华为比赛中的一道题目&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&#34;题面&#34;&gt;题面&lt;/h2&gt;
+&lt;p&gt;骤风起，仓颉飘飘乎不自觉于孤岛焉。岛无人迹，唯有有理数二族尔。一族曰甲分之乙，
+一族曰乙分之甲，甲、乙皆正整数。数之，则族族不竭其数。
+鹦鹉谓仓颉：“日择二数，合其为平均或调和平均。造得一，吾送汝归！”
+仓颉能归于九千九百九十九亿九千九百九十九万九千九百九十九日否？&lt;/p&gt;
+&lt;p&gt;仓颉被一阵风刮到了一个荒无人烟的小岛上，那里有两族有理数，$\frac a b$和$\frac b a$，（$a$,$b$ 为正整数），每族数有无穷多个。
+鹦鹉告诉仓颉：“每天，你可以选两个已有的数 x,y，将它们合成为$\frac{x+y}{2}$或$\frac{2xy}{x+y}$。如果你能合成 1，我就送你回家！”
+仓颉能在 999999999999 天内回家吗？&lt;/p&gt;
+&lt;p&gt;T 组数据。&lt;/p&gt;
+&lt;p&gt;##输入样例&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;3
+1 1
+1 2
+5 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出样例&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Yes
+No
+Yes
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;做法&#34;&gt;做法&lt;/h2&gt;
+&lt;p&gt;先打表，因为是网络赛，可以用mma先求出一些较小值。
+得到(1,3),(1,7),(1,15),(7,9),(3,13)等可以做到。
+猜想：分子分母(注意一定要约分)的和为2的幂次的时候，可以做到。&lt;/p&gt;
+&lt;p&gt;先写一波代码试一下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;31
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;32
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;33
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;34
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;35
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;36
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;37
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;38
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;39
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;40
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;41
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;42
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;43
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;44
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;45
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;46
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;47
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;48
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;49
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;50
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;51
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;52
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;53
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;54
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;55
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;56
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;57
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;58
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;59
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;60
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;61
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;62
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;63
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;64
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;65
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;66
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;67
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;68
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;69
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;70
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;71
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;72
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;73
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;74
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;75
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;76
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;77
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;78
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;79
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;80
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;81
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;82
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;83
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;84
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;85
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;86
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#080&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#080&#34;&gt;&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;gcd&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; a, &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;!&lt;/span&gt;a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; b;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (a &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt; b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; gcd(b, a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; gcd(a &lt;span style=&#34;color:#666&#34;&gt;%&lt;/span&gt; b, b);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#00f&#34;&gt;frac&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; up;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; down;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    frac(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; a, &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; d &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; gcd(a, b);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        up &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; d;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        down &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; b &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; d;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frac &lt;span style=&#34;color:#00a000&#34;&gt;simplify&lt;/span&gt;(frac x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; d &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; gcd(x.down, x.up);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; frac(x.up &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; d, x.down &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; d);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;pr&lt;/span&gt;(frac x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; x.up &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; x.down &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;is_power&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;||&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a2f&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (x &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#666&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a2f&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        x &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;judge&lt;/span&gt;(frac x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; is_power(x.up &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; x.down);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; t;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    scanf(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt;t);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; n, m;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (t&lt;span style=&#34;color:#666&#34;&gt;--&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scanf(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt;n);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scanf(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt;m);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        frac x(n, m);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;if&lt;/span&gt; (judge(x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Yes&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;No&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;发现是可以的。&lt;/p&gt;
+&lt;h2 id=&#34;证明&#34;&gt;证明&lt;/h2&gt;
+&lt;p&gt;接下来考虑怎么证明。
+首先可以得到，对于$2^k$个数字，通过不断对两两取平均的方式，可以得到它们的整体的平均值。即
+$$
+\frac{\sum_{k=1}^{k=2^n}x_k}{2^n}
+$$
+从而，若现有分子分母和为$2^k$的初始分数$\frac b a$,即满足$a+b=2^k$，则可看作手头有$2^k$个数，分别是$b$个$\frac{a}{b}$和$a$个$\frac{b}{a}$
+其均值为
+$$
+\frac{b*\frac{a}{b}+a*\frac{b}{a}}{2^k}=1
+$$
+即可满足条件。
+注意到，若在约分之前满足分子分母和为2的幂次，则约分后也满足。
+但约分之前不满足的，约分后也有可能满足。例如$\frac{3}{9}$
+即有如下结论：&lt;/p&gt;
+&lt;p&gt;对任意给的初始分数（可以未约分），只要分子分母满足和为2的幂次，则应输出Yes.&lt;/p&gt;
+&lt;p&gt;但注意
+$$
+未约分分数分子分母和为2的幂次\implies 对应的既约分数的分子分母和为2的幂次
+$$&lt;/p&gt;
+&lt;p&gt;因此可以先约分，后判断，若满足分子分母和为2的幂次，则一定可以。&lt;/p&gt;
+&lt;p&gt;那么，对于既约分数，如果和不是2的幂次会怎么样？&lt;/p&gt;
+&lt;p&gt;设分数为$\frac{a}{b}$且既约，即$gcd(a,b)=1$
+则等价于存在奇质数$p$使得$p|a+b$
+假设手里有的数均为满足$p|分子+分母$
+现考虑我们得到的新数
+$(\frac x y+\frac a b)/2=\frac{xb+ay}{2yb}$,则考虑其分子分母的和。此次有可能产生约分，但不会约去p，这是因为$p\not| yb$,而这是因为:$p|yb\implies p|y \ \ \text{or}\ \ p|b$而$p|y且p|x+y\implies p|x$与$\frac{x}{y}$为既约分数矛盾，ab同理。&lt;/p&gt;
+&lt;p&gt;这可以知道我们不会约去p，因此考虑p是否整除既约后的分数的分子分母和，等价于考虑当前分数的分子分母和。
+而$xb+ay+2yb\equiv -xa-xa+2xa \equiv 0 \mod p$则p整除。&lt;/p&gt;
+&lt;p&gt;同理对调和均值也有，p依然整除分子分母和。&lt;/p&gt;
+&lt;p&gt;则可知，若初始分数的分子分母和不为2的幂次，那么永远不能得到1. 因为$1=\frac11$其分子分母和为2，不含奇质因子p&lt;/p&gt;
+&lt;p&gt;证明完毕。&lt;/p&gt;- https://blog.oyyko.com/posts/ccpc_huawei/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Fix a grub bug</title>
+        <link>https://blog.oyyko.com/posts/grub/</link>
+        <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/grub/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/grub/ -&lt;p&gt;In this article, I will record how to fix the problem that grub can&amp;rsquo;t find Windows on nvme. So that someday, I can reuse this to help myself.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;First of all, install &lt;code&gt;os-prober&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then, run &lt;code&gt;update-grub&lt;/code&gt; or &lt;code&gt;grub-mkconfig&lt;/code&gt;.
+Then you will find that os-prober is not working.&lt;/p&gt;
+&lt;p&gt;It will print a warning saying like: &lt;code&gt;OS-PROBER will not be executed in order to protect xxx. If you want to know more, please look GRUB-DISABLE-OR-PROBER document to find more information&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Well, only stupid people will do as what the warning says.&lt;/p&gt;
+&lt;p&gt;For me, I just &lt;code&gt;vim /etc/default/grub&lt;/code&gt; and add one line &lt;code&gt;GRUB-DISABLE-OR-PROBER = false&lt;/code&gt; in this file.&lt;/p&gt;
+&lt;p&gt;Then run &lt;code&gt;grub-mkconfig&lt;/code&gt; again. This silly problem will get fixed.&lt;/p&gt;
+- https://blog.oyyko.com/posts/grub/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>name and shakespeare</title>
+        <link>https://blog.oyyko.com/posts/names_and_shakespeare/</link>
+        <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/names_and_shakespeare/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/names_and_shakespeare/ -&lt;p&gt;匿名函数与莎士比亚大定理&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This article is translated from &lt;a href=&#34;https://cs.stackexchange.com/questions/22497/why-is-it-important-for-functions-to-be-anonymous-in-lambda-calculus&#34;&gt;Here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;提问为什么在lambda-calculus里面函数必须是匿名的&#34;&gt;提问：为什么在lambda calculus里面，函数必须是匿名的。&lt;/h2&gt;
+&lt;p&gt;我正在观看一个Youtube视频，在这个视频里面，讲者介绍了Y组合子的概念。
+Y组合子概念产生的动机之一，正如讲者所述，是为了用lambda calculus来表示递归函数，以使得Church理论(任何能被实际上计算的东西都可以用lambda calculus来计算)保持成立。
+我的问题在于：为什么我们不能通过名字来简单的调用一个函数。例如日常生活中我们经常会写下这种式子：
+$$
+n(x,y)=x+y
+$$
+但是在lambda calculus里面我们不允许把这个函数与名字n相关联，我们只能匿名的定义它为
+$$
+(x,y)\rightarrow x+y
+$$
+为什么在lambda calculus里面我们不能拥有被命名的函数? 如果存在具名函数，我们会破坏什么准则? 或者仅仅是我搞错了视频的意思?&lt;/p&gt;
+&lt;h2 id=&#34;回答&#34;&gt;回答&lt;/h2&gt;
+&lt;p&gt;关于这个问题的主要结论来自一个十六世纪晚期的英国数学家，他叫莎士比亚。他最著名的关于这个问题的论文名为《罗密欧与茱丽叶》，在1597年发表。&lt;/p&gt;
+&lt;p&gt;他的主要结论在第二幕的第二场景中阐明。即如下的著名定理：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;名称有什么关系呢?玫瑰不叫玫瑰,依然芳香如故!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个定理可以被直观的理解为&amp;quot;名字对意义毫无帮助&amp;quot;
+莎士比亚的论文的大部分内容是一个用来补充定理的例子，用以表明名字尽管名字没有任何意义，但它们却是无穷无尽的问题的根源。
+正如莎士比亚所指出的那样，名称可以在不改变含义的情况下进行更改，这一操作后来被丘奇及其追随者称为α转换。结果，如何确定名字表示的意义变成了造成了许许多多的问题。例如我们要发展“&lt;strong&gt;环境&lt;/strong&gt;”的概念，在环境中名字-意义联系是确定的，并且发展出一系列的规则来辨别当前的环境。这使得计算机科学家们困惑了很长一段时间，引起了诸如臭名昭著的Funarg问题之类的技术难题。“环境”在许多流行的编程语言中仍然是个大问题，几乎和莎士比亚在其论文中提出的例子一样&lt;strong&gt;致命&lt;/strong&gt;。
+这个问题也与形式语言理论中提出的问题接近，即必须将字母和形式系统定义为同构，以便强调字母符号是抽象实体，而与它们如何作为某些集合中的元素而“实现”无关。
+莎士比亚的主要结果也表明了科学随后即将与魔术和宗教告别。因为在魔术与宗教的世界里面，人们认为一个东西有它的“真名”。
+所有这一切的结论是：尽管名字可以方便人们的日常工作和生活，但是在理论研究中不被名字而困扰更为重要。
+记住：&lt;strong&gt;不是所有被叫做娘的都是你的母亲。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;评论&#34;&gt;评论&lt;/h3&gt;
+&lt;p&gt;最近，玫瑰正在被foobar所取代。&lt;/p&gt;
+- https://blog.oyyko.com/posts/names_and_shakespeare/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>C&#43;&#43; Note 1</title>
+        <link>https://blog.oyyko.com/posts/cpp1/</link>
+        <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/cpp1/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/cpp1/ -&lt;p&gt;本文是我的C++笔记的第一篇
+My First C++ Note;&lt;/p&gt;
+&lt;h2 id=&#34;一些例子&#34;&gt;一些例子&lt;/h2&gt;
+&lt;h3 id=&#34;1&#34;&gt;1&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#080&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    string x{&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;222333&amp;#34;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;y &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;222333&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    string xx{x, &lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    string yy{y, &lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; xx &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; yy &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2&#34;&gt;2&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;pp&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;int&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;pp&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;int*&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    pp(&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;nullptr&lt;/span&gt;);&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 输出int*
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;    pp(&lt;span style=&#34;color:#a2f&#34;&gt;NULL&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 有歧义，编译失败
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;一些疑问&#34;&gt;一些疑问&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; s[&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;][&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;]{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;}, {&lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;4&lt;/span&gt;}};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a0a000&#34;&gt;i&lt;/span&gt; : s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; j{}; j &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;; &lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;j)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; i[j];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段代码为何生效？s的类型不应该是int(&lt;em&gt;)[2]吗?
+解释：s的类型为int[2][2],但是非常容易decay,因此大多数时候会提示为int(&lt;/em&gt;)[2]，例如你用char x{s};试图从报错中得到s的类型的时候就会提示为int(&lt;em&gt;)[2].此处从s中取出的应该是int[2],然后被decay为int&lt;/em&gt;
+追问：那有没有办法让i的类型为int[2]
+解答：写成auto&amp;amp; i 或者 int(&amp;amp;x)[2]即可
+完整代码为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; s[&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;][&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;]{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;}, {&lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;4&lt;/span&gt;}};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt;i)[&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a0a000&#34;&gt;j&lt;/span&gt; : i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; j;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;auto&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a0a000&#34;&gt;i&lt;/span&gt; : s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;auto&lt;/span&gt; &lt;span style=&#34;color:#a0a000&#34;&gt;j&lt;/span&gt; : i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; j;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a0a000&#34;&gt;j&lt;/span&gt; : (&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; j;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;- https://blog.oyyko.com/posts/cpp1/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>C Hello World Again</title>
+        <link>https://blog.oyyko.com/posts/c_hello_world/</link>
+        <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/c_hello_world/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/c_hello_world/ -&lt;p&gt;本文是我给地空学院的学生的C语言讲座的讲稿&lt;/p&gt;
+&lt;h1 id=&#34;hello-world-again&#34;&gt;Hello World Again&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&#34;指针与数组&#34;&gt;指针与数组&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;a[i]=*(a+i)=i[a]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;int (*x)[10]&lt;/code&gt;与&lt;code&gt;int *x[10]&lt;/code&gt;的区别
+前者是指向一个长度为10的整型数组的&lt;strong&gt;指针&lt;/strong&gt;
+后者是一个长度为10的(指向整型变量的指针)的&lt;strong&gt;数组&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;指针与数组的互换&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;;i&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10&lt;/span&gt;;&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    a[i]&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;p &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; a; p &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; (a &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;10&lt;/span&gt;); &lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;p)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;c风格的字符串处理&#34;&gt;C风格的字符串处理&lt;/h2&gt;
+&lt;h3 id=&#34;字符串的表示&#34;&gt;字符串的表示&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; s[&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;]&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 这是一个特殊的行为
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 注意到int *x=2是完全错误的
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 但这个语句是对的
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 编译器会开辟一块内存来存放&amp;#34;Hello&amp;#34;并用s指向它
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 但注意：这个&amp;#34;Hello&amp;#34;是不可更改的
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 例如下面的语句会出现错误
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;s[&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%c&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;[&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;]);&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//输出c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%s&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//输出bc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//此处的&amp;#34;abc&amp;#34;会被解释为指向char数组{&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;\0&amp;#39;}的指针
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; s[&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;]&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color:#00a000&#34;&gt;malloc&lt;/span&gt;(&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt;) &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;10&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;s&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, s &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//输出bc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, s &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//输出c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;free&lt;/span&gt;(s &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//释放掉用malloc申请的内存
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;字符串拷贝&#34;&gt;字符串拷贝&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;strcpy1&lt;/span&gt;(&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;a, &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;b) &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//把b赋给a
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;a&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;b&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;a&lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; a[&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;char&lt;/span&gt; b[&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;while&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#00a000&#34;&gt;scanf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, b);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#00a000&#34;&gt;strcpy1&lt;/span&gt;(a, b);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%s&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;, a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;求值顺序&#34;&gt;求值顺序&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%c%c%c&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#00a000&#34;&gt;getchar&lt;/span&gt;(),&lt;span style=&#34;color:#00a000&#34;&gt;getchar&lt;/span&gt;(),&lt;span style=&#34;color:#00a000&#34;&gt;getchar&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;该语句在gcc编译器下的作用是：读入三个字符并倒序输出。
+因为gcc编译器的实现方法是从右向左求值&lt;/p&gt;
+&lt;h2 id=&#34;变量作用域&#34;&gt;变量作用域&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,x); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//不会输出
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;8&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; x&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,x);&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;// 输出3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;用宏实现max函数&#34;&gt;用宏实现max函数&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;#define  MAX(x,y)  x &amp;gt; y ? x : y&lt;/code&gt;
+但考虑&lt;code&gt;MAX(1!=2,3)为1 != 2 &amp;gt; 3 ? 1 != 2 : 3&lt;/code&gt;
+由于&lt;code&gt;!=&lt;/code&gt;的优先级小于&lt;code&gt;&amp;gt;&lt;/code&gt;
+因此上式为&lt;code&gt;1 != (2&amp;gt;3) ? 1!=2 : 3&lt;/code&gt;
+为&lt;code&gt;(1 != 0) ? 1!=2 : 3&lt;/code&gt;
+为&lt;code&gt;1 ? 1 : 3&lt;/code&gt;
+为&lt;code&gt;1&lt;/code&gt;
+而该式应该是MAX(1,3)=3
+因此加括号为
+&lt;code&gt;#define  MAX(x,y)  (x) &amp;gt; (y) ? (x) : (y)&lt;/code&gt;
+但考虑&lt;code&gt;3+ MAX(1,2)&lt;/code&gt;
+为&lt;code&gt;3 + 1 &amp;gt; 2 ? 1 : 2&lt;/code&gt;
+为&lt;code&gt;4 &amp;gt; 2 ? 1 : 2&lt;/code&gt;
+为&lt;code&gt;1 ? 1 : 2&lt;/code&gt;
+为&lt;code&gt;1&lt;/code&gt;
+而实际上应该是5
+因此我们继续修改这个宏
+&lt;code&gt;#define MAX(x,y) ((x) &amp;gt; (y) ? (x) : (y))&lt;/code&gt;
+但考虑&lt;code&gt;MAX(i++,j++)&lt;/code&gt;
+展开后为&lt;code&gt;i++ &amp;gt; j++ ? i++ : j++&lt;/code&gt;
+这会使得i与j都自增两次
+为此考虑这么定义宏&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#define MAX(x,y)({     \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;    int _x = x;        \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;    int _y = y;        \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;    _x &amp;gt; _y ? _x : _y; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;该宏会重新定义两个变量_x与_y来进行比较，从而使得MAX(i++,j++)符合要求。&lt;/p&gt;
+&lt;h2 id=&#34;函数与数组的相似点与共同点&#34;&gt;函数与数组的相似点与共同点&lt;/h2&gt;
+&lt;p&gt;相似点：
+数组声明：int x[10]
+函数声明：int sum(int,int)
+数组类型：int [10]
+函数类型：int (int,int)
+数组指针：int (&lt;em&gt;x)[10]
+函数指针：int (&lt;em&gt;sum)(int,int)
+数组指针类型：int (&lt;/em&gt;)[10]
+函数指针类型：int (&lt;/em&gt;)(int,int)&lt;/p&gt;
+&lt;p&gt;数组、函数共同点：
+1.数组、函数都不可拷贝。&lt;/p&gt;
+&lt;p&gt;2.因为第1点，数组、函数不可以做函数的返回值，但函数可以返回数组的指针或函数的指针。&lt;/p&gt;
+&lt;p&gt;3.数组、函数可用于函数形参，但因为第1点，编译器会对其做处理。如果形参类型为数组，实际形参类型会转换成元素类型的指针，例如voidfun(int arr[5])等价于void fun(int arr*)。如果形参类型为函数，实际形参类型会转换成对应的函数指针类型，例如void fun (int test())等价于voidfun( int (*test)())&lt;/p&gt;
+&lt;h2 id=&#34;如何返回一个数组&#34;&gt;如何返回一个数组&lt;/h2&gt;
+&lt;p&gt;用结构体包装一下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#080&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#080&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;#define MAXNUM 1000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080&#34;&gt;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; a[MAXNUM];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array &lt;span style=&#34;color:#00a000&#34;&gt;DoubleIt&lt;/span&gt;(&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array y;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt; MAXNUM; &lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        y.a[i] &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; (x.a[i] &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;); &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//移位运算符的优先级非常低，应该在可能的情况下加上括号
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;&lt;/span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;return&lt;/span&gt; y;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array a &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;5&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;struct&lt;/span&gt; Array b &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;DoubleIt&lt;/span&gt;(a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#0b0;font-weight:bold&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;5&lt;/span&gt;; &lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#00a000&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;&lt;/span&gt;, b.a[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;推荐阅读书目&#34;&gt;推荐阅读书目：&lt;/h2&gt;
+&lt;p&gt;《C专家编程》
+《C陷阱与缺陷》
+《征服C指针》
+以上三本在图书馆应该都能借到，特别推荐《征服C指针》，是日本最受欢迎的C语言书籍之一，写的很好&lt;/p&gt;
+&lt;h1 id=&#34;c学习经验&#34;&gt;C学习经验&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;多写一些简单的程序做实验，验证自己的想法。从实践中学习。&lt;/li&gt;
+&lt;li&gt;多写代码，多写代码，多写代码。&lt;/li&gt;
+&lt;li&gt;找一些好书看，不要看谭浩强啥的。。 比如《C与指针》，《C专家编程》，《C陷阱与缺陷》，《明解C指针》。&lt;/li&gt;
+&lt;li&gt;学会使用搜索引擎。&lt;/li&gt;
+&lt;li&gt;不要害怕写代码，其实真的不难。。这个属于技术活，写的越多越熟练。&lt;/li&gt;
+&lt;li&gt;C其实是比较偏向底层的语言，如果有对于计算机硬件底层相关的知识可能会更好理解。&lt;/li&gt;
+&lt;/ol&gt;- https://blog.oyyko.com/posts/c_hello_world/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

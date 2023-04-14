@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html><head>
+<title>ICS PPT Note 1</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ppt-1-1" class="nav-ppt-1-1">
+									PPT 1-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt1-2" class="nav-ppt1-2">
+									PPT1-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-2-1" class="nav-ppt-2-1">
+									PPT 2-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#summary" class="nav-summary">
+									Summary:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#ppt2-2" class="nav-ppt2-2">
+									PPT2-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-3-1" class="nav-ppt-3-1">
+									PPT 3-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-3-2" class="nav-ppt-3-2">
+									PPT 3-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    ICS PPT Note 1
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-11-26 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/ics">ICS</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>计算系统概率PPT笔记1 复习期中</p>
+<h2 id="ppt-1-1">PPT 1-1</h2>
+<p>架构：
+Application
+Algorithm and Data Structure
+Programming Language, Compiler
+OS/VM
+<strong>ISA (Instruction Set Architecture)</strong>
+Microarchitecture
+RTL
+Digital Circuits/Analog Circuits
+Electonic Devices
+Physics</p>
+<h2 id="ppt1-2">PPT1-2</h2>
+<p>计算机是一个二进制的系统。通过操纵电子进行计算。高电压(高于某个特定值)视为1，低电压视为0.</p>
+<p>信息的基本单位是Bit</p>
+<p>MOS管：有N和P型
+N型MOS管:三个极, <strong>#1</strong> , <strong>#2</strong> 和 <strong>Gate</strong>
+当Gate为1时，连通
+当Gate为0时，断开</p>
+<p>P型MOS管恰恰相反
+当Gate为0时，连通
+当Gate为1时，断开</p>
+<h2 id="ppt-2-1">PPT 2-1</h2>
+<p>进制：八进制，二进制，十六进制
+无符号整数
+有符号整数：</p>
+<ul>
+<li>n个bit，有$2^n$个不同的值</li>
+</ul>
+<p>原码(signed Magnitude)：一个符号位，n-1个数值位。有+0,-0,导致空间的浪费
+反码(1&rsquo;s Complement)：正数的反码等于原码。负数的反码等于原码的符号位不变，而数值位取反。
+补码(2&rsquo;s Complement)：反码+1等于补码。
+例如3bit</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>010</td>
+<td>2</td>
+</tr>
+<tr>
+<td>011</td>
+<td>3</td>
+</tr>
+<tr>
+<td>100</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>101</td>
+<td>-3</td>
+</tr>
+<tr>
+<td>110</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>111</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary">Summary:</h3>
+<p>每个计算机里面的内容都是一个数字，也就是二进制的0和1.
+负数用补码(2&rsquo;s Complement)来表示
+Overflows can be detected utilizing the carry bit
+浮点数有特殊的表示法</p>
+<h2 id="ppt2-2">PPT2-2</h2>
+<p>a data type includes <strong>representation</strong> and <strong>operations</strong>.
+对整数的操作：
+１．　相加
+２．　相减
+３．　带符号扩展(Sign Extension)
+例如：0001的8位扩展为0000 0001
+而　1001的8位扩展为1111 1001
+将sign bit进行扩展</p>
+<p>判断overflow:　当输入的两个操作数的符号一致，而和的符号却不一样的时候。即产生了overflow.</p>
+<p>小数：
+定点数，浮点数</p>
+<p>浮点数：IEEE754</p>
+<p>S:1bit Exp:8bit Fraction:23bit</p>
+<p>1,8,23
+S,Exp,Frac</p>
+<p>$$
+(-1)^S*(1.Frac)*2^{(Exp-127)}, 1\le Exp\le 254
+$$</p>
+<p>特殊：当指数部分全1，小数部分全0时，表示无穷。符号位为1表示负无穷，符号位为0表示正无穷。浮点正常表示的指数范围为00000001-11111110，即$2^{-126}~2^{127}$
+若指数全为0，则为subnormal number,它表示的指数位仍然是$2^{-126}$，但小数从1.frac变为0.frac,从而可以表示更小的数</p>
+<p>Some data types are supported directly by the instruction set architecture.</p>
+<ul>
+<li>For LC-3, there is only one supported data type: 16-bit 2’s complement signed integer</li>
+<li>Operations: ADD, AND, NOT</li>
+</ul>
+<h2 id="ppt-3-1">PPT 3-1</h2>
+<p>晶体管和逻辑门
+MOS管：已学习
+CMOS: Complementary MOS
+使用N和P型的MOS管来构造逻辑门</p>
+<p>题目1:构造一个3个输入的NOR门，使用CMOS</p>
+<p>记号：</p>
+<ul>
+<li>在线上面打斜线写4,表示这个线是4位宽的</li>
+<li>小圈表示否定</li>
+</ul>
+<h2 id="ppt-3-2">PPT 3-2</h2>
+<p>从组合逻辑到时序逻辑
+Decoder
+MUX
+Full adder(input: A,B,C_in,output: S,C_out)
+使用1位的full adder可以构造多位的加法</p>
+<p>减法器：使用全加器和补码的原理构造，把输入B取反之后和A相加，加的时候设置全加器的C_in为1(补码要求) 即可</p>
+<p>RS锁存器(RS Latch):
+R:Reset (to be 0)
+S:Set   (to be 1)</p>
+<table>
+<thead>
+<tr>
+<th>R</th>
+<th>S</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>未定义</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>设为0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>设为1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>保持不变</td>
+</tr>
+</tbody>
+</table>
+<p>为了解决RS锁存器，当R,S同时取1的时候未定义的问题
+设计D锁存器</p>
+<table>
+<thead>
+<tr>
+<th>D</th>
+<th>E</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>0</td>
+<td>保持不变</td>
+</tr>
+<tr>
+<td>~</td>
+<td>1</td>
+<td>跟随D改变</td>
+</tr>
+</tbody>
+</table>
+<p>D触发器:俩D锁存器相连，功能：在clk的上升沿读取数据，其他时候保持不变.</p>
+<p>表示多位数据:
+A=10101
+A[4:2]=101
+A[1:0]=01</p>
+<p>Memory:
+k*m
+k=2^n个locations
+每个位置有m bit 的信息</p>
+<p><strong>k</strong>: Address Space
+number of locations
+(usually a power of 2)</p>
+<p><strong>m</strong>: Addressability
+number of bits per location
+(e.g., byte-addressable)</p>
+<p>RAM:(Random Access Memory)
+Static RAM(SRAM)</p>
+<ul>
+<li>fast, not very dense (bitcell is a latch)
+Dynamic RAM(DRAM)</li>
+<li>slower but denser, bit storage must be periodically refreshed</li>
+<li>each bitcell is a capacitor (like a leaky bucket) that decays</li>
+</ul>
+<p>ROM:(Read Only Memory)</p>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-11-26</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/cpp2/">
+			Next<br>C&#43;&#43; Note 2
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/gcd/">
+			Previous<br>A strange way to compute GCD
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#ppt-1-1" class="nav-ppt-1-1">
+									PPT 1-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt1-2" class="nav-ppt1-2">
+									PPT1-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-2-1" class="nav-ppt-2-1">
+									PPT 2-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#summary" class="nav-summary">
+									Summary:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#ppt2-2" class="nav-ppt2-2">
+									PPT2-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-3-1" class="nav-ppt-3-1">
+									PPT 3-1
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ppt-3-2" class="nav-ppt-3-2">
+									PPT 3-2
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

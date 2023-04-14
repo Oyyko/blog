@@ -2,7 +2,6 @@
 title: "Revisit_OS"
 date: 2022-08-20T16:05:28+08:00
 tags: [OS]
-categories: Study
 ---
 
 For some reason, I've been reviewing OS related stuff lately.
@@ -55,9 +54,3 @@ lrwxrwxrwx 1 zhangjia zhangjia 3  8月20日 16:46 s222 -> 222
 Now, why the soft link's file mode is lrwxrwxrwx.
 
 `l` means soft link. The rest is same to a normal file mode.
-
-## file system
-
-
-
-

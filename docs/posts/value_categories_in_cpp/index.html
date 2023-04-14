@@ -24,7 +24,8 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
 
 
   
@@ -32,26 +33,24 @@
 
 
 
-
-
-<link rel="stylesheet" href="https://blog.oyyko.com/scss/journal.min.515c30ecf3c29d38460d1d5f3d6bf827d37ad9fb53a5d0fc576470d5584a7910.css" integrity="sha256-UVww7PPCnThGDR1fPWv4J9N62ftTpdD8V2Rw1VhKeRA=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://blog.oyyko.com/scss/dark-mode.min.8182a9dc2ec0dbc4e593e2e45259f55a55c655174e6e4ef104d143c2ea55cfba.css" integrity="sha256-gYKp3C7A28Tlk&#43;LkUln1WlXGVRdObk7xBNFDwupVz7o=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab");
-</script>
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
 
 
 
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
 
 
 
-  <script src="/js/toc.js"></script>
+
+
 
 
 
@@ -68,219 +67,7 @@
 
 </head>
 <body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://blog.oyyko.com">
-    
-        <div class="nav-title">
-            Oyyko&#39;s Blog
-        </div>
-        
-        <div class="nav-subtitle">
-            Being towards death
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about">
-                About
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/life">
-                :Life
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/coding">
-                :Coding
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/study">
-                :Study
-            </a>
-            
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2022 Oyyko&#39;s Blog
-	
-
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#intro" onclick="onNavClick(`#intro-nav`)" id="intro-nav">
-									Intro
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#temporary-materialization" onclick="onNavClick(`#temporary-materialization-nav`)" id="temporary-materialization-nav">
-									Temporary materialization
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#decltype-and-value-categories" onclick="onNavClick(`#decltype-and-value-categories-nav`)" id="decltype-and-value-categories-nav">
-									Decltype and value categories
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#stdmove" onclick="onNavClick(`#stdmove-nav`)" id="stdmove-nav">
-									std::move
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
     <div class="drawer-content">
         <div class="drawer-menu">
@@ -319,36 +106,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 </a>
                 
             
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/life">
-                    :Life
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/coding">
-                    :Coding
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/study">
-                    :Study
-                </a>
-                
-            
             
             <div class="toc">
 
@@ -378,7 +135,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#intro" onclick="onNavClick(`#intro-nav`)" id="intro-nav">
+								<a href="#intro" class="nav-intro">
 									Intro
 								</a>
 							</li>
@@ -396,7 +153,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#temporary-materialization" onclick="onNavClick(`#temporary-materialization-nav`)" id="temporary-materialization-nav">
+								<a href="#temporary-materialization" class="nav-temporary-materialization">
 									Temporary materialization
 								</a>
 							</li>
@@ -414,7 +171,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#decltype-and-value-categories" onclick="onNavClick(`#decltype-and-value-categories-nav`)" id="decltype-and-value-categories-nav">
+								<a href="#decltype-and-value-categories" class="nav-decltype-and-value-categories">
 									Decltype and value categories
 								</a>
 							</li>
@@ -432,7 +189,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#stdmove" onclick="onNavClick(`#stdmove-nav`)" id="stdmove-nav">
+								<a href="#stdmove" class="nav-stdmove">
 									std::move
 								</a>
 							</li>
@@ -506,10 +263,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                         
 
                         
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/study">Study</a>
-                                &nbsp;
-                        
 
                         
                             <i class="material-icons" style="">label</i>
@@ -530,12 +283,12 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     <h2 id="intro">Intro</h2>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080">#define IS_XVALUE(expr) \
@@ -559,8 +312,8 @@ The one that has no identity but can be moved is called PRVALUE.</p>
 <p>For example, these are examples for XVALUE:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#666">::</span>move(x);
@@ -571,12 +324,12 @@ The one that has no identity but can be moved is called PRVALUE.</p>
 <p>The most useful example to help you understand XVALUE is: Temporary materialization.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">struct</span> <span style="color:#00f">S</span> { <span style="color:#0b0;font-weight:bold">int</span> m; };
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">struct</span> <span style="color:#00f">S</span> { <span style="color:#0b0;font-weight:bold">int</span> m; }; 
 </span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> S().m; <span style="color:#080;font-style:italic">// member access expects glvalue as of C++17;
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>               <span style="color:#080;font-style:italic">// S() prvalue is converted to xvalue
 </span></span></span></code></pre></td></tr></table>
@@ -611,7 +364,7 @@ The one that has no identity but can be moved is called PRVALUE.</p>
                 
                 
                 
-                <a class="older-posts" href="https://blog.oyyko.com/posts/revisit_os/">
+                <a class="older-posts" href="/posts/revisit_os/">
 			Previous<br>Revisit_OS
                 </a>
                 
@@ -637,13 +390,200 @@ The one that has no identity but can be moved is called PRVALUE.</p>
         async>
 </script>
 
+
+
             </div>
         </div>
     </div>
 
 
                     </div>
-            </div><div id="single-column-footer">
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#intro" class="nav-intro">
+									Intro
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#temporary-materialization" class="nav-temporary-materialization">
+									Temporary materialization
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#decltype-and-value-categories" class="nav-decltype-and-value-categories">
+									Decltype and value categories
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#stdmove" class="nav-stdmove">
+									std::move
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -656,6 +596,5 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
             </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+    <script src="/js/journal.js"></script></body>
 </html>

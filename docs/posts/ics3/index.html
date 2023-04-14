@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html><head>
+<title>ICS 笔记3</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#chapter8-1-subroutines" class="nav-chapter8-1-subroutines">
+									Chapter8-1 Subroutines
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#adt-abstract-data-types" class="nav-adt-abstract-data-types">
+									ADT Abstract Data Types
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#subroutine" class="nav-subroutine">
+									Subroutine
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e5%85%b3%e7%9a%84%e6%8c%87%e4%bb%a4" class="nav-相关的指令">
+									相关的指令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#jsr" class="nav-jsr">
+									JSR
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#jsrr" class="nav-jsrr">
+									JSRR
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ret" class="nav-ret">
+									RET
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%be%8b%e5%ad%90%e5%8f%96%e8%b4%9f%e6%95%b0" class="nav-例子取负数">
+									例子：取负数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" class="nav-如何使用">
+									如何使用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%b0%83%e7%94%a8%e6%97%b6%e7%9a%84%e4%bf%a1%e6%81%af%e4%bc%a0%e9%80%92" class="nav-调用时的信息传递">
+									调用时的信息传递
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#caller-save-and-caller-save" class="nav-caller-save-and-caller-save">
+									caller-save and caller-save
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#chapter8-2-memory-model-for-program-execution--the-stack" class="nav-chapter8-2-memory-model-for-program-execution--the-stack">
+									Chapter8-2 Memory Model for Program Execution &amp; the Stack
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    ICS 笔记3
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-12-19 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/ics">ICS</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>ICS笔记3</p>
+<h2 id="chapter8-1-subroutines">Chapter8-1 Subroutines</h2>
+<h3 id="adt-abstract-data-types">ADT Abstract Data Types</h3>
+<p>Up to now, we have processed a single value</p>
+<ul>
+<li>an integer</li>
+<li>a floating point number, or</li>
+<li>an ASCII character</li>
+</ul>
+<p>The real world is <strong>abstract data types</strong>, or more colloquially data structures，far more complex than simple, single numbers. E.g.</p>
+<ul>
+<li>a company’s organization chart</li>
+<li>a list of items arranged in alphabetical order</li>
+</ul>
+<p>In this chapter, we will study three abstract data types:</p>
+<ul>
+<li>stacks</li>
+<li>queues</li>
+<li>and character strings</li>
+</ul>
+<p>Before we get to stacks, queues, and character strings, however, we introduce a new concept that will prove very useful in manipulating data structures: <strong>subroutines, or what is also called functions</strong>.</p>
+<h3 id="subroutine">Subroutine</h3>
+<p>A subroutine is a program fragment that. . .</p>
+<ul>
+<li>Resides in user space (i.e, not in OS)</li>
+<li>Performs a well-defined task</li>
+<li>Is invoked (called) multiple times by a user program</li>
+<li>Returns control to the calling program when finished</li>
+</ul>
+<p>Virtues:</p>
+<ul>
+<li>Reuse code without re-typing it (and debugging it!)</li>
+<li>Divide task into parts (or among multiple programmers)</li>
+<li>Use vendor-supplied library of useful routines that one software engineer writes a program that requires such fragments and another software engineer writes the fragments.
+<ul>
+<li>math library</li>
+<li>square root, sine, and arctangent,etc.</li>
+</ul>
+</li>
+</ul>
+<p>Important: <strong>The Call/Return Mechanism</strong></p>
+<h3 id="相关的指令">相关的指令</h3>
+<p>JSR,JSRR,RET</p>
+<h3 id="jsr">JSR</h3>
+<p>0100 1 PCoffset11
+作用：跳转，并且把之前的PC保存在R7</p>
+<h3 id="jsrr">JSRR</h3>
+<p>0100 0 00 BaseR 000000
+作用：根据BaseR的值跳转，并且把PC的值保存在R7</p>
+<h3 id="ret">RET</h3>
+<p>1100 000 111 000000
+作用：把R7的值赋给PC</p>
+<h3 id="例子取负数">例子：取负数</h3>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Negate NOT R0,R0
+</span></span><span style="display:flex;"><span>ADD R0,R0,<span style="">#</span><span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>RET 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>; call the subroutine to compute R4<span style="color:#666">=-</span>R3
+</span></span><span style="display:flex;"><span>AND R0,R0,<span style="">#</span><span style="color:#666">0</span> ; let R0<span style="color:#666">=</span><span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>ADD R0,R0,R3 ; let R0<span style="color:#666">=</span>R3
+</span></span><span style="display:flex;"><span>JSR Negate
+</span></span><span style="display:flex;"><span>AND R4,R4,<span style="">#</span><span style="color:#666">0</span> ; let R4<span style="color:#666">=</span><span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>ADD R4,R4,R0 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="如何使用">如何使用</h3>
+<p>Programmer must know</p>
+<ul>
+<li>Address: or at least a label that will be bound to its address</li>
+<li>Function: what it does
+<ul>
+<li>NOTE: The programmer does not need to know how the subroutine works, but what changes are visible in the machine’s state after the routine has run</li>
+</ul>
+</li>
+<li>Arguments: what they are and where they are placed</li>
+<li>Return values: what they are and where they are placed</li>
+</ul>
+<h3 id="调用时的信息传递">调用时的信息传递</h3>
+<p>Argument(s)</p>
+<ul>
+<li>Value passed in to a subroutine is called an argument</li>
+<li>This is a value needed by the subroutine to do its job</li>
+<li>Examples</li>
+<li>TwosComp: R0 is number to be negated</li>
+<li>OUT: R0 is character to be printed</li>
+<li>PUTS: R0 is address of string to be printed</li>
+</ul>
+<p>传递方法：
+How?
+In registers (simple, fast, but limited number)
+In memory (many, but awkward, expensive)
+Both</p>
+<p>寄存器和内存进行传递参数</p>
+<p>Return Values</p>
+<ul>
+<li>A value passed out of a subroutine is called a return value</li>
+<li>This is the value that you called the subroutine to compute</li>
+</ul>
+<p>How?
+Registers, memory, or both
+Single return value in register most common
+通常，采用寄存器保存返回值</p>
+<h3 id="caller-save-and-caller-save">caller-save and caller-save</h3>
+<p>在调用和返回的过程中势必会对寄存器产生修改，那么如何分配保存与恢复现场的责任呢？
+一般有两种办法：
+caller-save和callee-save
+即责任在谁？
+caller-save要求调用者来保存相关的寄存器的信息，并且恢复现场。
+callee-save要求被调用者来存在相关的信息并且恢复现场。</p>
+<p>一般都采用callee-save，只有对于函数返回值R7采用的是caller-save</p>
+<p>Generally use “callee-save” strategy, except for return values
+Same as trap service routines
+Save anything that subroutine alters internally that shouldn’t be visible when the subroutine returns
+Restore incoming arguments to original values (unless overwritten by return value)</p>
+<p>Remember
+<strong>You MUST save R7 if you call any other subroutine or trap</strong>
+Otherwise, you won’t be able to return!</p>
+<h2 id="chapter8-2-memory-model-for-program-execution--the-stack">Chapter8-2 Memory Model for Program Execution &amp; the Stack</h2>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-12-19</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/linklist/">
+			Next<br>链表 笔记
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/yahang/">
+			Previous<br>压行技巧
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#chapter8-1-subroutines" class="nav-chapter8-1-subroutines">
+									Chapter8-1 Subroutines
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#adt-abstract-data-types" class="nav-adt-abstract-data-types">
+									ADT Abstract Data Types
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#subroutine" class="nav-subroutine">
+									Subroutine
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e5%85%b3%e7%9a%84%e6%8c%87%e4%bb%a4" class="nav-相关的指令">
+									相关的指令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#jsr" class="nav-jsr">
+									JSR
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#jsrr" class="nav-jsrr">
+									JSRR
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ret" class="nav-ret">
+									RET
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%be%8b%e5%ad%90%e5%8f%96%e8%b4%9f%e6%95%b0" class="nav-例子取负数">
+									例子：取负数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" class="nav-如何使用">
+									如何使用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%b0%83%e7%94%a8%e6%97%b6%e7%9a%84%e4%bf%a1%e6%81%af%e4%bc%a0%e9%80%92" class="nav-调用时的信息传递">
+									调用时的信息传递
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#caller-save-and-caller-save" class="nav-caller-save-and-caller-save">
+									caller-save and caller-save
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#chapter8-2-memory-model-for-program-execution--the-stack" class="nav-chapter8-2-memory-model-for-program-execution--the-stack">
+									Chapter8-2 Memory Model for Program Execution &amp; the Stack
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

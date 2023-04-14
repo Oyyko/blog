@@ -24,7 +24,8 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
 
 
   
@@ -32,26 +33,24 @@
 
 
 
-
-
-<link rel="stylesheet" href="https://blog.oyyko.com/scss/journal.min.515c30ecf3c29d38460d1d5f3d6bf827d37ad9fb53a5d0fc576470d5584a7910.css" integrity="sha256-UVww7PPCnThGDR1fPWv4J9N62ftTpdD8V2Rw1VhKeRA=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://blog.oyyko.com/scss/dark-mode.min.8182a9dc2ec0dbc4e593e2e45259f55a55c655174e6e4ef104d143c2ea55cfba.css" integrity="sha256-gYKp3C7A28Tlk&#43;LkUln1WlXGVRdObk7xBNFDwupVz7o=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab");
-</script>
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
 
 
 
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
 
 
 
-  <script src="/js/toc.js"></script>
+
+
 
 
 
@@ -68,128 +67,7 @@
 
 </head>
 <body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://blog.oyyko.com">
-    
-        <div class="nav-title">
-            Oyyko&#39;s Blog
-        </div>
-        
-        <div class="nav-subtitle">
-            Being towards death
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about">
-                About
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/life">
-                :Life
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/coding">
-                :Coding
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories/study">
-                :Study
-            </a>
-            
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2022 Oyyko&#39;s Blog
-	
-
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
     <div class="drawer-content">
         <div class="drawer-menu">
@@ -225,36 +103,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <a class="a-block drawer-menu-item false" href="/about">
                     About
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/life">
-                    :Life
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/coding">
-                    :Coding
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories/study">
-                    :Study
                 </a>
                 
             
@@ -324,10 +172,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                         
 
                         
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/coding">Coding</a>
-                                &nbsp;
-                        
 
                         
                             <i class="material-icons" style="">label</i>
@@ -351,7 +195,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <div class="post-body" v-pre>
                 
-                    <p>Recently I&rsquo;ve switched my code completion tool in VScode from Microsoft&rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.</p>
+                    <p>Recently I&rsquo;ve switched my code completion tool in VScode from Microsoft&rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company (Bytedance).</p>
 <p>I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.</p>
 <p>Now, there is a problem. I installed clangd, switched over and everything worked fine. But when I use string_view, clangd told me it didn&rsquo;t recognize this thing. I quickly realized that this is due to the fact that the default Cpp version of clangd is still 14. So changing its default version became something I had to do.</p>
 <p>I googled but didn&rsquo;t find any useful information.</p>
@@ -361,8 +205,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 and write the following information</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">CompileFlags</span>:<span style="color:#bbb"> 
@@ -382,13 +226,13 @@ and write the following information</p>
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="https://blog.oyyko.com/posts/revisit_os/">
+                <a class="newer-posts" href="/posts/revisit_os/">
 			Next<br>Revisit_OS
                 </a>
                 
                 
                 
-                <a class="older-posts" href="https://blog.oyyko.com/about/">
+                <a class="older-posts" href="/about/">
 			Previous<br>About
                 </a>
                 
@@ -414,13 +258,109 @@ and write the following information</p>
         async>
 </script>
 
+
+
             </div>
         </div>
     </div>
 
 
                     </div>
-            </div><div id="single-column-footer">
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -433,6 +373,5 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
             </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+    <script src="/js/journal.js"></script></body>
 </html>

@@ -2,7 +2,6 @@
 title: "Value_categories_in_Cpp"
 date: 2022-08-23T15:20:51+08:00
 tags: [Cpp]
-categories: Study
 ---
 
 ## Intro
@@ -45,7 +44,7 @@ a.m, the member of object expression, where a is an rvalue and m is a non-static
 The most useful example to help you understand XVALUE is: Temporary materialization.
 
 ```cpp
-struct S { int m; };
+struct S { int m; }; 
 int i = S().m; // member access expects glvalue as of C++17;
                // S() prvalue is converted to xvalue
 ```

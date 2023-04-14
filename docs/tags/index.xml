@@ -51,5 +51,113 @@
       <description></description>
     </item>
     
+    <item>
+      <title>bash</title>
+      <link>https://blog.oyyko.com/tags/bash/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Link</title>
+      <link>https://blog.oyyko.com/tags/link/</link>
+      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://blog.oyyko.com/tags/algorithm/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>https://blog.oyyko.com/tags/latex/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ICS</title>
+      <link>https://blog.oyyko.com/tags/ics/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/ics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://blog.oyyko.com/tags/math/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Number_Theory</title>
+      <link>https://blog.oyyko.com/tags/number_theory/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/number_theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leetcode</title>
+      <link>https://blog.oyyko.com/tags/leetcode/</link>
+      <pubDate>Tue, 30 Nov 2021 15:20:51 +0800</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IDE</title>
+      <link>https://blog.oyyko.com/tags/ide/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BUG</title>
+      <link>https://blog.oyyko.com/tags/bug/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Translation</title>
+      <link>https://blog.oyyko.com/tags/translation/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/translation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://blog.oyyko.com/tags/c/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/c/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

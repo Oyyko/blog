@@ -12,7 +12,7 @@
       <pubDate>Sun, 07 Aug 2022 21:49:29 +0800</pubDate>
       
       <guid>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</guid>
-      <description>Recently I&amp;rsquo;ve switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company.
+      <description>Recently I&amp;rsquo;ve switched my code completion tool in VScode from Microsoft&amp;rsquo;s official plugin to clangd. On the one hand, clangd can provide a better user experience, on the other hand, I also use this plugin in my company (Bytedance).
 I joked to myself: Two of the most interesting things I learned when I interned at the company were that indentation changed from four spaces to two, and braces changed from wrap to no wrap.</description>
     </item>
     

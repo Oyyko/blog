@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html><head>
+<title>数论笔记</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#4k3%e5%9e%8b%e7%b4%a0%e6%95%b0" class="nav-4k3型素数">
+									4k&#43;3型素数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%b8%80" class="nav-命题一">
+									命题一
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e" class="nav-证明">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%ba%8c" class="nav-命题二">
+									命题二
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-1" class="nav-证明-1">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#4k1%e5%9e%8b%e7%b4%a0%e6%95%b0" class="nav-4k1型素数">
+									4k&#43;1型素数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%b8%80-1" class="nav-命题一-1">
+									命题一
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-2" class="nav-证明-2">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%ba%8c-1" class="nav-命题二-1">
+									命题二
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-3" class="nav-证明-3">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    数论笔记
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-12-06 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/math">Math</a>
+                                &nbsp;
+                            
+                                <a href="/tags/number_theory">Number_Theory</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>本文是我的数论笔记的第一篇
+关于:4k+1型和4k+3型素数</p>
+<h2 id="4k3型素数">4k+3型素数</h2>
+<h3 id="命题一">命题一</h3>
+<p>$$
+a^2\equiv-1\mod p
+$$</p>
+<p>无解</p>
+<h3 id="证明">证明</h3>
+<p>假设有解，即存在$a$使得</p>
+<p>$$
+a^2\equiv-1\mod p
+$$</p>
+<p>则不妨设$p=4k+3$</p>
+<p>由费马小定理得：</p>
+<p>$$
+a^{p-1}\equiv1\mod p
+$$</p>
+<p>但又有：</p>
+<p>$$
+a^{p-1}=a^{4k+2}=(a^2)^{2k+1}\equiv(-1)^{2k+1}\equiv-1\mod p
+$$</p>
+<p>则矛盾</p>
+<p>因此不存在</p>
+<h3 id="命题二">命题二</h3>
+<p>$4k+3$型的素数有无穷多个</p>
+<h3 id="证明-1">证明</h3>
+<p>假设只有有限个，易知不可能只有3是$4k+1$型素数。则记所有比3大的$4k+1$型素数为$p_1,p_2,\dots,p_k$</p>
+<p>构造一个数: $4p_1p_2\dots p_k+3$</p>
+<p>则这个数的任何一个素因子均不属于${p_i}$</p>
+<p>但由于这个数模4余3，则它的素因子不可能都模4余1，否则它也会模4余1</p>
+<p>因此它存在至少一个模4余3的素因子，且这个素因子不可能是3</p>
+<p>则与所有比3大的$4k+1$型素数为$p_1,p_2,\dots,p_k$矛盾,因为存在一个新的比3大的$4k+1$型素数</p>
+<h2 id="4k1型素数">4k+1型素数</h2>
+<h3 id="命题一-1">命题一</h3>
+<p>存在一个数$a$使得$a^2\equiv-1\mod p$成立</p>
+<h3 id="证明-2">证明</h3>
+<p>这个数字就是$(\frac{p-1}{2})!$</p>
+<p>其理由如下：</p>
+<p>设$p=4k+1$</p>
+<p>则由wilson定理得</p>
+<p>$$
+(p-1)!\equiv-1\mod p
+$$</p>
+<p>即</p>
+<p>$$
+(p-1)!=(4k)!=(2k)!\times(2k+1)(2k+2)\dots(2k+2k)
+$$</p>
+<p>$$
+=(2k)!\times(4k+1-2k)(4k+1-(2k-1))\dots(4k+1-1)
+$$</p>
+<p>$$
+=(2k)!\times(-2k)(-(2k-1))\dots(-1)\=(2k)!\times(2k)!\equiv-1\mod p
+$$</p>
+<p>从而原命题成立</p>
+<h3 id="命题二-1">命题二</h3>
+<p>存在无限多个$4k+1$型素数</p>
+<h3 id="证明-3">证明</h3>
+<p>假设只有有限个，记为$p_1,\dots,p_k$</p>
+<p>构造一个新的数：$(p_1p_2\dots p_k)^2+1$</p>
+<p>考虑任取这个数的一个素因子$p$，易知$p\notin{p_i}$</p>
+<p>则有$(p_1p_2\dots p_k)^2\equiv-1\mod p$</p>
+<p>从而$p$一定是$4k+1$型的素数</p>
+<p>从而矛盾</p>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-12-06</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/three-problem/">
+			Next<br>三道面试题
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/bisection/">
+			Previous<br>二分总结
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#4k3%e5%9e%8b%e7%b4%a0%e6%95%b0" class="nav-4k3型素数">
+									4k&#43;3型素数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%b8%80" class="nav-命题一">
+									命题一
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e" class="nav-证明">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%ba%8c" class="nav-命题二">
+									命题二
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-1" class="nav-证明-1">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#4k1%e5%9e%8b%e7%b4%a0%e6%95%b0" class="nav-4k1型素数">
+									4k&#43;1型素数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%b8%80-1" class="nav-命题一-1">
+									命题一
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-2" class="nav-证明-2">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e9%a2%98%e4%ba%8c-1" class="nav-命题二-1">
+									命题二
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%af%81%e6%98%8e-3" class="nav-证明-3">
+									证明
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

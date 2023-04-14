@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html><head>
+<title>The language UNIMODAL is not context free</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#proposition-onebinary-equal" class="nav-proposition-onebinary-equal">
+									proposition one:“BINARY EQUAL”：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#proposition-twobinary-bigger" class="nav-proposition-twobinary-bigger">
+									proposition two:“BINARY BIGGER”:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#proposition-threeunimodal" class="nav-proposition-threeunimodal">
+									proposition three:“UNIMODAL”:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    The language UNIMODAL is not context free
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-10-06 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>In this article, we will prove that: the language &lsquo;UNIMODAL&rsquo; is not cfg. Also, we will prove that cfg can not be used to compare binary number.</p>
+<h2 id="proposition-onebinary-equal">proposition one:&ldquo;BINARY EQUAL&rdquo;：</h2>
+<p>Alphabet：{S,0,1}</p>
+<p>language BINARY_EQUAL：string such as ${(0|1)^* S (0|1)^*}$，AND the binary number before &lsquo;#&rsquo; is equal to the the latter one.</p>
+<p>statement： BINARY_EQUAL is not context free grammar</p>
+<p>Prove: Assume that BINARY_EQUAL is cfl(context free language), then use the pump lemma.</p>
+<p>For a string s=&ldquo;xxxx&hellip;xxxx#yyyy&hellip;yyyy&rdquo;</p>
+<p>$$
+\exists uvwxy, \text{such that} \ s=uvwxy\ ,\text{and}\ \ \forall i\ge 0, uv^iwx^iy\in \mathbb{BINARY_EQUAL}
+$$</p>
+<p>We choose a special string: $s=1^k0^kS0^k1^k$, so when k is large enough, the v and x must be different. Hence, the pumped string is not BINARY_EQUAL. So the proposition is right.</p>
+<h2 id="proposition-twobinary-bigger">proposition two:&ldquo;BINARY BIGGER&rdquo;:</h2>
+<p>Alphabet：{S,0,1}
+language BINARY_EQUAL：string such as ${(0|1)^* S (0|1)^*}$，AND the binary number before &lsquo;#&rsquo; is <strong>BIGGER</strong> to the the latter one.
+statement： BINARY_BIGGER is not context free grammar</p>
+<p>Prove: Assume that BINARY_BIGGER is cfl, use the pump lemma for the string $1^k0^{k-1}1S1^k0^k$.</p>
+<p>If v and x are both in the left number, the pump down it.(pump down means that we choose the $i$ in the pump lemma as 0. a.k.a $i=0$) then the digits of left num is 2k-2, while the right is 2k, so the right number is bigger than the left.</p>
+<p>If v and x are both in the right number, just choose i as much as you need. Then the right is obvious larger than the left.</p>
+<p>If v and x are in different sides:
+(1) If v is &lsquo;1&rsquo; and x is &lsquo;1&rsquo;,pump down it. Then two num should be equal
+(2) If v is &lsquo;00&hellip;1&rsquo;, and x is &lsquo;11&hellip;1&rsquo; then pump up it and the right num should be larger.</p>
+<p>So, the proposition is true.</p>
+<h2 id="proposition-threeunimodal">proposition three:&ldquo;UNIMODAL&rdquo;:</h2>
+<p>Alphabet：{S,0,1}
+language UNIMODAL：string such as ${(0|1)^* S (0|1)^<em>(S(0|1)^</em>)^*}$. This string will be considered as an array of binary number. And when and only when the array is UNIMODAL. The string belongs to the language.</p>
+<p>For example: 1 3 5 3 1 is a unimodal array. The form in binary is 1#11#101#11#1. So the string &lsquo;1#11#101#11#1&rsquo; is unimodal.
+statement： UNIMODAL is not context free grammar</p>
+<p>Prove: use pump lemma. s=uvwxy. Let s be &lsquo;$1^K0^KS1^K0^KS1^K0^KS1^K0^KS1^K0^K$&rsquo;, Actually, we need $1^K0^KS1^K0^K(S1^K0^K)^k$. Because every num in this array is equal. It&rsquo;s a UNIMODAL string. And if v and x belongs to one num, then pump down it. We get a decrease then increase, hence a controdiction.</p>
+<p>And if v and x belongs to different num. Then v is &lsquo;000&hellip;&rsquo;, x is &lsquo;111&hellip;&rsquo;,(because we let the k be large enough). Hence,we pump down, we we will get a decrease and then increase and then decrease. Controdiction!</p>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-10-06</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/ics1/">
+			Next<br>ICS Note 1
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/vscode/">
+			Previous<br>VSCODE 使用笔记
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#proposition-onebinary-equal" class="nav-proposition-onebinary-equal">
+									proposition one:“BINARY EQUAL”：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#proposition-twobinary-bigger" class="nav-proposition-twobinary-bigger">
+									proposition two:“BINARY BIGGER”:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#proposition-threeunimodal" class="nav-proposition-threeunimodal">
+									proposition three:“UNIMODAL”:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

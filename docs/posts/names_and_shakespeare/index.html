@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html><head>
+<title>name and shakespeare</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%8f%90%e9%97%ae%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9c%a8lambda-calculus%e9%87%8c%e9%9d%a2%e5%87%bd%e6%95%b0%e5%bf%85%e9%a1%bb%e6%98%af%e5%8c%bf%e5%90%8d%e7%9a%84" class="nav-提问为什么在lambda-calculus里面函数必须是匿名的">
+									提问：为什么在lambda calculus里面，函数必须是匿名的。
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%9e%e7%ad%94" class="nav-回答">
+									回答
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%af%84%e8%ae%ba" class="nav-评论">
+									评论
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    name and shakespeare
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-01-25 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/translation">Translation</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>匿名函数与莎士比亚大定理</p>
+<!-- raw HTML omitted -->
+<p>This article is translated from <a href="https://cs.stackexchange.com/questions/22497/why-is-it-important-for-functions-to-be-anonymous-in-lambda-calculus">Here</a></p>
+<h2 id="提问为什么在lambda-calculus里面函数必须是匿名的">提问：为什么在lambda calculus里面，函数必须是匿名的。</h2>
+<p>我正在观看一个Youtube视频，在这个视频里面，讲者介绍了Y组合子的概念。
+Y组合子概念产生的动机之一，正如讲者所述，是为了用lambda calculus来表示递归函数，以使得Church理论(任何能被实际上计算的东西都可以用lambda calculus来计算)保持成立。
+我的问题在于：为什么我们不能通过名字来简单的调用一个函数。例如日常生活中我们经常会写下这种式子：
+$$
+n(x,y)=x+y
+$$
+但是在lambda calculus里面我们不允许把这个函数与名字n相关联，我们只能匿名的定义它为
+$$
+(x,y)\rightarrow x+y
+$$
+为什么在lambda calculus里面我们不能拥有被命名的函数? 如果存在具名函数，我们会破坏什么准则? 或者仅仅是我搞错了视频的意思?</p>
+<h2 id="回答">回答</h2>
+<p>关于这个问题的主要结论来自一个十六世纪晚期的英国数学家，他叫莎士比亚。他最著名的关于这个问题的论文名为《罗密欧与茱丽叶》，在1597年发表。</p>
+<p>他的主要结论在第二幕的第二场景中阐明。即如下的著名定理：</p>
+<blockquote>
+<p>名称有什么关系呢?玫瑰不叫玫瑰,依然芳香如故!</p>
+</blockquote>
+<p>这个定理可以被直观的理解为&quot;名字对意义毫无帮助&quot;
+莎士比亚的论文的大部分内容是一个用来补充定理的例子，用以表明名字尽管名字没有任何意义，但它们却是无穷无尽的问题的根源。
+正如莎士比亚所指出的那样，名称可以在不改变含义的情况下进行更改，这一操作后来被丘奇及其追随者称为α转换。结果，如何确定名字表示的意义变成了造成了许许多多的问题。例如我们要发展“<strong>环境</strong>”的概念，在环境中名字-意义联系是确定的，并且发展出一系列的规则来辨别当前的环境。这使得计算机科学家们困惑了很长一段时间，引起了诸如臭名昭著的Funarg问题之类的技术难题。“环境”在许多流行的编程语言中仍然是个大问题，几乎和莎士比亚在其论文中提出的例子一样<strong>致命</strong>。
+这个问题也与形式语言理论中提出的问题接近，即必须将字母和形式系统定义为同构，以便强调字母符号是抽象实体，而与它们如何作为某些集合中的元素而“实现”无关。
+莎士比亚的主要结果也表明了科学随后即将与魔术和宗教告别。因为在魔术与宗教的世界里面，人们认为一个东西有它的“真名”。
+所有这一切的结论是：尽管名字可以方便人们的日常工作和生活，但是在理论研究中不被名字而困扰更为重要。
+记住：<strong>不是所有被叫做娘的都是你的母亲。</strong></p>
+<h3 id="评论">评论</h3>
+<p>最近，玫瑰正在被foobar所取代。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2021-01-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/grub/">
+			Next<br>Fix a grub bug
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/cpp1/">
+			Previous<br>C&#43;&#43; Note 1
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%8f%90%e9%97%ae%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9c%a8lambda-calculus%e9%87%8c%e9%9d%a2%e5%87%bd%e6%95%b0%e5%bf%85%e9%a1%bb%e6%98%af%e5%8c%bf%e5%90%8d%e7%9a%84" class="nav-提问为什么在lambda-calculus里面函数必须是匿名的">
+									提问：为什么在lambda calculus里面，函数必须是匿名的。
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%9e%e7%ad%94" class="nav-回答">
+									回答
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%af%84%e8%ae%ba" class="nav-评论">
+									评论
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2022 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
