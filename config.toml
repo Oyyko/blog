@@ -42,5 +42,5 @@ weight = 1
     lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "emacs"
+    style = "doom-one"
     tabWidth = 4
