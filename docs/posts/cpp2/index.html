@@ -41,11 +41,11 @@
     
     <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
 
 
 <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab|Special+Elite">
 
 
 
@@ -638,140 +638,140 @@ My Second C++ Note;</p>
 <p><code>vector.clear()</code>并不释放数组，其会调用<code>data[0]...data[size-1]</code>的析构函数。
 <code>vector</code>在析构的时候会先调用<code>clear()</code>然后释放数组
 例如</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> x{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">4</span>};
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> x.capacity() <span style="color:#666">&lt;&lt;</span> x.size() <span style="color:#666">&lt;&lt;</span> endl; <span style="color:#080;font-style:italic">// 3 3
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    x.push_back(<span style="color:#666">10</span>);
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> x.capacity() <span style="color:#666">&lt;&lt;</span> x.size() <span style="color:#666">&lt;&lt;</span> endl; <span style="color:#080;font-style:italic">// 6 4
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    x.clear();
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> x.capacity() <span style="color:#666">&lt;&lt;</span> x.size() <span style="color:#666">&lt;&lt;</span> endl; <span style="color:#080;font-style:italic">// 6 0
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">x</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">4</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">capacity</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">size</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">endl</span>; <span style="color:#8a93a5;font-style:italic">// 3 3
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>    <span style="color:#c1abea">x</span>.<span style="color:#c1abea">push_back</span>(<span style="color:#d19a66">10</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">capacity</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">size</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">endl</span>; <span style="color:#8a93a5;font-style:italic">// 6 4
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>    <span style="color:#c1abea">x</span>.<span style="color:#c1abea">clear</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">capacity</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">x</span>.<span style="color:#c1abea">size</span>() <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">endl</span>; <span style="color:#8a93a5;font-style:italic">// 6 0
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">21
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">World</span>
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">class</span> <span style="color:#76a9f9">World</span>
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
-</span></span><span style="display:flex;"><span>    World()
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">public</span><span style="color:#c7bf54">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">World</span>()
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;World()!</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;World()!</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>;
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#666">~</span>World()
+</span></span><span style="display:flex;"><span>    <span style="color:#c7bf54">~</span><span style="color:#c1abea">World</span>()
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;~World()!</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;~World()!</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span>World<span style="color:#666">&gt;</span> v(<span style="color:#666">3</span>);
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;AAA</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>;
-</span></span><span style="display:flex;"><span>    v.clear();
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;BBB</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#c1abea">World</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>(<span style="color:#d19a66">3</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;AAA</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">v</span>.<span style="color:#c1abea">clear</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;BBB</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个会输出</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>World<span style="color:#666">()</span>!
-</span></span><span style="display:flex;"><span>World<span style="color:#666">()</span>!
-</span></span><span style="display:flex;"><span>World<span style="color:#666">()</span>!
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>World<span style="color:#c7bf54">()</span>!
+</span></span><span style="display:flex;"><span>World<span style="color:#c7bf54">()</span>!
+</span></span><span style="display:flex;"><span>World<span style="color:#c7bf54">()</span>!
 </span></span><span style="display:flex;"><span>AAA
-</span></span><span style="display:flex;"><span>~World<span style="color:#666">()</span>!
-</span></span><span style="display:flex;"><span>~World<span style="color:#666">()</span>!
-</span></span><span style="display:flex;"><span>~World<span style="color:#666">()</span>!
+</span></span><span style="display:flex;"><span>~World<span style="color:#c7bf54">()</span>!
+</span></span><span style="display:flex;"><span>~World<span style="color:#c7bf54">()</span>!
+</span></span><span style="display:flex;"><span>~World<span style="color:#c7bf54">()</span>!
 </span></span><span style="display:flex;"><span>BBB
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="clear-and-minimize">clear and minimize</h2>
 <h3 id="before-c11">Before C++11</h3>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>,<span style="color:#666">4</span>,<span style="color:#666">5</span>};
-</span></span><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> temp;
-</span></span><span style="display:flex;"><span>v.swap(temp);
-</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// to make the capacity and size of v to be both 0
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>,<span style="color:#d19a66">2</span>,<span style="color:#d19a66">3</span>,<span style="color:#d19a66">4</span>,<span style="color:#d19a66">5</span>};
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">temp</span>;
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">v</span>.<span style="color:#c1abea">swap</span>(<span style="color:#c1abea">temp</span>);
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// to make the capacity and size of v to be both 0
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="after-c11">After C++11</h3>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>,<span style="color:#666">4</span>,<span style="color:#666">5</span>};
-</span></span><span style="display:flex;"><span>v.clear();
-</span></span><span style="display:flex;"><span>v.shrink_to_fit();<span style="color:#080;font-style:italic">// to make the capacity == size
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>,<span style="color:#d19a66">2</span>,<span style="color:#d19a66">3</span>,<span style="color:#d19a66">4</span>,<span style="color:#d19a66">5</span>};
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">v</span>.<span style="color:#c1abea">clear</span>();
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">v</span>.<span style="color:#c1abea">shrink_to_fit</span>();<span style="color:#8a93a5;font-style:italic">// to make the capacity == size
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="partition">partition()</h2>
 <p>按照规则进行进行分组
 返回分出的第二组的首位的迭代器</p>
 <p>例如</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>, <span style="color:#666">5</span>, <span style="color:#666">6</span>, <span style="color:#666">7</span>};
-</span></span><span style="display:flex;"><span>    partition(v.begin(), v.end(), [](<span style="color:#0b0;font-weight:bold">int</span> x)
-</span></span><span style="display:flex;"><span>              { <span style="color:#a2f;font-weight:bold">return</span> x <span style="color:#666">%</span> <span style="color:#666">2</span> <span style="color:#666">==</span> <span style="color:#666">0</span>; });
-</span></span><span style="display:flex;"><span>    pr(v);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>, <span style="color:#d19a66">4</span>, <span style="color:#d19a66">5</span>, <span style="color:#d19a66">6</span>, <span style="color:#d19a66">7</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">partition</span>(<span style="color:#c1abea">v</span>.<span style="color:#c1abea">begin</span>(), <span style="color:#c1abea">v</span>.<span style="color:#c1abea">end</span>(), [](<span style="color:#ef8383">int</span> <span style="color:#c1abea">x</span>)
+</span></span><span style="display:flex;"><span>              { <span style="color:#c678dd">return</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">%</span> <span style="color:#d19a66">2</span> <span style="color:#c7bf54">==</span> <span style="color:#d19a66">0</span>; });
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">pr</span>(<span style="color:#c1abea">v</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>得到
@@ -781,16 +781,16 @@ My Second C++ Note;</p>
 可能会打乱顺序</p>
 <p>对于不想打乱顺序的，使用<code>stable_partition()</code></p>
 <h2 id="partial_sort">partial_sort()</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">partial_sort</span> (RandomAccessIterator first,
-</span></span><span style="display:flex;"><span>                   RandomAccessIterator middle,
-</span></span><span style="display:flex;"><span>                   RandomAccessIterator last);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">partial_sort</span> (<span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#c1abea">first</span>,
+</span></span><span style="display:flex;"><span>                   <span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#c1abea">middle</span>,
+</span></span><span style="display:flex;"><span>                   <span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#c1abea">last</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>partial_sort() 会将 [first, last) 范围内最小（或最大）的 middle-first 个元素移动到 [first, middle) 区域中，并对这部分元素做升序（或降序）排序。</p>
@@ -800,20 +800,20 @@ My Second C++ Note;</p>
 partial_sort() 函数在实现过程中，需要交换某些元素的存储位置。因此，如果容器中存储的是自定义的类对象，则该类的内部必须提供移动构造函数和移动赋值运算符。</p>
 <h2 id="partial_sort_copy">partial_sort_copy()</h2>
 <p>partial_sort_copy() 函数的功能和 partial_sort() 类似，唯一的区别在于，前者不会对原有数据做任何变动，而是先将选定的部分元素拷贝到另外指定的数组或容器中，然后再对这部分元素进行排序。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>RandomAccessIterator <span style="color:#00a000">partial_sort_copy</span> (
-</span></span><span style="display:flex;"><span>                       InputIterator first,
-</span></span><span style="display:flex;"><span>                       InputIterator last,
-</span></span><span style="display:flex;"><span>                       RandomAccessIterator result_first,
-</span></span><span style="display:flex;"><span>                       RandomAccessIterator result_last);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#00b1f7">partial_sort_copy</span> (
+</span></span><span style="display:flex;"><span>                       <span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">first</span>,
+</span></span><span style="display:flex;"><span>                       <span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">last</span>,
+</span></span><span style="display:flex;"><span>                       <span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#c1abea">result_first</span>,
+</span></span><span style="display:flex;"><span>                       <span style="color:#c1abea">RandomAccessIterator</span> <span style="color:#c1abea">result_last</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>partial_sort_copy() 函数会将 [first, last) 范围内最小（或最大）的 result_last-result_first 个元素复制到 [result_first, result_last) 区域中，并对该区域的元素做升序（或降序）排序。</p>
@@ -827,62 +827,62 @@ partial_sort() 函数在实现过程中，需要交换某些元素的存储位�
 </ul>
 <p>简单的理解 nth_element() 函数的功能，当采用默认的升序排序规则（std::less<!-- raw HTML omitted -->）时，该函数可以从某个序列中找到第 n 小的元素 K，并将 K 移动到序列中第 n 的位置处。不仅如此，整个序列经过 nth_element() 函数处理后，所有位于 K 之前的元素都比 K 小，所有位于 K 之后的元素都比 K 大。</p>
 <h2 id="is_sorted">is_sorted()</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//判断 [first, last) 区域内的数据是否符合 std::less&lt;T&gt; 排序规则，即是否为升序序列
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">is_sorted</span> (ForwardIterator first, ForwardIterator last);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">//判断 [first, last) 区域内的数据是否符合 std::less&lt;T&gt; 排序规则，即是否为升序序列
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#ef8383">bool</span> <span style="color:#00b1f7">is_sorted</span> (<span style="color:#c1abea">ForwardIterator</span> <span style="color:#c1abea">first</span>, <span style="color:#c1abea">ForwardIterator</span> <span style="color:#c1abea">last</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="is_sorted_until">is_sorted_until()</h2>
 <p>和 is_sorted() 函数相比，is_sorted_until() 函数不仅能检测出某个序列是否有序，还会返回一个正向迭代器，该迭代器指向的是当前序列中第一个破坏有序状态的元素。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>ForwardIterator <span style="color:#00a000">is_sorted_until</span> (ForwardIterator first, ForwardIterator last);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">ForwardIterator</span> <span style="color:#00b1f7">is_sorted_until</span> (<span style="color:#c1abea">ForwardIterator</span> <span style="color:#c1abea">first</span>, <span style="color:#c1abea">ForwardIterator</span> <span style="color:#c1abea">last</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="merge">merge()</h2>
 <p>merge() 函数用于将 2 个有序序列合并为 1 个有序序列，前提是这 2 个有序序列的排序规则相同（要么都是升序，要么都是降序）。并且最终借助该函数获得的新有序序列，其排序规则也和这 2 个有序序列相同。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>OutputIterator <span style="color:#00a000">merge</span> (InputIterator1 first1, InputIterator1 last1,
-</span></span><span style="display:flex;"><span>                      InputIterator2 first2, InputIterator2 last2,
-</span></span><span style="display:flex;"><span>                      OutputIterator result);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">OutputIterator</span> <span style="color:#00b1f7">merge</span> (<span style="color:#c1abea">InputIterator1</span> <span style="color:#c1abea">first1</span>, <span style="color:#c1abea">InputIterator1</span> <span style="color:#c1abea">last1</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#c1abea">InputIterator2</span> <span style="color:#c1abea">first2</span>, <span style="color:#c1abea">InputIterator2</span> <span style="color:#c1abea">last2</span>,
+</span></span><span style="display:flex;"><span>                      <span style="color:#c1abea">OutputIterator</span> <span style="color:#c1abea">result</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="inplace_merge">inplace_merge()</h2>
 <p>事实上，当 2 个有序序列存储在同一个数组或容器中时，如果想将它们合并为 1 个有序序列，除了使用 merge() 函数，更推荐使用 inplace_merge() 函数。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//默认采用升序的排序规则
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">inplace_merge</span> (BidirectionalIterator first, BidirectionalIterator middle,
-</span></span><span style="display:flex;"><span>                    BidirectionalIterator last);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">//默认采用升序的排序规则
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">inplace_merge</span> (<span style="color:#c1abea">BidirectionalIterator</span> <span style="color:#c1abea">first</span>, <span style="color:#c1abea">BidirectionalIterator</span> <span style="color:#c1abea">middle</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#c1abea">BidirectionalIterator</span> <span style="color:#c1abea">last</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中，first、middle 和 last 都为双向迭代器，[first, middle) 和 [middle, last) 各表示一个有序序列。</p>
 <h2 id="find-find_if">find() find_if()</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>InputIterator <span style="color:#00a000">find</span> (InputIterator first, InputIterator last, <span style="color:#a2f;font-weight:bold">const</span> T<span style="color:#666">&amp;</span> val);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">InputIterator</span> <span style="color:#00b1f7">find</span> (<span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">first</span>, <span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">last</span>, <span style="color:#c678dd">const</span> <span style="color:#c1abea">T</span><span style="color:#c7bf54">&amp;</span> <span style="color:#c1abea">val</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>find() 函数本质上是一个模板函数，用于在指定范围内查找和目标元素值相等的第一个元素。
@@ -890,12 +890,12 @@ partial_sort() 函数在实现过程中，需要交换某些元素的存储位�
 值得一提的是，find() 函数的底层实现，其实就是用<code>==</code>运算符将 val 和 [first, last) 区域内的元素逐个进行比对。这也就意味着，[first, last) 区域内的元素必须支持<code>==</code>运算符。</p>
 <hr>
 <p>和 find() 函数相同，find_if() 函数也用于在指定区域内执行查找操作。不同的是，前者需要明确指定要查找的元素的值，而后者则允许自定义查找规则。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>InputIterator <span style="color:#00a000">find_if</span> (InputIterator first, InputIterator last, UnaryPredicate pred);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">InputIterator</span> <span style="color:#00b1f7">find_if</span> (<span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">first</span>, <span style="color:#c1abea">InputIterator</span> <span style="color:#c1abea">last</span>, <span style="color:#c1abea">UnaryPredicate</span> <span style="color:#c1abea">pred</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="find_end与search">find_end()与search()</h2>
@@ -913,38 +913,38 @@ count_if(): 满足pred的个数</p>
 <p>分别等价于transform,copy_if,accumulate</p>
 <p>用法：</p>
 <h4 id="copy_if">copy_if</h4>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>, <span style="color:#666">5</span>, <span style="color:#666">6</span>, <span style="color:#666">7</span>};
-</span></span><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> vv;
-</span></span><span style="display:flex;"><span>copy_if(begin(v), end(v), inserter(vv,begin(vv)), [](<span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>x)
-</span></span><span style="display:flex;"><span>            { <span style="color:#a2f;font-weight:bold">return</span> x <span style="color:#666">%</span> <span style="color:#666">2</span> <span style="color:#666">==</span> <span style="color:#666">0</span>; });
-</span></span><span style="display:flex;"><span>pr(vv);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>, <span style="color:#d19a66">4</span>, <span style="color:#d19a66">5</span>, <span style="color:#d19a66">6</span>, <span style="color:#d19a66">7</span>};
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">vv</span>;
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">copy_if</span>(<span style="color:#c1abea">begin</span>(<span style="color:#c1abea">v</span>), <span style="color:#c1abea">end</span>(<span style="color:#c1abea">v</span>), <span style="color:#c1abea">inserter</span>(<span style="color:#c1abea">vv</span>,<span style="color:#c1abea">begin</span>(<span style="color:#c1abea">vv</span>)), [](<span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>)
+</span></span><span style="display:flex;"><span>            { <span style="color:#c678dd">return</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">%</span> <span style="color:#d19a66">2</span> <span style="color:#c7bf54">==</span> <span style="color:#d19a66">0</span>; });
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">pr</span>(<span style="color:#c1abea">vv</span>);
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>注意：这里使用<code>inserter</code>来创建了插入迭代器，从而实现向v2里面插入元素的功能</p>
 <p>类似的</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>};
-</span></span><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> cc{<span style="color:#666">11</span>, <span style="color:#666">22</span>, <span style="color:#666">33</span>, <span style="color:#666">44</span>};
-</span></span><span style="display:flex;"><span>    copy_if(v.begin(), v.end(), back_inserter(cc), [](<span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>x)
-</span></span><span style="display:flex;"><span>            { <span style="color:#a2f;font-weight:bold">return</span> x <span style="color:#666">%</span> <span style="color:#666">2</span> <span style="color:#666">==</span> <span style="color:#666">0</span>; });
-</span></span><span style="display:flex;"><span>    pr(cc);<span style="color:#080;font-style:italic">// 11 22 33 44 2
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">cc</span>{<span style="color:#d19a66">11</span>, <span style="color:#d19a66">22</span>, <span style="color:#d19a66">33</span>, <span style="color:#d19a66">44</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">copy_if</span>(<span style="color:#c1abea">v</span>.<span style="color:#c1abea">begin</span>(), <span style="color:#c1abea">v</span>.<span style="color:#c1abea">end</span>(), <span style="color:#c1abea">back_inserter</span>(<span style="color:#c1abea">cc</span>), [](<span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>)
+</span></span><span style="display:flex;"><span>            { <span style="color:#c678dd">return</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">%</span> <span style="color:#d19a66">2</span> <span style="color:#c7bf54">==</span> <span style="color:#d19a66">0</span>; });
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">pr</span>(<span style="color:#c1abea">cc</span>);<span style="color:#8a93a5;font-style:italic">// 11 22 33 44 2
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>这里使用<code>back_inserter</code>向后面追加元素</p>
@@ -952,58 +952,58 @@ count_if(): 满足pred的个数</p>
 <p>对容器里面的每个元素都做一次操作</p>
 <h3 id="accumulate">accumulate</h3>
 <p>迭代所有元素并做类似求和等操作</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>};
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> accumulate(v.begin(), v.end(), v[<span style="color:#666">0</span>], [](<span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>x, <span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>y)
-</span></span><span style="display:flex;"><span>                       { <span style="color:#a2f;font-weight:bold">return</span> x <span style="color:#666">*</span> y; });<span style="color:#080;font-style:italic">//will print 6
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">accumulate</span>(<span style="color:#c1abea">v</span>.<span style="color:#c1abea">begin</span>(), <span style="color:#c1abea">v</span>.<span style="color:#c1abea">end</span>(), <span style="color:#c1abea">v</span>[<span style="color:#d19a66">0</span>], [](<span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>, <span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">y</span>)
+</span></span><span style="display:flex;"><span>                       { <span style="color:#c678dd">return</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">*</span> <span style="color:#c1abea">y</span>; });<span style="color:#8a93a5;font-style:italic">//will print 6
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>注意:当我们把accumulate作用在monoid上面的时候，要把第三个参数，即初始值设置为幺元.这有时候比较烦人。
 那么，当我们已经确定了所处理的容器不会是空的的时候，可以这么写</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>};
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> accumulate(next(begin(v)), end(v), v[<span style="color:#666">0</span>], [](<span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>x, <span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>y)
-</span></span><span style="display:flex;"><span>                       { <span style="color:#a2f;font-weight:bold">return</span> x <span style="color:#666">+</span> y; });
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>, <span style="color:#d19a66">4</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">accumulate</span>(<span style="color:#c1abea">next</span>(<span style="color:#c1abea">begin</span>(<span style="color:#c1abea">v</span>)), <span style="color:#c1abea">end</span>(<span style="color:#c1abea">v</span>), <span style="color:#c1abea">v</span>[<span style="color:#d19a66">0</span>], [](<span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>, <span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">y</span>)
+</span></span><span style="display:flex;"><span>                       { <span style="color:#c678dd">return</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">+</span> <span style="color:#c1abea">y</span>; });
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>也就是把初始值设置为<code>v[0]</code>之后再累加剩余的元素即可。</p>
 <h2 id="unique">unique</h2>
 <p>unique() 算法可以在序列中原地移除重复的元素，这就要求被处理的序列必须是正向迭代器所指定的。在移除重复元素后，它会返回一个正向迭代器作为新序列的结束迭代器。可以提供一个函数对象作为可选的第三个参数，这个参数会定义一个用来代替 == 比较元素的方法。</p>
 <h2 id="for_each">for_each()</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> v{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>};
-</span></span><span style="display:flex;"><span>    for_each(v.begin(), v.end(), [](<span style="color:#a2f;font-weight:bold">auto</span> <span style="color:#666">&amp;</span>x)
-</span></span><span style="display:flex;"><span>             { x <span style="color:#666">=</span> x <span style="color:#666">*</span> <span style="color:#666">2</span>; });
-</span></span><span style="display:flex;"><span>    pr(v);<span style="color:#080;font-style:italic">//2 4 6
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> vv{<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>};
-</span></span><span style="display:flex;"><span>    for_each(vv.begin(), vv.end(), [](<span style="color:#a2f;font-weight:bold">auto</span> x)
-</span></span><span style="display:flex;"><span>             { x <span style="color:#666">=</span> x <span style="color:#666">*</span> <span style="color:#666">2</span>; });
-</span></span><span style="display:flex;"><span>    pr(v);<span style="color:#080;font-style:italic">//1 2 3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">v</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">for_each</span>(<span style="color:#c1abea">v</span>.<span style="color:#c1abea">begin</span>(), <span style="color:#c1abea">v</span>.<span style="color:#c1abea">end</span>(), [](<span style="color:#c678dd">auto</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>)
+</span></span><span style="display:flex;"><span>             { <span style="color:#c1abea">x</span> <span style="color:#c7bf54">=</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">*</span> <span style="color:#d19a66">2</span>; });
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">pr</span>(<span style="color:#c1abea">v</span>);<span style="color:#8a93a5;font-style:italic">//2 4 6
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">vector</span><span style="color:#c7bf54">&lt;</span><span style="color:#ef8383">int</span><span style="color:#c7bf54">&gt;</span> <span style="color:#c1abea">vv</span>{<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">for_each</span>(<span style="color:#c1abea">vv</span>.<span style="color:#c1abea">begin</span>(), <span style="color:#c1abea">vv</span>.<span style="color:#c1abea">end</span>(), [](<span style="color:#c678dd">auto</span> <span style="color:#c1abea">x</span>)
+</span></span><span style="display:flex;"><span>             { <span style="color:#c1abea">x</span> <span style="color:#c7bf54">=</span> <span style="color:#c1abea">x</span> <span style="color:#c7bf54">*</span> <span style="color:#d19a66">2</span>; });
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">pr</span>(<span style="color:#c1abea">v</span>);<span style="color:#8a93a5;font-style:italic">//1 2 3
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>

@@ -41,11 +41,11 @@
     
     <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
 
 
 <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab|Special+Elite">
 
 
 
@@ -264,41 +264,41 @@
                 
                     <p>C++ 笔记4</p>
 <h2 id="引用与重载">引用与重载</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080">#include</span> <span style="color:#080">&lt;iostream&gt;</span><span style="color:#080">
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">using</span> <span style="color:#a2f;font-weight:bold">namespace</span> std;
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">f</span>(<span style="color:#0b0;font-weight:bold">double</span> x)
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#include</span> <span style="color:#8a93a5;font-style:italic">&lt;iostream&gt;</span><span style="color:#8a93a5;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#c678dd">using</span> <span style="color:#c678dd">namespace</span> <span style="color:#c1abea">std</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">f</span>(<span style="color:#ef8383">double</span> <span style="color:#c1abea">x</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;DOUBLE&#34;</span> <span style="color:#666">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;DOUBLE&#34;</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">endl</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">f</span>(<span style="color:#0b0;font-weight:bold">int</span> <span style="color:#666">&amp;</span>x)
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">f</span>(<span style="color:#ef8383">int</span> <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">x</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    cout <span style="color:#666">&lt;&lt;</span> <span style="color:#b44">&#34;INT&amp;&#34;</span> <span style="color:#666">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">cout</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#98c379">&#34;INT&amp;&#34;</span> <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#c1abea">endl</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    f(<span style="color:#666">2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">f</span>(<span style="color:#d19a66">2</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>

@@ -41,11 +41,11 @@
     
     <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
 
 
 <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab|Special+Elite">
 
 
 
@@ -447,199 +447,199 @@
 前者是指向一个长度为10的整型数组的<strong>指针</strong>
 后者是一个长度为10的(指向整型变量的指针)的<strong>数组</strong></p>
 <p>指针与数组的互换</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i<span style="color:#666">=</span><span style="color:#666">0</span>;i<span style="color:#666">&lt;</span><span style="color:#666">10</span>;<span style="color:#666">++</span>i)
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#c678dd">for</span>(<span style="color:#ef8383">int</span> <span style="color:#c1abea">i</span><span style="color:#c7bf54">=</span><span style="color:#d19a66">0</span>;<span style="color:#c1abea">i</span><span style="color:#c7bf54">&lt;</span><span style="color:#d19a66">10</span>;<span style="color:#c7bf54">++</span><span style="color:#c1abea">i</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    a[i]<span style="color:#666">=</span><span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">a</span>[<span style="color:#c1abea">i</span>]<span style="color:#c7bf54">=</span><span style="color:#d19a66">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">for</span> (<span style="color:#0b0;font-weight:bold">int</span> <span style="color:#666">*</span>p <span style="color:#666">=</span> a; p <span style="color:#666">!=</span> (a <span style="color:#666">+</span> <span style="color:#666">10</span>); <span style="color:#666">++</span>p)
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">for</span> (<span style="color:#ef8383">int</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">p</span> <span style="color:#c7bf54">=</span> <span style="color:#c1abea">a</span>; <span style="color:#c1abea">p</span> <span style="color:#c7bf54">!=</span> (<span style="color:#c1abea">a</span> <span style="color:#c7bf54">+</span> <span style="color:#d19a66">10</span>); <span style="color:#c7bf54">++</span><span style="color:#c1abea">p</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%d</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, <span style="color:#666">*</span>p);
+</span></span><span style="display:flex;"><span>    <span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%d</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#c7bf54">*</span><span style="color:#c1abea">p</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>  
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="c风格的字符串处理">C风格的字符串处理</h2>
 <h3 id="字符串的表示">字符串的表示</h3>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">char</span> s[<span style="color:#666">100</span>]<span style="color:#666">=</span><span style="color:#b44">&#34;Hello&#34;</span>;
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">char</span> <span style="color:#c1abea">s</span>[<span style="color:#d19a66">100</span>]<span style="color:#c7bf54">=</span><span style="color:#98c379">&#34;Hello&#34;</span>;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">char</span> <span style="color:#666">*</span>s<span style="color:#666">=</span><span style="color:#b44">&#34;Hello&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 这是一个特殊的行为
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 注意到int *x=2是完全错误的
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 但这个语句是对的
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 编译器会开辟一块内存来存放&#34;Hello&#34;并用s指向它
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 但注意：这个&#34;Hello&#34;是不可更改的
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// 例如下面的语句会出现错误
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>s[<span style="color:#666">1</span>]<span style="color:#666">=</span><span style="color:#b44">&#39;a&#39;</span>;
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">char</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">s</span><span style="color:#c7bf54">=</span><span style="color:#98c379">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 这是一个特殊的行为
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 注意到int *x=2是完全错误的
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 但这个语句是对的
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 编译器会开辟一块内存来存放&#34;Hello&#34;并用s指向它
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 但注意：这个&#34;Hello&#34;是不可更改的
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">// 例如下面的语句会出现错误
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#c1abea">s</span>[<span style="color:#d19a66">1</span>]<span style="color:#c7bf54">=</span><span style="color:#98c379">&#39;a&#39;</span>;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%c</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, <span style="color:#b44">&#34;abc&#34;</span>[<span style="color:#666">2</span>]);<span style="color:#080;font-style:italic">//输出c
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%s</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, <span style="color:#b44">&#34;abc&#34;</span><span style="color:#666">+</span><span style="color:#666">1</span>); <span style="color:#080;font-style:italic">//输出bc
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//此处的&#34;abc&#34;会被解释为指向char数组{&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;\0&#39;}的指针
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%c</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#98c379">&#34;abc&#34;</span>[<span style="color:#d19a66">2</span>]);<span style="color:#8a93a5;font-style:italic">//输出c
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%s</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#98c379">&#34;abc&#34;</span><span style="color:#c7bf54">+</span><span style="color:#d19a66">1</span>); <span style="color:#8a93a5;font-style:italic">//输出bc
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">//此处的&#34;abc&#34;会被解释为指向char数组{&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;\0&#39;}的指针
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">char</span> s[<span style="color:#666">100</span>]<span style="color:#666">=</span>{<span style="color:#b44">&#39;a&#39;</span>,<span style="color:#b44">&#39;b&#39;</span>,<span style="color:#b44">&#39;c&#39;</span>};
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">char</span> <span style="color:#c1abea">s</span>[<span style="color:#d19a66">100</span>]<span style="color:#c7bf54">=</span>{<span style="color:#98c379">&#39;a&#39;</span>,<span style="color:#98c379">&#39;b&#39;</span>,<span style="color:#98c379">&#39;c&#39;</span>};
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">char</span> <span style="color:#666">*</span>s <span style="color:#666">=</span> (<span style="color:#0b0;font-weight:bold">char</span> <span style="color:#666">*</span>)<span style="color:#00a000">malloc</span>(<span style="color:#a2f;font-weight:bold">sizeof</span>(<span style="color:#0b0;font-weight:bold">char</span>) <span style="color:#666">*</span> <span style="color:#666">10</span>);
-</span></span><span style="display:flex;"><span><span style="color:#666">*</span>s<span style="color:#666">++</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;a&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#666">*</span>s<span style="color:#666">++</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;b&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#666">*</span>s<span style="color:#666">++</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;c&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%s&#34;</span>, s <span style="color:#666">-</span> <span style="color:#666">2</span>); <span style="color:#080;font-style:italic">//输出bc
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%s&#34;</span>, s <span style="color:#666">-</span> <span style="color:#666">1</span>); <span style="color:#080;font-style:italic">//输出c
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#00a000">free</span>(s <span style="color:#666">-</span> <span style="color:#666">3</span>); <span style="color:#080;font-style:italic">//释放掉用malloc申请的内存
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">char</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">s</span> <span style="color:#c7bf54">=</span> (<span style="color:#ef8383">char</span> <span style="color:#c7bf54">*</span>)<span style="color:#00b1f7">malloc</span>(<span style="color:#c678dd">sizeof</span>(<span style="color:#ef8383">char</span>) <span style="color:#c7bf54">*</span> <span style="color:#d19a66">10</span>);
+</span></span><span style="display:flex;"><span><span style="color:#c7bf54">*</span><span style="color:#c1abea">s</span><span style="color:#c7bf54">++</span> <span style="color:#c7bf54">=</span> <span style="color:#98c379">&#39;a&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#c7bf54">*</span><span style="color:#c1abea">s</span><span style="color:#c7bf54">++</span> <span style="color:#c7bf54">=</span> <span style="color:#98c379">&#39;b&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#c7bf54">*</span><span style="color:#c1abea">s</span><span style="color:#c7bf54">++</span> <span style="color:#c7bf54">=</span> <span style="color:#98c379">&#39;c&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%s&#34;</span>, <span style="color:#c1abea">s</span> <span style="color:#c7bf54">-</span> <span style="color:#d19a66">2</span>); <span style="color:#8a93a5;font-style:italic">//输出bc
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%s&#34;</span>, <span style="color:#c1abea">s</span> <span style="color:#c7bf54">-</span> <span style="color:#d19a66">1</span>); <span style="color:#8a93a5;font-style:italic">//输出c
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#00b1f7">free</span>(<span style="color:#c1abea">s</span> <span style="color:#c7bf54">-</span> <span style="color:#d19a66">3</span>); <span style="color:#8a93a5;font-style:italic">//释放掉用malloc申请的内存
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>  
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="字符串拷贝">字符串拷贝</h3>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">23
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">strcpy1</span>(<span style="color:#0b0;font-weight:bold">char</span> <span style="color:#666">*</span>a, <span style="color:#0b0;font-weight:bold">char</span> <span style="color:#666">*</span>b) <span style="color:#080;font-style:italic">//把b赋给a
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">while</span> (<span style="color:#666">*</span>b)
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">strcpy1</span>(<span style="color:#ef8383">char</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">a</span>, <span style="color:#ef8383">char</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">b</span>) <span style="color:#8a93a5;font-style:italic">//把b赋给a
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">while</span> (<span style="color:#c7bf54">*</span><span style="color:#c1abea">b</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#666">*</span>a<span style="color:#666">++</span> <span style="color:#666">=</span> <span style="color:#666">*</span>b<span style="color:#666">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#c7bf54">*</span><span style="color:#c1abea">a</span><span style="color:#c7bf54">++</span> <span style="color:#c7bf54">=</span> <span style="color:#c7bf54">*</span><span style="color:#c1abea">b</span><span style="color:#c7bf54">++</span>;
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">while</span> (<span style="color:#666">*</span>a)
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">while</span> (<span style="color:#c7bf54">*</span><span style="color:#c1abea">a</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#666">*</span>a<span style="color:#666">++</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#c7bf54">*</span><span style="color:#c1abea">a</span><span style="color:#c7bf54">++</span> <span style="color:#c7bf54">=</span> <span style="color:#98c379">&#39;\0&#39;</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">char</span> a[<span style="color:#666">100</span>];
-</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">char</span> b[<span style="color:#666">100</span>];
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">while</span> (<span style="color:#666">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ef8383">char</span> <span style="color:#c1abea">a</span>[<span style="color:#d19a66">100</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#ef8383">char</span> <span style="color:#c1abea">b</span>[<span style="color:#d19a66">100</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">while</span> (<span style="color:#d19a66">1</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#00a000">scanf</span>(<span style="color:#b44">&#34;%s&#34;</span>, b);
-</span></span><span style="display:flex;"><span>        <span style="color:#00a000">strcpy1</span>(a, b);
-</span></span><span style="display:flex;"><span>        <span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%s</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, a);
+</span></span><span style="display:flex;"><span>        <span style="color:#00b1f7">scanf</span>(<span style="color:#98c379">&#34;%s&#34;</span>, <span style="color:#c1abea">b</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#00b1f7">strcpy1</span>(<span style="color:#c1abea">a</span>, <span style="color:#c1abea">b</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%s</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#c1abea">a</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="求值顺序">求值顺序</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%c%c%c</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>,<span style="color:#00a000">getchar</span>(),<span style="color:#00a000">getchar</span>(),<span style="color:#00a000">getchar</span>());
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%c%c%c</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>,<span style="color:#00b1f7">getchar</span>(),<span style="color:#00b1f7">getchar</span>(),<span style="color:#00b1f7">getchar</span>());
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>该语句在gcc编译器下的作用是：读入三个字符并倒序输出。
 因为gcc编译器的实现方法是从右向左求值</p>
 <h2 id="变量作用域">变量作用域</h2>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> x<span style="color:#666">=</span><span style="color:#666">2</span>;
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ef8383">int</span> <span style="color:#c1abea">x</span><span style="color:#c7bf54">=</span><span style="color:#d19a66">2</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%d&#34;</span>,x); <span style="color:#080;font-style:italic">//不会输出
+</span></span><span style="display:flex;"><span><span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%d&#34;</span>,<span style="color:#c1abea">x</span>); <span style="color:#8a93a5;font-style:italic">//不会输出
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> x<span style="color:#666">=</span><span style="color:#666">8</span>;
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#c1abea">x</span><span style="color:#c7bf54">=</span><span style="color:#d19a66">8</span>;
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> x<span style="color:#666">=</span><span style="color:#666">3</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%d&#34;</span>,x);<span style="color:#080;font-style:italic">// 输出3
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#ef8383">int</span> <span style="color:#c1abea">x</span><span style="color:#c7bf54">=</span><span style="color:#d19a66">3</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%d&#34;</span>,<span style="color:#c1abea">x</span>);<span style="color:#8a93a5;font-style:italic">// 输出3
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="用宏实现max函数">用宏实现max函数</h2>
@@ -665,20 +665,20 @@
 展开后为<code>i++ &gt; j++ ? i++ : j++</code>
 这会使得i与j都自增两次
 为此考虑这么定义宏</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080">#define MAX(x,y)({     \
-</span></span></span><span style="display:flex;"><span><span style="color:#080">    int _x = x;        \
-</span></span></span><span style="display:flex;"><span><span style="color:#080">    int _y = y;        \
-</span></span></span><span style="display:flex;"><span><span style="color:#080">    _x &gt; _y ? _x : _y; \
-</span></span></span><span style="display:flex;"><span><span style="color:#080">})
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#define MAX(x,y)({     \
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">    int _x = x;        \
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">    int _y = y;        \
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">    _x &gt; _y ? _x : _y; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">})
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>该宏会重新定义两个变量_x与_y来进行比较，从而使得MAX(i++,j++)符合要求。</p>
@@ -698,65 +698,65 @@
 <p>3.数组、函数可用于函数形参，但因为第1点，编译器会对其做处理。如果形参类型为数组，实际形参类型会转换成元素类型的指针，例如voidfun(int arr[5])等价于void fun(int arr*)。如果形参类型为函数，实际形参类型会转换成对应的函数指针类型，例如void fun (int test())等价于voidfun( int (*test)())</p>
 <h2 id="如何返回一个数组">如何返回一个数组</h2>
 <p>用结构体包装一下</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">29
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080">#include</span> <span style="color:#080">&lt;stdio.h&gt;</span><span style="color:#080">
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>  
-</span></span><span style="display:flex;"><span><span style="color:#080">#define MAXNUM 1000
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>  
-</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">struct</span> Array
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#include</span> <span style="color:#8a93a5;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#8a93a5;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#define MAXNUM 1000
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span>
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> a[MAXNUM];
+</span></span><span style="display:flex;"><span>    <span style="color:#ef8383">int</span> <span style="color:#c1abea">a</span>[<span style="color:#c1abea">MAXNUM</span>];
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">struct</span> Array <span style="color:#00a000">DoubleIt</span>(<span style="color:#a2f;font-weight:bold">struct</span> Array x)
+</span></span><span style="display:flex;"><span><span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span> <span style="color:#00b1f7">DoubleIt</span>(<span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span> <span style="color:#c1abea">x</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">struct</span> Array y;
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">for</span> (<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>; i <span style="color:#666">&lt;</span> MAXNUM; <span style="color:#666">++</span>i)
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span> <span style="color:#c1abea">y</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">for</span> (<span style="color:#ef8383">int</span> <span style="color:#c1abea">i</span> <span style="color:#c7bf54">=</span> <span style="color:#d19a66">0</span>; <span style="color:#c1abea">i</span> <span style="color:#c7bf54">&lt;</span> <span style="color:#c1abea">MAXNUM</span>; <span style="color:#c7bf54">++</span><span style="color:#c1abea">i</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        y.a[i] <span style="color:#666">=</span> (x.a[i] <span style="color:#666">&lt;&lt;</span> <span style="color:#666">1</span>); <span style="color:#080;font-style:italic">//移位运算符的优先级非常低，应该在可能的情况下加上括号
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> y;
+</span></span><span style="display:flex;"><span>        <span style="color:#c1abea">y</span>.<span style="color:#c1abea">a</span>[<span style="color:#c1abea">i</span>] <span style="color:#c7bf54">=</span> (<span style="color:#c1abea">x</span>.<span style="color:#c1abea">a</span>[<span style="color:#c1abea">i</span>] <span style="color:#c7bf54">&lt;&lt;</span> <span style="color:#d19a66">1</span>); <span style="color:#8a93a5;font-style:italic">//移位运算符的优先级非常低，应该在可能的情况下加上括号
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#c1abea">y</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">struct</span> Array a <span style="color:#666">=</span> {<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>, <span style="color:#666">5</span>};
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">struct</span> Array b <span style="color:#666">=</span> <span style="color:#00a000">DoubleIt</span>(a);
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">for</span> (<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>; i <span style="color:#666">&lt;</span> <span style="color:#666">5</span>; <span style="color:#666">++</span>i)
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span> <span style="color:#c1abea">a</span> <span style="color:#c7bf54">=</span> {<span style="color:#d19a66">1</span>, <span style="color:#d19a66">2</span>, <span style="color:#d19a66">3</span>, <span style="color:#d19a66">4</span>, <span style="color:#d19a66">5</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">struct</span> <span style="color:#c1abea">Array</span> <span style="color:#c1abea">b</span> <span style="color:#c7bf54">=</span> <span style="color:#00b1f7">DoubleIt</span>(<span style="color:#c1abea">a</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">for</span> (<span style="color:#ef8383">int</span> <span style="color:#c1abea">i</span> <span style="color:#c7bf54">=</span> <span style="color:#d19a66">0</span>; <span style="color:#c1abea">i</span> <span style="color:#c7bf54">&lt;</span> <span style="color:#d19a66">5</span>; <span style="color:#c7bf54">++</span><span style="color:#c1abea">i</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#00a000">printf</span>(<span style="color:#b44">&#34;%d</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, b.a[i]);
+</span></span><span style="display:flex;"><span>        <span style="color:#00b1f7">printf</span>(<span style="color:#98c379">&#34;%d</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#c1abea">b</span>.<span style="color:#c1abea">a</span>[<span style="color:#c1abea">i</span>]);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>  

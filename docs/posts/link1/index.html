@@ -41,11 +41,11 @@
     
     <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.938e9fafbc7b34d30178c96060bc5980493a42bea78a6bb10ad2e93ec742d02c.css" integrity="sha256-k46fr7x7NNMBeMlgYLxZgEk6Qr6nimuxCtLpPsdC0Cw=" media="screen">
+<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
 
 
 <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab">
+          href="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab|Special+Elite">
 
 
 
@@ -352,53 +352,53 @@
 <p>C语言函数和变量的符号名基本就是函数名字变量名字，不同模块如果有相同的函数或变量名字就会产生符号冲突无法链接成功的问题，所以C++引入了命名空间来解决这种符号冲突问题。同时为了支持函数重载C++也会根据函数名字以及命名空间以及参数类型生成特殊的符号名称。</p>
 <p>由于C语言和C++的符号修饰方式不同，C语言和C++的目标文件在链接时可能会报错说找不到符号，所以为了C++和C兼容，引入了extern &ldquo;C&rdquo;，当引用某个C语言的函数时加extern &ldquo;C&quot;告诉编译器对此函数使用C语言的方式来链接，如果C++的函数用extern &ldquo;C&quot;声明，则此函数的符号就是按C语言方式生成的。</p>
 <p>以memset函数举例，C语言中以C语言方式来链接，但是在C++中以C++方式来链接就会找不到这个memset的符号，所以需要使用extern &ldquo;C&quot;方式来声明这个函数，为了兼容C和C++，可以使用宏来判断，用条件宏判断当前是不是C++代码，如果是C++代码则extern &ldquo;C&rdquo;。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080">#ifdef __cplusplus
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">extern</span> <span style="color:#b44">&#34;C&#34;</span> {
-</span></span><span style="display:flex;"><span><span style="color:#080">#endif
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#666">*</span><span style="color:#00a000">memset</span>(<span style="color:#0b0;font-weight:bold">void</span> <span style="color:#666">*</span>, <span style="color:#0b0;font-weight:bold">int</span>, size_t);
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#c678dd">extern</span> <span style="color:#98c379">&#34;C&#34;</span> {
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#c7bf54">*</span><span style="color:#00b1f7">memset</span>(<span style="color:#ef8383">void</span> <span style="color:#c7bf54">*</span>, <span style="color:#ef8383">int</span>, <span style="color:#c1abea">size_t</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#080">#ifdef __cplusplus
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>}
-</span></span><span style="display:flex;"><span><span style="color:#080">#endif
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#endif
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="强符号和弱符号">强符号和弱符号</h2>
 <p>我们经常编程中遇到的multiple definition of &lsquo;xxx&rsquo;，指的是多个目标中有相同名字的全局符号的定义，产生了冲突，这种符号的定义指的是强符号。有强符号自然就有弱符号，编译器默认函数和初始化了的全局变量为强符号，未初始化的全局变量为弱符号。attribute((weak))可以定义弱符号。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">extern</span> <span style="color:#0b0;font-weight:bold">int</span> ext;
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c678dd">extern</span> <span style="color:#ef8383">int</span> <span style="color:#c1abea">ext</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> weak; <span style="color:#080;font-style:italic">// 弱符号
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">int</span> strong <span style="color:#666">=</span> <span style="color:#666">1</span>; <span style="color:#080;font-style:italic">// 强符号
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>__attribute__((weak)) <span style="color:#0b0;font-weight:bold">int</span> weak2 <span style="color:#666">=</span> <span style="color:#666">2</span>; <span style="color:#080;font-style:italic">// 弱符号
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#c1abea">weak</span>; <span style="color:#8a93a5;font-style:italic">// 弱符号
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#ef8383">int</span> <span style="color:#c1abea">strong</span> <span style="color:#c7bf54">=</span> <span style="color:#d19a66">1</span>; <span style="color:#8a93a5;font-style:italic">// 强符号
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span><span style="color:#c1abea">__attribute__</span>((<span style="color:#c1abea">weak</span>)) <span style="color:#ef8383">int</span> <span style="color:#c1abea">weak2</span> <span style="color:#c7bf54">=</span> <span style="color:#d19a66">2</span>; <span style="color:#8a93a5;font-style:italic">// 弱符号
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#d19a66">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
@@ -408,69 +408,69 @@
 一个符号在所有目标文件中都是弱符号，选择占用空间最大的符号，int类型和double类型选double类型</p>
 <h2 id="强引用和弱引用">强引用和弱引用</h2>
 <p>一般引用了某个函数符号，而这个函数在任何地方都没有被定义，则会报错error: undefined reference to &lsquo;xxx&rsquo;，这种符号引用称为强引用。与此对应的则有弱引用，链接器对强引用弱引用的处理过程几乎一样，只是对于未定义的弱引用，链接器不会报错，而是默认其是一个特殊的值。</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#080">#include</span> <span style="color:#080">&lt;cstdio&gt;</span><span style="color:#080">
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>
-</span></span><span style="display:flex;"><span>__attribute__((weak)) <span style="color:#0b0;font-weight:bold">void</span> foo();
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic">#include</span> <span style="color:#8a93a5;font-style:italic">&lt;cstdio&gt;</span><span style="color:#8a93a5;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#c1abea">__attribute__</span>((<span style="color:#c1abea">weak</span>)) <span style="color:#ef8383">void</span> <span style="color:#c1abea">foo</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    printf(<span style="color:#b44">&#34;%d</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>, <span style="color:#666">&amp;</span>foo); <span style="color:#080;font-style:italic">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    foo();
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">printf</span>(<span style="color:#98c379">&#34;%d</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#c7bf54">&amp;</span><span style="color:#c1abea">foo</span>); <span style="color:#8a93a5;font-style:italic">// 0
+</span></span></span><span style="display:flex;"><span><span style="color:#8a93a5;font-style:italic"></span>    <span style="color:#c1abea">foo</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#d19a66">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这里foo的地址是0</p>
 <p>则可以改为</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>__attribute__ ((weak)) <span style="color:#0b0;font-weight:bold">void</span> foo();
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#c1abea">__attribute__</span> ((<span style="color:#c1abea">weak</span>)) <span style="color:#ef8383">void</span> <span style="color:#c1abea">foo</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (foo) {
-</span></span><span style="display:flex;"><span>        foo();
+</span></span><span style="display:flex;"><span><span style="color:#ef8383">int</span> <span style="color:#00b1f7">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">if</span> (<span style="color:#c1abea">foo</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#c1abea">foo</span>();
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#d19a66">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这种强引用弱引用对于库来说十分有用，库中的弱引用可以被用户定义的强引用所覆盖，这样程序就可以使用自定义版本的库函数，可以将引用定义为弱引用，如果去掉了某个功能，也可以正常连接接，想增加相应功能还可以直接增加强引用，方便程序的裁剪和组合。</p>
 <p>例如再加一个文件</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">foo</span>()
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#ef8383">void</span> <span style="color:#00b1f7">foo</span>()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    printf(<span style="color:#b44">&#34;foo2</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#c1abea">printf</span>(<span style="color:#98c379">&#34;foo2</span><span style="color:#d26464;font-weight:bold">\n</span><span style="color:#98c379">&#34;</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
@@ -507,8 +507,8 @@
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="/posts/bash/">
-			Next<br>BASH脚本
+                <a class="newer-posts" href="/posts/chrome_amd/">
+			Next<br>In archlinux, chrome cannot be displayed normally under AMD.
                 </a>
                 
                 

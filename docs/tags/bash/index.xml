@@ -15,5 +15,15 @@
       <description>&lt;p&gt;BASH 条件判断&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>In archlinux, chrome cannot be displayed normally under AMD.</title>
+      <link>https://blog.oyyko.com/posts/chrome_amd/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/chrome_amd/</guid>
+      <description>Solution:
+rm -rf .config/google-chrome/Default/GPUCache </description>
+    </item>
+    
   </channel>
 </rss>
