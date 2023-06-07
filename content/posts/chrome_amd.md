@@ -1,7 +1,7 @@
 ---
 title: In archlinux, chrome cannot be displayed normally under AMD.
-date: 2022-05-27
-tags: [bash]
+date: 2023-06-07
+tags: [archlinux, bug]
 ---
 Solution:
 ```

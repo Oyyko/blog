@@ -9,6 +9,7 @@ enableGitInfo = true
 enableUtterances = true
 Subtitle = "Being towards death"
 favicon = "https://avatars.githubusercontent.com/u/66729335?v=4"
+fonts="https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons|Jetbrains+Mono|Roboto+Slab|Special+Elite"
 
 [taxonomies]
    tag = "tags"
