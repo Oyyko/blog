@@ -5,9 +5,296 @@
     <link>https://blog.oyyko.com/</link>
     <description>Recent content on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Aug 2022 15:20:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Archlinux/Manjaro Install Guide</title>
+        <link>https://blog.oyyko.com/posts/arch_install/</link>
+        <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/arch_install/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/arch_install/ -&lt;p&gt;manjaro I3新电脑配置&lt;/p&gt;
+&lt;p&gt;假设已经安装好了manjaro i3，接下来要做的是：&lt;/p&gt;
+&lt;h2 id=&#34;基本装机-按顺序执行以下操作&#34;&gt;基本装机 按顺序执行以下操作&lt;/h2&gt;
+&lt;h3 id=&#34;换源&#34;&gt;换源&lt;/h3&gt;
+&lt;p&gt;编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;
+内容改为&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;加入archlinuxcn源并安装yay&#34;&gt;加入archlinuxcn源并安装yay&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 文件末尾添加以下两行&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[archlinuxcn]
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后通过以下命令安装 archlinuxcn-keyring 包导入 GPG key。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Sy archlinuxcn-keyring
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后就可以用yay 安装各种软件了&lt;/p&gt;
+&lt;p&gt;记得先&lt;code&gt;sudo pacman -Syyu&lt;/code&gt;一下。&lt;/p&gt;
+&lt;h3 id=&#34;科学上网&#34;&gt;科学上网&lt;/h3&gt;
+&lt;p&gt;由于安装某些软件的时候，yay会从国外下载，所以要先科学上网才能尽情安装想要的软件。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S clash-for-windows-bin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后导入已有的订阅。
+之后在终端中设置(例如加入到&lt;code&gt;~/.zshrc&lt;/code&gt;中)：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export https_proxy=http://127.0.0.1:7890;
+export http_proxy=http://127.0.0.1:7890;
+export all_proxy=socks5://127.0.0.1:7890;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;对于i3wm等无法设置系统级代理的桌面环境，请把chrome的启动改为&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bindsym $mod+F2 exec google-chrome-stable --proxy-server=&amp;#34;socks5://127.0.0.1:7890&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样chrome也可以自动使用代理上网了。&lt;/p&gt;
+&lt;h3 id=&#34;安装输入法&#34;&gt;安装输入法&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S fcitx5-im
+yay -S base-devel
+yay -S fcitx5-rime
+yay -S rime-cloverpinyin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置fcitx5的环境变量：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano ~/.pam_environment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;内容为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;GTK_IM_MODULE DEFAULT=fcitx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;QT_IM_MODULE  DEFAULT=fcitx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;XMODIFIERS    DEFAULT=\@im=fcitx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SDL_IM_MODULE DEFAULT=fcitx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;创建并写入rime-cloverpinyin的输入方案：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano ~/.local/share/fcitx5/rime/default.custom.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;内容为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;patch:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;#34;menu/page_size&amp;#34;: 5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  schema_list:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - schema: clover
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装中文维基百科词库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yay -S fcitx5-pinyin-zhwiki-rime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;设置fctix5自动启动：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nano ~/.i3/config
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;加入&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;exec --no-startup-id fcitx5
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;安装geek字体&#34;&gt;安装geek字体&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S nerd-fonts-jetbrains-mono
+yay -S ttf-jetbrains-mono
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后把终端的字体改为该字体。例如更改Konsole的配置，如果默认终端不是Konsole建议改为Konsole。&lt;/p&gt;
+&lt;h3 id=&#34;安装常用软件&#34;&gt;安装常用软件&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S ntfs-3g # 使系统可以识别 NTFS 格式的硬盘
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 安装几个开源中文字体。一般装上文泉驿就能解决大多 wine 应用中文方块的问题
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安装谷歌开源字体及表情
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S typora-free
+yay -S visual-studio-code-bin
+yay -S google-chrome
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一些常用命令的Rust版本：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S fd bat exa ripgrep procs dust 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;安装latex&#34;&gt;安装latex&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S texlive-most texlive-lang
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置vscode-latexworkshop使用xelatex为默认&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Haulyn5/article/details/124128533&#34;&gt;https://blog.csdn.net/Haulyn5/article/details/124128533&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;修改settings.json&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;#34;latex-workshop.latex.tools&amp;#34;: [
+
+        {
+            &amp;#34;name&amp;#34;: &amp;#34;latexmk&amp;#34;,
+            &amp;#34;command&amp;#34;: &amp;#34;latexmk&amp;#34;,
+            &amp;#34;args&amp;#34;: [
+                &amp;#34;-xelatex&amp;#34;,
+                &amp;#34;-synctex=1&amp;#34;,
+                &amp;#34;-interaction=nonstopmode&amp;#34;,
+                &amp;#34;-file-line-error&amp;#34;,
+                &amp;#34;%DOC%&amp;#34;
+            ],
+            &amp;#34;env&amp;#34;: {}
+        },
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;安装zsh&#34;&gt;安装zsh&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更改默认shell&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chsh -s /usr/bin/zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;对于Konsole需要修改它的配置文件来改变它启动的时候默认使用的shell&lt;/p&gt;
+&lt;p&gt;由于manjaro i3有自带的zsh配置已经够用，因此这里我们暂时不使用oh my zsh&lt;/p&gt;
+&lt;h3 id=&#34;输出炫酷neofetch&#34;&gt;输出炫酷neofetch&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yay -S lolcat neofetch
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;neofetch | lolcat
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;你会得到炫酷的manjaro图案和你的电脑的基本信息显示。&lt;/p&gt;
+&lt;h3 id=&#34;git配置&#34;&gt;GIT配置&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global  user.name &amp;#34;111&amp;#34; 
+git config --global  user.email &amp;#34;111@111.111&amp;#34;   
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置好的gitconfig文件在&lt;code&gt;~/.gitconfig&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;github-ssh--配置&#34;&gt;github ssh  配置&lt;/h3&gt;
+&lt;p&gt;生成新 SSH 密钥&lt;/p&gt;
+&lt;p&gt;可在本地计算机上生成新的 SSH 密钥。 生成密钥后，可以将密钥添加到您在 GitHub.com 上的帐户，以启用通过 SSH 进行 Git 操作的身份验证。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t ed25519 -C &lt;span style=&#34;color:#63c381&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;之后&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat ~/.ssh/id_ed25519.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后在github网站上加入SSH KEY即可。&lt;/p&gt;
+&lt;h3 id=&#34;配置ssh-使用代理&#34;&gt;配置SSH 使用代理&lt;/h3&gt;
+&lt;p&gt;安装netcat&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S netcat                                                                    
+:: 有 2 个软件包可提供 netcat ：
+:: 软件仓库 extra
+   1) gnu-netcat
+:: 软件仓库 community
+   2) openbsd-netcat
+
+输入某个数字 ( 默认=1 ): 2
+正在解析依赖关系...
+正在查找软件包冲突...
+
+软件包 (1) openbsd-netcat-1.219_1-1
+
+下载大小：      0.02 MiB
+全部安装大小：  0.05 MiB
+
+:: 进行安装吗？ [Y/n] 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;需要下载openbsd版本的&lt;/p&gt;
+&lt;p&gt;之后&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;~/.ssh/config&lt;/code&gt; 文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host github.com
+    User git
+    ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样git使用ssh方式的时候就可以走代理加速了。&lt;/p&gt;
+&lt;h3 id=&#34;注释掉archlinuxcn源&#34;&gt;注释掉archlinuxcn源&lt;/h3&gt;
+&lt;p&gt;装机的时候用一下可以了。由于manjaro毕竟和archlinux有区别，日常使用不需要打开这个源。可能会导致软件版本出现不兼容。&lt;/p&gt;
+&lt;h2 id=&#34;杂项&#34;&gt;杂项&lt;/h2&gt;
+&lt;h3 id=&#34;默认应用&#34;&gt;默认应用&lt;/h3&gt;
+&lt;p&gt;默认应用的设置文件：vim ~/.config/mimeapps.list, 可以在里面更改默认浏览器&lt;/p&gt;
+&lt;h3 id=&#34;i3配置&#34;&gt;I3配置&lt;/h3&gt;
+&lt;p&gt;配置文件在 ~/.i3/config&lt;/p&gt;
+&lt;h2 id=&#34;i3快捷键&#34;&gt;I3快捷键&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;MOD+9 锁屏
+MOD+数字 切换工作区
+MOD+Return 打开终端
+MOD+F2 打开浏览器
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以在&lt;code&gt;~/.i3/config&lt;/code&gt;中查看快捷键。&lt;/p&gt;
+- https://blog.oyyko.com/posts/arch_install/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Scheme Review 1</title>
+        <link>https://blog.oyyko.com/posts/scheme/</link>
+        <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/scheme/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/scheme/ -&lt;p&gt;&lt;a href=&#34;https://courses.cs.washington.edu/courses/cse341/04wi/lectures/14-scheme-quote.html&#34;&gt;https://courses.cs.washington.edu/courses/cse341/04wi/lectures/14-scheme-quote.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;quote&#34;&gt;Quote&lt;/h2&gt;
+&lt;p&gt;Scheme has a convenient syntax for representing data literals: prefix any expression with &amp;rsquo; (single quote) and the expression, rather than being evaluated, will be returned as data:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scheme&#34; data-lang=&#34;scheme&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#56b6c2&#34;&gt;&amp;#39;3&lt;/span&gt;        &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; 3                 (a number)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;hi&amp;#34;&lt;/span&gt;     &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; &amp;#34;hi&amp;#34;              (a string)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#56b6c2&#34;&gt;&amp;#39;a&lt;/span&gt;        &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; a                 (a symbol)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#dcaeea&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;4&lt;/span&gt;)  &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;+ &amp;#39;3 &amp;#39;4)   (a list)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#dcaeea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#dcaeea&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#dcaeea&#34;&gt;c&lt;/span&gt;)  &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;a &amp;#39;b &amp;#39;c)   (a list)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c678dd&#34;&gt;define &lt;/span&gt;&lt;span style=&#34;color:#dcaeea&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;25&lt;/span&gt;)                   (&lt;span style=&#34;color:#00b1f7&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#dcaeea&#34;&gt;list&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;define &amp;#39;x &amp;#39;25)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;define &amp;#39;x 25)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c678dd&#34;&gt;lambda &lt;/span&gt;(&lt;span style=&#34;color:#00b1f7&#34;&gt;x&lt;/span&gt;) (&lt;span style=&#34;color:#ef8383&#34;&gt;+ &lt;/span&gt;&lt;span style=&#34;color:#dcaeea&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt;))            (&lt;span style=&#34;color:#00b1f7&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#dcaeea&#34;&gt;list&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;lambda (list &amp;#39;x) (list &amp;#39;+ &amp;#39;x &amp;#39;3))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;lambda (list &amp;#39;x) (list &amp;#39;+ &amp;#39;x 3))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;As these examples illustrate, &amp;ldquo;quoted&amp;rdquo; data remains unevaluated, and provides a convenient way of representing Scheme programs. This is one of the big payoffs of Lisp&amp;rsquo;s simple syntax: since programs themselves are lists, it is extremely simple to represent Lisp programs as data. Compare the simplicity of quoted lists with the ML datatype that we used to represent ML expressions.&lt;/p&gt;
+&lt;p&gt;This makes it simple to write programs that manipulate other programs &amp;mdash; it is easy to construct and transform programs on the fly.&lt;/p&gt;
+&lt;p&gt;Note that names in Lisp programs are translated into symbols in quoted Lisp expressions. This is so that quoted names can be distinguished from quoted strings; consider the difference between the following two expressions:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scheme&#34; data-lang=&#34;scheme&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c678dd&#34;&gt;define &lt;/span&gt;&lt;span style=&#34;color:#dcaeea&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;10&lt;/span&gt;)    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#39;define &amp;#39;x 10)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;define&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#dcaeea&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;10&lt;/span&gt;)  &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; (list &amp;#34;define&amp;#34; &amp;#39;x 10)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This distinction is probably the only good reason that strings and symbols are distinct data types in Lisp.&lt;/p&gt;
+&lt;h2 id=&#34;quasiquote&#34;&gt;Quasiquote&lt;/h2&gt;
+&lt;p&gt;Sometimes one doesn&amp;rsquo;t want to escape evaluation of an entire list. In this case, one can use the ` (backquote) operator, also called quasiquote with the , (comma) operator, also called unquote. Quasiquote behaves like quote, except that unquoted expressions are evaluated:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scheme&#34; data-lang=&#34;scheme&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;`&lt;/span&gt;(&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;,&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;+ &lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;4&lt;/span&gt;))   &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; &amp;#39;(1 2 7)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#c678dd&#34;&gt;quasiquote &lt;/span&gt;(&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt; (&lt;span style=&#34;color:#c678dd&#34;&gt;unquote &lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;+ &lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;4&lt;/span&gt;))))  &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;; =&amp;gt; &amp;#39;(1 2 7)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;- https://blog.oyyko.com/posts/scheme/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>In archlinux, chrome cannot be displayed normally under AMD.</title>
+        <link>https://blog.oyyko.com/posts/chrome_amd/</link>
+        <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/chrome_amd/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/chrome_amd/ -&lt;p&gt;Solution:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm -rf .config/google-chrome/Default/GPUCache
+&lt;/code&gt;&lt;/pre&gt;- https://blog.oyyko.com/posts/chrome_amd/ - </description>
+        </item>
     
     
     
@@ -430,417 +717,6 @@ and write the following information&lt;/p&gt;
 &lt;p&gt;当 然，也可以只用 $(( 表达式 )) 和 echo 命令进行 shell 算术运算，如清单 12 所示。这样就不必学习关于函数或测试的任何内容，但是请注意 shell 不会解释元字符，例如 *，因此元字符不能在 (( 表达式 )) 或 [[ 表达式 ]] 中那样正常发挥作用。&lt;/p&gt;
 &lt;p&gt;清单 12. 在 shell 中用 echo 和 $(( )) 直接进行计算&lt;/p&gt;
 &lt;p&gt;[ian@pinguino ~]$ echo $((3 + (4**3 /2)))&lt;/p&gt;- https://blog.oyyko.com/posts/bash/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>In archlinux, chrome cannot be displayed normally under AMD.</title>
-        <link>https://blog.oyyko.com/posts/chrome_amd/</link>
-        <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/chrome_amd/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/chrome_amd/ -&lt;p&gt;Solution:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm -rf .config/google-chrome/Default/GPUCache
-&lt;/code&gt;&lt;/pre&gt;- https://blog.oyyko.com/posts/chrome_amd/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>链接 Note 1</title>
-        <link>https://blog.oyyko.com/posts/link1/</link>
-        <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/link1/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/link1/ -&lt;p&gt;链接的笔记&lt;/p&gt;
-&lt;p&gt;本文部分信息来自网络&lt;/p&gt;
-&lt;h2 id=&#34;bss段不占用存储空间&#34;&gt;.bss段不占用存储空间&lt;/h2&gt;
-&lt;p&gt;为什么要有.bss段？因为已经初始化的全局变量，需要在目标文件里面占用空间来存储它们被初始化的值。例如&lt;code&gt;int a=3,b=2;&lt;/code&gt;我们需要存下3和2. 但是如果是没有初始化的全局变量，只需要记录一下长度就会好了。例如两个int，记录一些.bss段的长度为8字节即可。&lt;/p&gt;
-&lt;p&gt;那么，这个长度总要占地方的吧？&lt;/p&gt;
-&lt;p&gt;.bss段占据的大小存放在ELF文件格式中的段表(Section Table)中，段表存放了各个段的各种信息，比如段的名字、段的类型、段在elf文件中的偏移、段的大小等信息。同时符号存放在符号表.symtab中。&lt;/p&gt;
-&lt;p&gt;.bss不占据实际的磁盘空间，只在段表中记录大小，在符号表中记录符号。当文件加载运行时，才分配空间以及初始化。&lt;/p&gt;
-&lt;h2 id=&#34;程序为什么要分成数据段和代码段&#34;&gt;程序为什么要分成数据段和代码段&lt;/h2&gt;
-&lt;p&gt;数据和指令被映射到两个虚拟内存区域，数据段对进程来说可读写，代码段是只读，这样可以防止程序的指令被有意无意的改写。&lt;/p&gt;
-&lt;p&gt;有利于提高程序局部性，现代CPU缓存一般被设计成数据缓存和指令缓存分离，分开对CPU缓存命中率有好处。&lt;/p&gt;
-&lt;p&gt;代码段是可以共享的，数据段是私有的，当运行多个程序的副本时，只需要保存一份代码段部分。&lt;/p&gt;
-&lt;h2 id=&#34;链接器通过什么进行的链接&#34;&gt;链接器通过什么进行的链接&lt;/h2&gt;
-&lt;p&gt;链接的接口是符号，在链接中，将函数和变量统称为符号，函数名和变量名统称为符号名。链接过程的本质就是把多个不同的目标文件之间相互“粘”到一起，像玩具积木一样各有凹凸部分，有固定的规则可以拼成一个整体。&lt;/p&gt;
-&lt;p&gt;可以将符号看作是链接中的粘合剂，整个链接过程基于符号才可以正确完成，符号有很多类型，主要有局部符号和外部符号，局部符号只在编译单元内部可见，对于链接过程没有作用，在目标文件中引用的全局符号，却没有在本目标文件中被定义的叫做外部符号，以及定义在本目标文件中的可以被其它目标文件引用的全局符号，在链接过程中发挥重要作用。&lt;/p&gt;
-&lt;h2 id=&#34;为什么需要extern-c&#34;&gt;为什么需要extern &amp;ldquo;C&amp;rdquo;&lt;/h2&gt;
-&lt;p&gt;C语言函数和变量的符号名基本就是函数名字变量名字，不同模块如果有相同的函数或变量名字就会产生符号冲突无法链接成功的问题，所以C++引入了命名空间来解决这种符号冲突问题。同时为了支持函数重载C++也会根据函数名字以及命名空间以及参数类型生成特殊的符号名称。&lt;/p&gt;
-&lt;p&gt;由于C语言和C++的符号修饰方式不同，C语言和C++的目标文件在链接时可能会报错说找不到符号，所以为了C++和C兼容，引入了extern &amp;ldquo;C&amp;rdquo;，当引用某个C语言的函数时加extern &amp;ldquo;C&amp;quot;告诉编译器对此函数使用C语言的方式来链接，如果C++的函数用extern &amp;ldquo;C&amp;quot;声明，则此函数的符号就是按C语言方式生成的。&lt;/p&gt;
-&lt;p&gt;以memset函数举例，C语言中以C语言方式来链接，但是在C++中以C++方式来链接就会找不到这个memset的符号，所以需要使用extern &amp;ldquo;C&amp;quot;方式来声明这个函数，为了兼容C和C++，可以使用宏来判断，用条件宏判断当前是不是C++代码，如果是C++代码则extern &amp;ldquo;C&amp;rdquo;。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#ifdef __cplusplus
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#endif
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#00b1f7&#34;&gt;memset&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;*&lt;/span&gt;, &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt;, &lt;span style=&#34;color:#c1abea&#34;&gt;size_t&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#ifdef __cplusplus
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#endif
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;强符号和弱符号&#34;&gt;强符号和弱符号&lt;/h2&gt;
-&lt;p&gt;我们经常编程中遇到的multiple definition of &amp;lsquo;xxx&amp;rsquo;，指的是多个目标中有相同名字的全局符号的定义，产生了冲突，这种符号的定义指的是强符号。有强符号自然就有弱符号，编译器默认函数和初始化了的全局变量为强符号，未初始化的全局变量为弱符号。attribute((weak))可以定义弱符号。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;ext&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;weak&lt;/span&gt;; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// 弱符号
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;strong&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// 强符号
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;__attribute__&lt;/span&gt;((&lt;span style=&#34;color:#c1abea&#34;&gt;weak&lt;/span&gt;)) &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;weak2&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt;; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// 弱符号
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;main&lt;/span&gt;() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;链接器规则：&lt;/p&gt;
-&lt;p&gt;不允许强符号被多次定义，多次定义就会multiple definition of &amp;lsquo;xxx&amp;rsquo;
-一个符号在一个目标文件中是强符号，在其它目标文件中是弱符号，选择强符号
-一个符号在所有目标文件中都是弱符号，选择占用空间最大的符号，int类型和double类型选double类型&lt;/p&gt;
-&lt;h2 id=&#34;强引用和弱引用&#34;&gt;强引用和弱引用&lt;/h2&gt;
-&lt;p&gt;一般引用了某个函数符号，而这个函数在任何地方都没有被定义，则会报错error: undefined reference to &amp;lsquo;xxx&amp;rsquo;，这种符号引用称为强引用。与此对应的则有弱引用，链接器对强引用弱引用的处理过程几乎一样，只是对于未定义的弱引用，链接器不会报错，而是默认其是一个特殊的值。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;__attribute__&lt;/span&gt;((&lt;span style=&#34;color:#c1abea&#34;&gt;weak&lt;/span&gt;)) &lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;main&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span style=&#34;color:#d26464;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;); &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// 0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这里foo的地址是0&lt;/p&gt;
-&lt;p&gt;则可以改为&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;__attribute__&lt;/span&gt; ((&lt;span style=&#34;color:#c1abea&#34;&gt;weak&lt;/span&gt;)) &lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;main&lt;/span&gt;() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#c1abea&#34;&gt;foo&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这种强引用弱引用对于库来说十分有用，库中的弱引用可以被用户定义的强引用所覆盖，这样程序就可以使用自定义版本的库函数，可以将引用定义为弱引用，如果去掉了某个功能，也可以正常连接接，想增加相应功能还可以直接增加强引用，方便程序的裁剪和组合。&lt;/p&gt;
-&lt;p&gt;例如再加一个文件&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;foo&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;foo2&lt;/span&gt;&lt;span style=&#34;color:#d26464;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这个时候就可以&lt;code&gt;g++ 1.cpp 2.cpp&lt;/code&gt;从而得到一个可以输出&lt;code&gt;foo2&lt;/code&gt;的可执行文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;弱符号的出现主要是为了解决宏条件编译问题的,宏条件编译对于长期维护的代码是个灾难。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;程序首先执行的代码并不是main开始的代码，也就是程序的真正入口不是main函数，而是运行库的入口函数；运行库会 先把main函数需要的参数、环境变量等准备好；然后将标准输入输出文件描述符打开，这样才能保证main函数开始就可以使用printf；然后把堆初始化，这样才能保证程序可以自由地执行malloc、new等；还有就是把全局变量初始化、全局构造函数执行完；做完这么多工作之后运行库就执行回调函数main，这时候程序才开始进入人们常说的函数入口。程序的运行环境组成是：程序本身逻辑代码、运行库、系统内核、内存；内存分为用户空间和内核空间，只要内核才使用内核空间，其它的包括运行库都是使用用户空间；程序运行空间分为栈空间和堆空间，函数运行的环境就是栈空间，栈空间都是有固定大小的，一般是2M，地址增加方向是向低地址扩张；堆空间比较大，使用也很灵活，这个堆空间一般都是运行库在帮你管理，堆分配算中中最简单的就是空闲链表算法；程序运行完之后，运行库还要帮你把所有的后事处理掉，释放堆空间、关闭所有打开的文件描述符、释放所有的进程资源等，这就是进程关闭内存泄漏的那些空间能够得到回收的原因；从程序的整个过程可以看书，main函数只不过是运行库的一个回调函数，不是真正的函数入口，当然我们也可以自己写一个运行库，这样就可以直接运行在系统内核之上了，运行库主要部分就是标准c接口的实现，听上去并不复杂。&lt;/p&gt;
-&lt;h2 id=&#34;动态和静态的比较&#34;&gt;动态和静态的比较&lt;/h2&gt;
-&lt;p&gt;动态链接库有两个设计目标，也是它的优势：&lt;/p&gt;
-&lt;p&gt;动态链接。例如MySQL支持MyISAM和InodeDB等不同的存储引擎，你也可以为它添加新的存储引擎，那么这个存储引擎就只能编译成动态链接库的形式。因为MySQL释出（release）的时候，还不知道有会有谁为它写新的存储引擎，所以也不知道应该链接那个静态库。当然，MySQL有源码，你可以重新编译一下，把你的新存储引擎链接进去，但是像Oracle这种没有源码的程序，就只能用动态链接库解决这个问题了。&lt;/p&gt;
-&lt;p&gt;共享，节约内存。例如libc.so提供了基础的C语言函数和系统调用接口，每个应用程序都会用到，如果每个进程都用静态库，那么printf这个函数的代码在内存中会有许多份，每个进程都有一个副本。使用动态链接库就可以避免这个问题，同一个动态链接库在多个不同进程之间的代码是共享的，不会占用多余的内存空间。数据不是共享的，每个进程都有自己的独有数据。&lt;/p&gt;
-&lt;p&gt;缺点1、当系统中多个应用程序都用了一个动态链接库，但是要求的版本不同，这时动态链接库之间就会相互干扰。2、性能开销。动态链接库为了做到“共享代码，但是不共享数据”，引入了不小的开销，调用动态链接库中的函数，需要好几次间接内存访问才能走到函数入口，全局数据也是。&lt;/p&gt;
-&lt;p&gt;静态链接的优缺点：&lt;/p&gt;
-&lt;p&gt;优点：代码装载速度快，执行速度略比动态链接库快；只需保证在开发者的计算机中有正确的.lib文件，在以二进制形式发布程序时不需考虑在用户的计算机上.lib文件是否存在及版本问题。&lt;/p&gt;
-&lt;p&gt;缺点：&lt;/p&gt;
-&lt;p&gt;使用静态链接生成的可执行文件体积较大，包含相同的公共代码，造成浪费。&lt;/p&gt;
-&lt;p&gt;静态库对程序的更新、部署和发布会带来麻烦。如果静态库liba.lib更新了，所有使用它的应用程序都需要重新编译、发布给用户（对于玩家来说，可能是一个很小的改动，却导致整个程序重新下载，全量更新）&lt;/p&gt;
-&lt;p&gt;动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入。不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例，规避了空间浪费问题。动态库在程序运行是才被载入，也解决了静态库对程序的更新、部署和发布页会带来麻烦。用户只需要更新动态库即可，增量更新。&lt;/p&gt;
-&lt;p&gt;动态链接的优缺点：&lt;/p&gt;
-&lt;p&gt;优点：生成的可执行文件较静态链接生成的可执行文件小；适用于大规模的软件开发，使开发过程独立、耦合度小，便于不同开发者和开发组织之间进行开发和测试；不同编程语言编写的程序只要按照函数调用约定就可以调用同一个DLL函数；DLL文件与EXE文件独立，只要输出接口不变（即名称、参数、返回值类型和调用约定不变），更换DLL文件不会对EXE文件造成任何影响，因而极大地提高了可维护性和可扩展性；&lt;/p&gt;
-&lt;p&gt;缺点：使用动态链接库的应用程序不是自完备的，它依赖的DLL模块也要存在，如果使用载入时动态链接，程序启动时发现DLL不存在，系统将终止程序并给出错误信息；速度比静态链接慢；&lt;/p&gt;
-&lt;p&gt;为什么要进行动态链接？为了解决静态链接浪费空间和更新困难的缺点。&lt;/p&gt;
-&lt;p&gt;动态链接的方式？装载时重定位和地址无关代码技术。&lt;/p&gt;
-&lt;p&gt;地址无关代码技术原理？通过GOT段实现间接跳转。&lt;/p&gt;
-&lt;p&gt;延迟加载技术原理？对外部函数符号通过PLT段实现延迟绑定及间接跳转。&lt;/p&gt;
-&lt;p&gt;如何进行显式运行时链接？通过&amp;lt;dlfcn.h&amp;gt;头文件中的四个函数。&lt;/p&gt;- https://blog.oyyko.com/posts/link1/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>C&#43;&#43; Note 3</title>
-        <link>https://blog.oyyko.com/posts/cpp3/</link>
-        <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/cpp3/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/cpp3/ -&lt;p&gt;本文是我的C++笔记的第三篇
-My Thrid C++ Note;&lt;/p&gt;
-&lt;h2 id=&#34;explict&#34;&gt;explict&lt;/h2&gt;
-&lt;p&gt;防止类的构造函数的隐式转换&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#76a9f9&#34;&gt;A&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x_&lt;/span&gt;)&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;{&lt;span style=&#34;color:#c1abea&#34;&gt;x_&lt;/span&gt;} {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt;; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// YES
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a2&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt;}; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// YES
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这样是对的&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#76a9f9&#34;&gt;A&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;explict&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x_&lt;/span&gt;)&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;{&lt;span style=&#34;color:#c1abea&#34;&gt;x_&lt;/span&gt;} {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt;; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// NO
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;3&lt;/span&gt;}; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;//YES
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;析构函数-移动构造-和-emplace_back&#34;&gt;析构函数 移动构造 和 emplace_back&lt;/h2&gt;
-&lt;p&gt;下列代码&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;13
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;14
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;15
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;16
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;17
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;18
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;19
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;20
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;21
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;22
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;23
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;24
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;25
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;26
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;27
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;28
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;29
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;30
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;31
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#76a9f9&#34;&gt;A&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;xx&lt;/span&gt;) &lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;{&lt;span style=&#34;color:#c1abea&#34;&gt;xx&lt;/span&gt;} {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;() &lt;span style=&#34;color:#c7bf54&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;(&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;) {}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c7bf54&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;() { &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;goodbye &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;; }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;main&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;vector&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;--------------------------------------&lt;/span&gt;&lt;span style=&#34;color:#d26464;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// OUTPUT
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 2
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// --------------------------------------
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;// goodbye 2
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;其原因在于：
-首先:&lt;code&gt;emplace_back&lt;/code&gt;只有在传入构造参数列表的时候和&lt;code&gt;push_back&lt;/code&gt;有区别。其他的时候没有区别。
-这里相当于先生成临时对象&lt;code&gt;A{0}&lt;/code&gt;，再拷贝构造到v中。从而执行了一次对于0的析构
-之后，因为要再加入&lt;code&gt;A{1}&lt;/code&gt;,而目前的v的可用空间大小是1
-因此需要再向系统申请一块大小为2的空间。之后再把原来的&lt;code&gt;A{0}&lt;/code&gt;复制过去。再放弃原来的大小为1的地址上的&lt;code&gt;A{0}&lt;/code&gt;,因此又执行一次对于0的析构。之后构造临时对象A1，再复制到v中。则临时对象析构，造成一次对于1的析构。
-之后要加入2. 方法一样。先开辟新内存空间，把原来的对象复制过去。再加入2 即可
-最终，3个对象的生命周期均到达终点。则依次析构。&lt;/p&gt;
-&lt;p&gt;而&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;vector&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;reserve&lt;/span&gt;(&lt;span style=&#34;color:#d19a66&#34;&gt;10&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在提前预留了空间之后，输出为&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;goodbye 0
-goodbye 1
-goodbye 2
---------------------------------------
-goodbye 0
-goodbye 1
-goodbye 2
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我们输出capacity即可看到我们的猜测是正确的。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;vector&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;CAPACITY &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;capacity&lt;/span&gt;() &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;CAPACITY &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;capacity&lt;/span&gt;() &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;CAPACITY &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;capacity&lt;/span&gt;() &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;emplace_back&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;{&lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;CAPACITY &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;v&lt;/span&gt;.&lt;span style=&#34;color:#c1abea&#34;&gt;capacity&lt;/span&gt;() &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;--------------------------------------&lt;/span&gt;&lt;span style=&#34;color:#d26464;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;得到&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;CAPACITY 0
-goodbye 0
-CAPACITY 1
-goodbye 0
-goodbye 1
-CAPACITY 2
-goodbye 0
-goodbye 1
-goodbye 2
-CAPACITY 4
---------------------------------------
-goodbye 0
-goodbye 1
-goodbye 2
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;结论：
-emplace_back以参数列表的形式传入时，不论是否有移动构造函数，都是原地构造，只会调用一次构造函数（只有这一项和push_back有区别，其它都是一样的）&lt;/p&gt;
-&lt;p&gt;emplace_back以左值对象的形式传入时，不论是否有移动构造函数，都是调用一次拷贝构造函数&lt;/p&gt;
-&lt;p&gt;emplace_back以右值对象（例如move（左值对象），或者就是右值）的形式传入时
-a. 有移动构造函数，调用一次移动构造
-b. 没有移动构造函数，调用拷贝构造函数&lt;/p&gt;
-&lt;p&gt;emplace_back以 Person(“aaa”, “shandong”, 1991) 形式传入时
-a. 有移动构造函数，构造临时文件 —&amp;gt; 移动构造 —&amp;gt; 临时文件析构
-b. 没有移动构造函数，构造临时文件 —&amp;gt; 拷贝构造 —&amp;gt; 临时文件析构&lt;/p&gt;- https://blog.oyyko.com/posts/cpp3/ - </description>
         </item>
     
     

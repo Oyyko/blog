@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html><head>
+<title>Archlinux/Manjaro Install Guide</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66729335?v=4">
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira&#43;Mono%7cMaterial&#43;Icons%7cJetbrains&#43;Mono%7cRoboto&#43;Slab%7cSpecial&#43;Elite">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e6%9c%ac%e8%a3%85%e6%9c%ba-%e6%8c%89%e9%a1%ba%e5%ba%8f%e6%89%a7%e8%a1%8c%e4%bb%a5%e4%b8%8b%e6%93%8d%e4%bd%9c" class="nav-基本装机-按顺序执行以下操作">
+									基本装机 按顺序执行以下操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%8d%a2%e6%ba%90" class="nav-换源">
+									换源
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a0%e5%85%a5archlinuxcn%e6%ba%90%e5%b9%b6%e5%ae%89%e8%a3%85yay" class="nav-加入archlinuxcn源并安装yay">
+									加入archlinuxcn源并安装yay
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91" class="nav-科学上网">
+									科学上网
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e8%be%93%e5%85%a5%e6%b3%95" class="nav-安装输入法">
+									安装输入法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85geek%e5%ad%97%e4%bd%93" class="nav-安装geek字体">
+									安装geek字体
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%b8%b8%e7%94%a8%e8%bd%af%e4%bb%b6" class="nav-安装常用软件">
+									安装常用软件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85latex" class="nav-安装latex">
+									安装latex
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85zsh" class="nav-安装zsh">
+									安装zsh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%be%93%e5%87%ba%e7%82%ab%e9%85%b7neofetch" class="nav-输出炫酷neofetch">
+									输出炫酷neofetch
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#git%e9%85%8d%e7%bd%ae" class="nav-git配置">
+									GIT配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#github-ssh--%e9%85%8d%e7%bd%ae" class="nav-github-ssh--配置">
+									github ssh 配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%85%8d%e7%bd%aessh-%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86" class="nav-配置ssh-使用代理">
+									配置SSH 使用代理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b3%a8%e9%87%8a%e6%8e%89archlinuxcn%e6%ba%90" class="nav-注释掉archlinuxcn源">
+									注释掉archlinuxcn源
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%9d%82%e9%a1%b9" class="nav-杂项">
+									杂项
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%bb%98%e8%ae%a4%e5%ba%94%e7%94%a8" class="nav-默认应用">
+									默认应用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#i3%e9%85%8d%e7%bd%ae" class="nav-i3配置">
+									I3配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#i3%e5%bf%ab%e6%8d%b7%e9%94%ae" class="nav-i3快捷键">
+									I3快捷键
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://blog.oyyko.com">
+            Oyyko&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.oyyko.com">
+        <div class="single-column-header-title">Oyyko&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">Being towards death</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Archlinux/Manjaro Install Guide
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2023-07-05 00:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/os">os</a>
+                                &nbsp;
+                            
+                                <a href="/tags/linux">linux</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>manjaro I3新电脑配置</p>
+<p>假设已经安装好了manjaro i3，接下来要做的是：</p>
+<h2 id="基本装机-按顺序执行以下操作">基本装机 按顺序执行以下操作</h2>
+<h3 id="换源">换源</h3>
+<p>编辑<code>/etc/pacman.d/mirrorlist</code>
+内容改为</p>
+<pre tabindex="0"><code>Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+</code></pre><h3 id="加入archlinuxcn源并安装yay">加入archlinuxcn源并安装yay</h3>
+<p>在 <code>/etc/pacman.conf</code> 文件末尾添加以下两行</p>
+<pre tabindex="0"><code>[archlinuxcn]
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+</code></pre><p>之后通过以下命令安装 archlinuxcn-keyring 包导入 GPG key。</p>
+<pre tabindex="0"><code>sudo pacman -Sy archlinuxcn-keyring
+</code></pre><p>之后就可以用yay 安装各种软件了</p>
+<p>记得先<code>sudo pacman -Syyu</code>一下。</p>
+<h3 id="科学上网">科学上网</h3>
+<p>由于安装某些软件的时候，yay会从国外下载，所以要先科学上网才能尽情安装想要的软件。</p>
+<pre tabindex="0"><code>yay -S clash-for-windows-bin
+</code></pre><p>之后导入已有的订阅。
+之后在终端中设置(例如加入到<code>~/.zshrc</code>中)：</p>
+<pre tabindex="0"><code>export https_proxy=http://127.0.0.1:7890;
+export http_proxy=http://127.0.0.1:7890;
+export all_proxy=socks5://127.0.0.1:7890;
+</code></pre><p>对于i3wm等无法设置系统级代理的桌面环境，请把chrome的启动改为</p>
+<pre tabindex="0"><code>bindsym $mod+F2 exec google-chrome-stable --proxy-server=&#34;socks5://127.0.0.1:7890&#34;
+</code></pre><p>这样chrome也可以自动使用代理上网了。</p>
+<h3 id="安装输入法">安装输入法</h3>
+<pre tabindex="0"><code>yay -S fcitx5-im
+yay -S base-devel
+yay -S fcitx5-rime
+yay -S rime-cloverpinyin
+</code></pre><p>配置fcitx5的环境变量：</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nano ~/.pam_environment
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>内容为：</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GTK_IM_MODULE DEFAULT=fcitx
+</span></span><span style="display:flex;"><span>QT_IM_MODULE  DEFAULT=fcitx
+</span></span><span style="display:flex;"><span>XMODIFIERS    DEFAULT=\@im=fcitx
+</span></span><span style="display:flex;"><span>SDL_IM_MODULE DEFAULT=fcitx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建并写入rime-cloverpinyin的输入方案：</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nano ~/.local/share/fcitx5/rime/default.custom.yaml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>内容为：</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>patch:
+</span></span><span style="display:flex;"><span>  &#34;menu/page_size&#34;: 5
+</span></span><span style="display:flex;"><span>  schema_list:
+</span></span><span style="display:flex;"><span>    - schema: clover
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装中文维基百科词库：</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>yay -S fcitx5-pinyin-zhwiki-rime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>设置fctix5自动启动：</p>
+<pre tabindex="0"><code>nano ~/.i3/config
+</code></pre><p>加入</p>
+<pre tabindex="0"><code>exec --no-startup-id fcitx5
+</code></pre><h3 id="安装geek字体">安装geek字体</h3>
+<pre tabindex="0"><code>yay -S nerd-fonts-jetbrains-mono
+yay -S ttf-jetbrains-mono
+</code></pre><p>之后把终端的字体改为该字体。例如更改Konsole的配置，如果默认终端不是Konsole建议改为Konsole。</p>
+<h3 id="安装常用软件">安装常用软件</h3>
+<pre tabindex="0"><code>sudo pacman -S ntfs-3g # 使系统可以识别 NTFS 格式的硬盘
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 安装几个开源中文字体。一般装上文泉驿就能解决大多 wine 应用中文方块的问题
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安装谷歌开源字体及表情
+</code></pre><pre tabindex="0"><code>yay -S typora-free
+yay -S visual-studio-code-bin
+yay -S google-chrome
+</code></pre><p>一些常用命令的Rust版本：</p>
+<pre tabindex="0"><code>yay -S fd bat exa ripgrep procs dust 
+</code></pre><h3 id="安装latex">安装latex</h3>
+<pre tabindex="0"><code>sudo pacman -S texlive-most texlive-lang
+</code></pre><p>配置vscode-latexworkshop使用xelatex为默认</p>
+<p><a href="https://blog.csdn.net/Haulyn5/article/details/124128533">https://blog.csdn.net/Haulyn5/article/details/124128533</a></p>
+<p>修改settings.json</p>
+<pre tabindex="0"><code>&#34;latex-workshop.latex.tools&#34;: [
+
+        {
+            &#34;name&#34;: &#34;latexmk&#34;,
+            &#34;command&#34;: &#34;latexmk&#34;,
+            &#34;args&#34;: [
+                &#34;-xelatex&#34;,
+                &#34;-synctex=1&#34;,
+                &#34;-interaction=nonstopmode&#34;,
+                &#34;-file-line-error&#34;,
+                &#34;%DOC%&#34;
+            ],
+            &#34;env&#34;: {}
+        },
+</code></pre><h3 id="安装zsh">安装zsh</h3>
+<pre tabindex="0"><code>sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
+</code></pre><p>更改默认shell</p>
+<pre tabindex="0"><code>chsh -s /usr/bin/zsh
+</code></pre><p>对于Konsole需要修改它的配置文件来改变它启动的时候默认使用的shell</p>
+<p>由于manjaro i3有自带的zsh配置已经够用，因此这里我们暂时不使用oh my zsh</p>
+<h3 id="输出炫酷neofetch">输出炫酷neofetch</h3>
+<pre tabindex="0"><code>yay -S lolcat neofetch
+</code></pre><pre tabindex="0"><code>neofetch | lolcat
+</code></pre><p>你会得到炫酷的manjaro图案和你的电脑的基本信息显示。</p>
+<h3 id="git配置">GIT配置</h3>
+<pre tabindex="0"><code>git config --global  user.name &#34;111&#34; 
+git config --global  user.email &#34;111@111.111&#34;   
+</code></pre><p>配置好的gitconfig文件在<code>~/.gitconfig</code></p>
+<h3 id="github-ssh--配置">github ssh  配置</h3>
+<p>生成新 SSH 密钥</p>
+<p>可在本地计算机上生成新的 SSH 密钥。 生成密钥后，可以将密钥添加到您在 GitHub.com 上的帐户，以启用通过 SSH 进行 Git 操作的身份验证。</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#63c381">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_ed25519.pub
+</code></pre><p>然后在github网站上加入SSH KEY即可。</p>
+<h3 id="配置ssh-使用代理">配置SSH 使用代理</h3>
+<p>安装netcat</p>
+<pre tabindex="0"><code>sudo pacman -S netcat                                                                    
+:: 有 2 个软件包可提供 netcat ：
+:: 软件仓库 extra
+   1) gnu-netcat
+:: 软件仓库 community
+   2) openbsd-netcat
+
+输入某个数字 ( 默认=1 ): 2
+正在解析依赖关系...
+正在查找软件包冲突...
+
+软件包 (1) openbsd-netcat-1.219_1-1
+
+下载大小：      0.02 MiB
+全部安装大小：  0.05 MiB
+
+:: 进行安装吗？ [Y/n] 
+</code></pre><p>需要下载openbsd版本的</p>
+<p>之后</p>
+<p>修改 <code>~/.ssh/config</code> 文件</p>
+<pre tabindex="0"><code>Host github.com
+    User git
+    ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+</code></pre><p>这样git使用ssh方式的时候就可以走代理加速了。</p>
+<h3 id="注释掉archlinuxcn源">注释掉archlinuxcn源</h3>
+<p>装机的时候用一下可以了。由于manjaro毕竟和archlinux有区别，日常使用不需要打开这个源。可能会导致软件版本出现不兼容。</p>
+<h2 id="杂项">杂项</h2>
+<h3 id="默认应用">默认应用</h3>
+<p>默认应用的设置文件：vim ~/.config/mimeapps.list, 可以在里面更改默认浏览器</p>
+<h3 id="i3配置">I3配置</h3>
+<p>配置文件在 ~/.i3/config</p>
+<h2 id="i3快捷键">I3快捷键</h2>
+<pre tabindex="0"><code>MOD+9 锁屏
+MOD+数字 切换工作区
+MOD+Return 打开终端
+MOD+F2 打开浏览器
+</code></pre><p>可以在<code>~/.i3/config</code>中查看快捷键。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2023-07-05</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/scheme/">
+			Previous<br>Scheme Review 1
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Oyyko/utteranc-comments"
+        issue-term="pathname"
+        label=""
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.oyyko.com">
+    
+        <div class="nav-title">
+            Oyyko&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            Being towards death
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 Oyyko&#39;s Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e6%9c%ac%e8%a3%85%e6%9c%ba-%e6%8c%89%e9%a1%ba%e5%ba%8f%e6%89%a7%e8%a1%8c%e4%bb%a5%e4%b8%8b%e6%93%8d%e4%bd%9c" class="nav-基本装机-按顺序执行以下操作">
+									基本装机 按顺序执行以下操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%8d%a2%e6%ba%90" class="nav-换源">
+									换源
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a0%e5%85%a5archlinuxcn%e6%ba%90%e5%b9%b6%e5%ae%89%e8%a3%85yay" class="nav-加入archlinuxcn源并安装yay">
+									加入archlinuxcn源并安装yay
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91" class="nav-科学上网">
+									科学上网
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e8%be%93%e5%85%a5%e6%b3%95" class="nav-安装输入法">
+									安装输入法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85geek%e5%ad%97%e4%bd%93" class="nav-安装geek字体">
+									安装geek字体
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%b8%b8%e7%94%a8%e8%bd%af%e4%bb%b6" class="nav-安装常用软件">
+									安装常用软件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85latex" class="nav-安装latex">
+									安装latex
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85zsh" class="nav-安装zsh">
+									安装zsh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%be%93%e5%87%ba%e7%82%ab%e9%85%b7neofetch" class="nav-输出炫酷neofetch">
+									输出炫酷neofetch
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#git%e9%85%8d%e7%bd%ae" class="nav-git配置">
+									GIT配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#github-ssh--%e9%85%8d%e7%bd%ae" class="nav-github-ssh--配置">
+									github ssh 配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%85%8d%e7%bd%aessh-%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86" class="nav-配置ssh-使用代理">
+									配置SSH 使用代理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b3%a8%e9%87%8a%e6%8e%89archlinuxcn%e6%ba%90" class="nav-注释掉archlinuxcn源">
+									注释掉archlinuxcn源
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%9d%82%e9%a1%b9" class="nav-杂项">
+									杂项
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e9%bb%98%e8%ae%a4%e5%ba%94%e7%94%a8" class="nav-默认应用">
+									默认应用
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#i3%e9%85%8d%e7%bd%ae" class="nav-i3配置">
+									I3配置
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#i3%e5%bf%ab%e6%8d%b7%e9%94%ae" class="nav-i3快捷键">
+									I3快捷键
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 Oyyko&#39;s Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
