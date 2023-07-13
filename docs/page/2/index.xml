@@ -5,9 +5,246 @@
     <link>https://blog.oyyko.com/</link>
     <description>Recent content on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>First Post</title>
+        <link>https://blog.oyyko.com/posts/first-post/</link>
+        <pubDate>Sun, 24 Jul 2022 00:37:35 +0800</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/first-post/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/first-post/ -&lt;h2 id=&#34;新博客&#34;&gt;新博客&lt;/h2&gt;
+&lt;p&gt;决定把博客切换到hugo。也算是人生路上一个新的开始。&lt;/p&gt;
+- https://blog.oyyko.com/posts/first-post/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>C&#43;&#43; Note 4</title>
+        <link>https://blog.oyyko.com/posts/cpp4/</link>
+        <pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/cpp4/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/cpp4/ -&lt;p&gt;C++ 笔记4&lt;/p&gt;
+&lt;h2 id=&#34;引用与重载&#34;&gt;引用与重载&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8a93a5;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#c678dd&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;std&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;f&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;DOUBLE&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;f&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;INT&amp;amp;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;endl&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;f&lt;/span&gt;(&lt;span style=&#34;color:#d19a66&#34;&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段代码会输出DOUBLE 原因在于 2是右值 不能用于初始化一个&lt;code&gt;int&amp;amp;&lt;/code&gt; 则只能选择第一个版本的函数重载&lt;/p&gt;
+&lt;h2 id=&#34;重载的其他规则&#34;&gt;重载的其他规则&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;T&lt;/code&gt;和&lt;code&gt;const T&lt;/code&gt;同样
+&lt;code&gt;T*&lt;/code&gt;和&lt;code&gt;const T*&lt;/code&gt;不一样 但是和&lt;code&gt;T* const &lt;/code&gt;一样
+&lt;code&gt;T&amp;amp;&lt;/code&gt;和&lt;code&gt;const T&amp;amp;&lt;/code&gt;不一样&lt;/p&gt;
+&lt;h2 id=&#34;模版实现数组求平均值&#34;&gt;模版实现数组求平均值&lt;/h2&gt;- https://blog.oyyko.com/posts/cpp4/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>BASH脚本</title>
+        <link>https://blog.oyyko.com/posts/bash/</link>
+        <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.oyyko.com/posts/bash/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/bash/ -&lt;p&gt;BASH 条件判断&lt;/p&gt;
+&lt;h2 id=&#34;test-和-&#34;&gt;test 和 [&lt;/h2&gt;
+&lt;p&gt;内置命令 test 根据表达式expr 求值的结果返回 0（真）或 1（假）。也可以使用方括号：test expr 和 [ expr ] 是等价的。 可以用 $? 检查返回值；可以使用 &amp;amp;&amp;amp; 和 || 操作返回值；也可以用本技巧后面介绍的各种条件结构测试返回值。&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ test 3 -gt 4 &amp;amp;&amp;amp; echo True || echo false&lt;/p&gt;
+&lt;p&gt;false&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [ &amp;ldquo;abc&amp;rdquo; != &amp;ldquo;def&amp;rdquo; ];echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ test -d &amp;ldquo;$HOME&amp;rdquo; ;echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;在清单 1 的第一个示例中，-gt 操作符对两个字符值之间执行算术比较。在第二个示例中，用 [ ] 的形式比较两个字符串不相等。在最后一个示例中，测试 HOME 变量的值，用单目操作符 -d 检查它是不是目录。&lt;/p&gt;
+&lt;p&gt;可以用 -eq、 -ne、-lt、 -le、 -gt 或 -ge 比较算术值，它们分别表示等于、不等于、小于、小于等于、大于、大于等于。&lt;/p&gt;
+&lt;p&gt;可以分别用操作符 =、 !=、&amp;lt; 和 &amp;gt; 比较字符串是否相等、不相等或者第一个字符串的排序在第二个字符串的前面或后面。单目操作符 -z 测试 null 字符串，如果字符串非空 -n 返回 True（或者根本没有操作符）。&lt;/p&gt;
+&lt;p&gt;说明：shell 也用 &amp;lt; 和 &amp;gt; 操作符进行重定向，所以必须用 &amp;lt; 或 &amp;gt; 加以转义。清单 2 显示了字符串测试的更多示例。检查它们是否如您预期的一样。&lt;/p&gt;
+&lt;h2 id=&#34;一些常见的文件测试-操作符-特征&#34;&gt;一些常见的文件测试 操作符 特征&lt;/h2&gt;
+&lt;p&gt;-d 目录&lt;/p&gt;
+&lt;p&gt;-e 存在（也可以用 -a）&lt;/p&gt;
+&lt;p&gt;-f 普通文件&lt;/p&gt;
+&lt;p&gt;-h 符号连接（也可以用 -L）&lt;/p&gt;
+&lt;p&gt;-p 命名管道&lt;/p&gt;
+&lt;p&gt;-r 可读&lt;/p&gt;
+&lt;p&gt;-s 非空&lt;/p&gt;
+&lt;p&gt;-S 套接字&lt;/p&gt;
+&lt;p&gt;-w 可写&lt;/p&gt;
+&lt;p&gt;-N 从上次读取之后已经做过修改&lt;/p&gt;
+&lt;h2 id=&#34;除了上面的单目测试还可以使用表-2-所示的双目操作符比较两个文件&#34;&gt;除了上面的单目测试，还可以使用表 2 所示的双目操作符比较两个文件：&lt;/h2&gt;
+&lt;p&gt;表 2. 测试一对文件 操作符 为 True 的情况&lt;/p&gt;
+&lt;p&gt;-nt 测试 file1 是否比 file2 更新。修改日期将用于这次和下次比较。&lt;/p&gt;
+&lt;p&gt;-ot 测试 file1 是否比 file2 旧。&lt;/p&gt;
+&lt;p&gt;-ef 测试 file1 是不是 file2 的硬链接。&lt;/p&gt;
+&lt;h2 id=&#34;清单-5-分配和测试算术表达式&#34;&gt;清单 5. 分配和测试算术表达式&lt;/h2&gt;
+&lt;p&gt;[ian@pinguino ~]$ let x=2 y=2**3 z=y*3;echo $? $x $y $z&lt;/p&gt;
+&lt;p&gt;0 2 8 24&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ (( w=(y/x) + ( (~ ++x) &amp;amp; 0x0f ) )); echo $? $x $y $w&lt;/p&gt;
+&lt;p&gt;0 3 8 16&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ (( w=(y/x) + ( (~ ++x) &amp;amp; 0x0f ) )); echo $? $x $y $w&lt;/p&gt;
+&lt;p&gt;0 4 8 13&lt;/p&gt;
+&lt;p&gt;清单 6. 使用 [[ 复合命令&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ ( -d &amp;ldquo;$HOME&amp;rdquo; ) &amp;amp;&amp;amp; ( -w &amp;ldquo;$HOME&amp;rdquo; ) ]] &amp;amp;&amp;amp;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo &amp;ldquo;home is a writable directory&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;home is a writable directory&lt;/p&gt;
+&lt;p&gt;在使用 = 或 != 操作符时，复合命令 [[ 还能在字符串上进行模式匹配。匹配的方式就像清单 7 所示的通配符匹配。&lt;/p&gt;
+&lt;p&gt;清单 7. 用 [[ 进行通配符测试&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def .d,x&amp;ndash;&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; ]]; echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def c&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; ]]; echo $?&lt;/p&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; ]]; echo $?&lt;/p&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;甚至还可以在 [[ 复合命令内执行算术测试，但是千万要小心。除非在 (( 复合命令内，否则 &amp;lt; 和 &amp;gt; 操作符会把操作数当成字符串比较并在当前排序序列中测试它们的顺序。清单 8 用一些示例演示了这一点。&lt;/p&gt;
+&lt;p&gt;清单 8. 用 [[ 包含算术测试&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; || (( 3 &amp;gt; 2 )) ]]; echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; || 3 -gt 2 ]]; echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; || 3 &amp;gt; 2 ]]; echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; || a &amp;gt; 2 ]]; echo $?&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ [[ &amp;ldquo;abc def d,x&amp;rdquo; == a[abc]&lt;em&gt;\ ?d&lt;/em&gt; || a -gt 2 ]]; echo $?&lt;/p&gt;
+&lt;p&gt;-bash: a: unbound variable&lt;/p&gt;
+&lt;p&gt;条件测试&lt;/p&gt;
+&lt;p&gt;虽然使用以上的测试和 &amp;amp;&amp;amp;、 || 控制操作符能实现许多编程，但 bash 还包含了更熟悉的 “if, then, else” 和 case 结构。学习完这些之后，将学习循环结构，这样您的工具箱将真正得到扩展。&lt;/p&gt;
+&lt;p&gt;If、then、else 语句&lt;/p&gt;
+&lt;p&gt;bash 的 if 命令是个复合命令，它测试一个测试或命令（$?）的返回值，并根据返回值为 True（0）或 False（不为 0）进行分支。虽然上面的测试只返回 0 或 1 值，但命令可能返回其他值。请参阅 LPI exam 102 prep: Shells, scripting, programming, and compiling 教程学习这方面的更多内容。&lt;/p&gt;
+&lt;p&gt;Bash 中的 if 命令有一个 then 子句，子句中包含测试或命令返回 0 时要执行的命令列表，可以有一个或多个可选的 elif 子句，每个子句可执行附加的测试和一个 then 子句，子句中又带有相关的命令列表，最后是可选的 else 子句及命令列表，在前面的测试或 elif 子句中的所有测试都不为真的时候执行，最后使用 fi 标记表示该结构结束。&lt;/p&gt;
+&lt;p&gt;使用迄今为止学到的东西，现在能够构建简单的计算器来计算算术表达式，如清单 9 所示：&lt;/p&gt;
+&lt;p&gt;清单 9. 用 if、then、else 计算表达式&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ function mycalc ()&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;{&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;local x&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if [ $# -lt 1 ]; then&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo &amp;ldquo;This function evaluates arithmetic for you if you give it some&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;elif (( $* )); then&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;let x=&amp;quot;$*&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo &amp;ldquo;$* = $x&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;else&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo &amp;ldquo;$* = 0 or is not an arithmetic expression&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;fi&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 3 + 4&lt;/p&gt;
+&lt;p&gt;3 + 4 = 7&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 3 + 4**3&lt;/p&gt;
+&lt;p&gt;3 + 4**3 = 67&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 3 + (4**3 /2)&lt;/p&gt;
+&lt;p&gt;-bash: syntax error near unexpected token `(&#39;&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 3 + &amp;ldquo;(4**3 /2)&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;3 + (4**3 /2) = 35&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc xyz&lt;/p&gt;
+&lt;p&gt;xyz = 0 or is not an arithmetic expression&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc xyz + 3 + &amp;ldquo;(4**3 /2)&amp;rdquo; + abc&lt;/p&gt;
+&lt;p&gt;xyz + 3 + (4**3 /2) + abc = 35&lt;/p&gt;
+&lt;p&gt;这个计算器利用 local 语句将 x 声明为局部变量，只能在 mycalc 函数的范围内使用。let 函数具有几个可用的选项，可以执行与它密切关联的 declare 函数。请参考 bash 手册或使用 help let 获得更多信息。&lt;/p&gt;
+&lt;p&gt;如清单 9 所示，需要确保在表达式使用 shell 元字符 —— 例如(、)、*、&amp;gt; 和 &amp;lt; 时 —— 正确地对表达式转义。无论如何，现在有了一个非常方便的小计算器，可以像 shell 那样进行算术计算。&lt;/p&gt;
+&lt;p&gt;在清单 9 中可能注意到 else 子句和最后的两个示例。可以看到，把 xyz 传递给 mycalc 并没有错误，但计算结果为 0。这个函数还不够灵巧，不能区分最后使用的示例中的字符值，所以不能警告用户。可以使用字符串模式匹配测试（例如&lt;/p&gt;
+&lt;p&gt;[[ ! (&amp;quot;$*&amp;quot; == &lt;em&gt;[a-zA-Z]&lt;/em&gt; ]]&lt;/p&gt;
+&lt;p&gt;， 或使用适合自己范围的形式）消除包含字母表字符的表达式，但是这会妨碍在输入中使用 16 进制标记，因为使用 16 进制标记时可能要用 0x0f 表示 15。实际上，shell 允许的基数最高为 64（使用 base#value 标记），所以可以在输入中加入 _ 和 @ 合法地使用任何字母表字符。8 进制和 16 进制使用常用的标记方式，开头为 0 表示八进制，开头为 0x 或 0X 表示 16 进制。清单 10 显示了一些示例。&lt;/p&gt;
+&lt;p&gt;清单 10. 用不同的基数进行计算&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 015&lt;/p&gt;
+&lt;p&gt;015 = 13&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 0xff&lt;/p&gt;
+&lt;p&gt;0xff = 255&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 29#37&lt;/p&gt;
+&lt;p&gt;29#37 = 94&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 64#1az&lt;/p&gt;
+&lt;p&gt;64#1az = 4771&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 64#1azA&lt;/p&gt;
+&lt;p&gt;64#1azA = 305380&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 64#1azA_@&lt;/p&gt;
+&lt;p&gt;64#1azA_@ = 1250840574&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ mycalc 64#1az*64**3 + 64#A_@&lt;/p&gt;
+&lt;p&gt;64#1az*64**3 + 64#A_@ = 1250840574&lt;/p&gt;
+&lt;p&gt;对输入进行的额外处理超出了本技巧的范围，所以请小心使用这个计算器。&lt;/p&gt;
+&lt;p&gt;elif 语句非常方便。它允许简化缩进，从而有助于脚本编写。在清单 11 中可能会对 type 命令在 mycalc 函数中的输出感到惊讶。&lt;/p&gt;
+&lt;p&gt;清单 11. Type mycalc&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ type mycalc&lt;/p&gt;
+&lt;p&gt;mycalc is a function&lt;/p&gt;
+&lt;p&gt;mycalc ()&lt;/p&gt;
+&lt;p&gt;{&lt;/p&gt;
+&lt;p&gt;local x;&lt;/p&gt;
+&lt;p&gt;if [ $# -lt 1 ]; then&lt;/p&gt;
+&lt;p&gt;echo &amp;ldquo;This function evaluates arithmetic for you if you give it some&amp;rdquo;;&lt;/p&gt;
+&lt;p&gt;else&lt;/p&gt;
+&lt;p&gt;if (( $* )); then&lt;/p&gt;
+&lt;p&gt;let x=&amp;quot;$*&amp;quot;;&lt;/p&gt;
+&lt;p&gt;echo &amp;ldquo;$* = $x&amp;rdquo;;&lt;/p&gt;
+&lt;p&gt;else&lt;/p&gt;
+&lt;p&gt;echo &amp;ldquo;$* = 0 or is not an arithmetic expression&amp;rdquo;;&lt;/p&gt;
+&lt;p&gt;fi;&lt;/p&gt;
+&lt;p&gt;fi&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;当 然，也可以只用 $(( 表达式 )) 和 echo 命令进行 shell 算术运算，如清单 12 所示。这样就不必学习关于函数或测试的任何内容，但是请注意 shell 不会解释元字符，例如 *，因此元字符不能在 (( 表达式 )) 或 [[ 表达式 ]] 中那样正常发挥作用。&lt;/p&gt;
+&lt;p&gt;清单 12. 在 shell 中用 echo 和 $(( )) 直接进行计算&lt;/p&gt;
+&lt;p&gt;[ian@pinguino ~]$ echo $((3 + (4**3 /2)))&lt;/p&gt;- https://blog.oyyko.com/posts/bash/ - </description>
+        </item>
     
     
     
@@ -913,315 +1150,6 @@ Restore incoming arguments to original values (unless overwritten by return valu
 &lt;strong&gt;You MUST save R7 if you call any other subroutine or trap&lt;/strong&gt;
 Otherwise, you won’t be able to return!&lt;/p&gt;
 &lt;h2 id=&#34;chapter8-2-memory-model-for-program-execution--the-stack&#34;&gt;Chapter8-2 Memory Model for Program Execution &amp;amp; the Stack&lt;/h2&gt;- https://blog.oyyko.com/posts/ics3/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>压行技巧</title>
-        <link>https://blog.oyyko.com/posts/yahang/</link>
-        <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/yahang/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/yahang/ -&lt;p&gt;压行技巧&lt;/p&gt;
-&lt;h2 id=&#34;1&#34;&gt;1&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;init&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;check&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;update&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;XXX&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以改成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;init&lt;/span&gt;; &lt;span style=&#34;color:#c1abea&#34;&gt;check&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;||&lt;/span&gt; (&lt;span style=&#34;color:#c1abea&#34;&gt;XXX&lt;/span&gt;,&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;) ; &lt;span style=&#34;color:#c1abea&#34;&gt;update&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
-&lt;p&gt;逗号的用法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;if&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;AAA&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;BBB&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;CCC&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;DDD&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以改成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;if&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;AAA&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;BBB&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;CCC&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;DDD&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;3&#34;&gt;3&lt;/h2&gt;
-&lt;p&gt;赋值语句和普通表达式的值&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;B&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以改为&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#c1abea&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;B&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;4&#34;&gt;4&lt;/h2&gt;
-&lt;p&gt;短路语句&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;if&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;AAA&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#c1abea&#34;&gt;BBB&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以写成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#c7bf54&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;AAA&lt;/span&gt;)&lt;span style=&#34;color:#c7bf54&#34;&gt;||&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;BBB&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;当AAA为假，则短路，不计算BBB&lt;/p&gt;
-&lt;p&gt;当AAA为真，计算BBB&lt;/p&gt;
-&lt;h2 id=&#34;5&#34;&gt;5&lt;/h2&gt;
-&lt;p&gt;利用for&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;n&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;++&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;n&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;++&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt;[&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;][&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;]);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以改为&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;n&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;++&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;n&lt;/span&gt;;&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;++&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#c1abea&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#98c379&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt;[&lt;span style=&#34;color:#c1abea&#34;&gt;i&lt;/span&gt;][&lt;span style=&#34;color:#c1abea&#34;&gt;j&lt;/span&gt;]);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;6&#34;&gt;6&lt;/h2&gt;
-&lt;p&gt;综合运用例如&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;find&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c678dd&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;fa&lt;/span&gt;[&lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;]&lt;span style=&#34;color:#c7bf54&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#f5a40d&#34;&gt;x&lt;/span&gt;:&lt;span style=&#34;color:#c1abea&#34;&gt;fa&lt;/span&gt;[&lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;]&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;find&lt;/span&gt;(&lt;span style=&#34;color:#c1abea&#34;&gt;fa&lt;/span&gt;[&lt;span style=&#34;color:#c1abea&#34;&gt;x&lt;/span&gt;]);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;并查集&lt;/p&gt;
-&lt;h2 id=&#34;7&#34;&gt;7&lt;/h2&gt;- https://blog.oyyko.com/posts/yahang/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>三道面试题</title>
-        <link>https://blog.oyyko.com/posts/three-problem/</link>
-        <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/three-problem/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/three-problem/ -&lt;p&gt;三道面试题&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;不使用额外空间交换两个数
-解1:加法减法
-解2:异或&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 6
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 7
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 8
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt; 9
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;10
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;11
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;12
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;13
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;f&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt;, &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef8383&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#00b1f7&#34;&gt;ff&lt;/span&gt;(&lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt;, &lt;span style=&#34;color:#ef8383&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;^&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;^&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c7bf54&#34;&gt;^&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;b&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;1-1000的一个排列 丢失了三个数字 怎样$O(n)$时间，$O(1)$额外空间找到&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;25个马 🐎！
-每次可以让5个马赛跑
-问最少几次能找出最快的三匹马&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;答案：7次可以。暂时不知道咋证明7次是最少的。
-&lt;a href=&#34;https://math.stackexchange.com/questions/1361065/why-6-races-are-not-sufficient-in-the-25-horses-5-tracks-problem&#34;&gt;https://math.stackexchange.com/questions/1361065/why-6-races-are-not-sufficient-in-the-25-horses-5-tracks-problem&lt;/a&gt; 一个证明&lt;/p&gt;- https://blog.oyyko.com/posts/three-problem/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>数论笔记</title>
-        <link>https://blog.oyyko.com/posts/shulun/</link>
-        <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/shulun/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/shulun/ -&lt;p&gt;本文是我的数论笔记的第一篇
-关于:4k+1型和4k+3型素数&lt;/p&gt;
-&lt;h2 id=&#34;4k3型素数&#34;&gt;4k+3型素数&lt;/h2&gt;
-&lt;h3 id=&#34;命题一&#34;&gt;命题一&lt;/h3&gt;
-&lt;p&gt;$$
-a^2\equiv-1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;无解&lt;/p&gt;
-&lt;h3 id=&#34;证明&#34;&gt;证明&lt;/h3&gt;
-&lt;p&gt;假设有解，即存在$a$使得&lt;/p&gt;
-&lt;p&gt;$$
-a^2\equiv-1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;则不妨设$p=4k+3$&lt;/p&gt;
-&lt;p&gt;由费马小定理得：&lt;/p&gt;
-&lt;p&gt;$$
-a^{p-1}\equiv1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;但又有：&lt;/p&gt;
-&lt;p&gt;$$
-a^{p-1}=a^{4k+2}=(a^2)^{2k+1}\equiv(-1)^{2k+1}\equiv-1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;则矛盾&lt;/p&gt;
-&lt;p&gt;因此不存在&lt;/p&gt;
-&lt;h3 id=&#34;命题二&#34;&gt;命题二&lt;/h3&gt;
-&lt;p&gt;$4k+3$型的素数有无穷多个&lt;/p&gt;
-&lt;h3 id=&#34;证明-1&#34;&gt;证明&lt;/h3&gt;
-&lt;p&gt;假设只有有限个，易知不可能只有3是$4k+1$型素数。则记所有比3大的$4k+1$型素数为$p_1,p_2,\dots,p_k$&lt;/p&gt;
-&lt;p&gt;构造一个数: $4p_1p_2\dots p_k+3$&lt;/p&gt;
-&lt;p&gt;则这个数的任何一个素因子均不属于${p_i}$&lt;/p&gt;
-&lt;p&gt;但由于这个数模4余3，则它的素因子不可能都模4余1，否则它也会模4余1&lt;/p&gt;
-&lt;p&gt;因此它存在至少一个模4余3的素因子，且这个素因子不可能是3&lt;/p&gt;
-&lt;p&gt;则与所有比3大的$4k+1$型素数为$p_1,p_2,\dots,p_k$矛盾,因为存在一个新的比3大的$4k+1$型素数&lt;/p&gt;
-&lt;h2 id=&#34;4k1型素数&#34;&gt;4k+1型素数&lt;/h2&gt;
-&lt;h3 id=&#34;命题一-1&#34;&gt;命题一&lt;/h3&gt;
-&lt;p&gt;存在一个数$a$使得$a^2\equiv-1\mod p$成立&lt;/p&gt;
-&lt;h3 id=&#34;证明-2&#34;&gt;证明&lt;/h3&gt;
-&lt;p&gt;这个数字就是$(\frac{p-1}{2})!$&lt;/p&gt;
-&lt;p&gt;其理由如下：&lt;/p&gt;
-&lt;p&gt;设$p=4k+1$&lt;/p&gt;
-&lt;p&gt;则由wilson定理得&lt;/p&gt;
-&lt;p&gt;$$
-(p-1)!\equiv-1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;即&lt;/p&gt;
-&lt;p&gt;$$
-(p-1)!=(4k)!=(2k)!\times(2k+1)(2k+2)\dots(2k+2k)
-$$&lt;/p&gt;
-&lt;p&gt;$$
-=(2k)!\times(4k+1-2k)(4k+1-(2k-1))\dots(4k+1-1)
-$$&lt;/p&gt;
-&lt;p&gt;$$
-=(2k)!\times(-2k)(-(2k-1))\dots(-1)\=(2k)!\times(2k)!\equiv-1\mod p
-$$&lt;/p&gt;
-&lt;p&gt;从而原命题成立&lt;/p&gt;
-&lt;h3 id=&#34;命题二-1&#34;&gt;命题二&lt;/h3&gt;
-&lt;p&gt;存在无限多个$4k+1$型素数&lt;/p&gt;
-&lt;h3 id=&#34;证明-3&#34;&gt;证明&lt;/h3&gt;
-&lt;p&gt;假设只有有限个，记为$p_1,\dots,p_k$&lt;/p&gt;
-&lt;p&gt;构造一个新的数：$(p_1p_2\dots p_k)^2+1$&lt;/p&gt;
-&lt;p&gt;考虑任取这个数的一个素因子$p$，易知$p\notin{p_i}$&lt;/p&gt;
-&lt;p&gt;则有$(p_1p_2\dots p_k)^2\equiv-1\mod p$&lt;/p&gt;
-&lt;p&gt;从而$p$一定是$4k+1$型的素数&lt;/p&gt;
-&lt;p&gt;从而矛盾&lt;/p&gt;- https://blog.oyyko.com/posts/shulun/ - </description>
         </item>
     
     

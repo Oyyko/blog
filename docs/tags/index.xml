@@ -5,7 +5,53 @@
     <link>https://blog.oyyko.com/tags/</link>
     <description>Recent content in Tags on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.oyyko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.oyyko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>code</title>
+      <link>https://blog.oyyko.com/tags/code/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mogan</title>
+      <link>https://blog.oyyko.com/tags/mogan/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/mogan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://blog.oyyko.com/tags/note/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>texmacs</title>
+      <link>https://blog.oyyko.com/tags/texmacs/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/texmacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archlinux</title>
+      <link>https://blog.oyyko.com/tags/archlinux/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://blog.oyyko.com/tags/linux/</link>
@@ -16,11 +62,29 @@
     </item>
     
     <item>
+      <title>manjaro</title>
+      <link>https://blog.oyyko.com/tags/manjaro/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/manjaro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>os</title>
       <link>https://blog.oyyko.com/tags/os/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://blog.oyyko.com/tags/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>translate</title>
+      <link>https://blog.oyyko.com/tags/translate/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/tags/translate/</guid>
       <description></description>
     </item>
     
@@ -39,15 +103,6 @@
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://blog.oyyko.com/tags/scheme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>archlinux</title>
-      <link>https://blog.oyyko.com/tags/archlinux/</link>
-      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.oyyko.com/tags/archlinux/</guid>
       <description></description>
     </item>
     

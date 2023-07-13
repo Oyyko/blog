@@ -2,35 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.oyyko.com/posts/arch_install/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+    <loc>https://blog.oyyko.com/tags/code/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.oyyko.com/tags/linux/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+    <loc>https://blog.oyyko.com/tags/mogan/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.oyyko.com/tags/os/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+    <loc>https://blog.oyyko.com/tags/note/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/texmacs/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/posts/texmacs_note2/</loc>
+    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/archlinux/</loc>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/posts/arch_install/</loc>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/linux/</loc>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/manjaro/</loc>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/os/</loc>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/posts/texmacs_graphics_tutorial/</loc>
+    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/posts/texmacs_note/</loc>
+    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/translate/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/lisp/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/scheme/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/scheme/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/tags/archlinux/</loc>
-    <lastmod>2023-06-07T17:19:05+08:00</lastmod>
+    <lastmod>2023-07-05T22:04:12+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/bug/</loc>
     <lastmod>2023-06-07T17:19:05+08:00</lastmod>

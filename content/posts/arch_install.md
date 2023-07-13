@@ -1,7 +1,7 @@
 ---
 title: Archlinux/Manjaro Install Guide
 date: 2023-07-05
-tags: [os, linux]
+tags: [os, linux, archlinux, manjaro]
 ---
 manjaro I3新电脑配置
 

@@ -5,7 +5,17 @@
     <link>https://blog.oyyko.com/posts/</link>
     <description>Recent content in Posts on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.oyyko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Texmacs/Mogan Note 2</title>
+      <link>https://blog.oyyko.com/posts/texmacs_note2/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/texmacs_note2/</guid>
+      <description>23_15 1 (get-init-tree &amp;#34;text-at-halign&amp;#34;) 这个与缓存有关。缓存位置在~/.Texmacs/。如果不更改缓存，更改源代码不会生效。</description>
+    </item>
+    
     <item>
       <title>Archlinux/Manjaro Install Guide</title>
       <link>https://blog.oyyko.com/posts/arch_install/</link>
@@ -25,6 +35,24 @@ export https_proxy=http://127.0.0.1:7890; export http_proxy=http://127.0.0.1:789
 bindsym $mod+F2 exec google-chrome-stable --proxy-server=&amp;#34;socks5://127.0.0.1:7890&amp;#34; 这样chrome也可以自动使用代理上网了。
 安装输入法 yay -S fcitx5-im yay -S base-devel yay -S fcitx5-rime yay -S rime-cloverpinyin 配置fcitx5的环境变量：
 1 nano ~/.</description>
+    </item>
+    
+    <item>
+      <title>Texmacs Graphics Tutorial</title>
+      <link>https://blog.oyyko.com/posts/texmacs_graphics_tutorial/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/texmacs_graphics_tutorial/</guid>
+      <description>原文：https://www.texmacs.org/tmweb/documents/tutorials/TeXmacs-graphics-tutorial.pdf</description>
+    </item>
+    
+    <item>
+      <title>Texmacs/Mogan Note</title>
+      <link>https://blog.oyyko.com/posts/texmacs_note/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.oyyko.com/posts/texmacs_note/</guid>
+      <description>graphics-utils.scm 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ;;These abbreviations are very convenient ;;to use. A nice naming scheme is : ;; ;; -&amp;gt; b=bool ; ;; -&amp;gt; i=integer ; ;; -&amp;gt; f=float ; ;; -&amp;gt; sy=symbol ; ;; -&amp;gt; s=string ; ;; -&amp;gt; o=Scheme object ; ;; -&amp;gt; p=path. ;; -&amp;gt; t=tree. ;; ;; One can add the missing ones on demand.</description>
     </item>
     
     <item>
