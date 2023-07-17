@@ -13,7 +13,8 @@
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://blog.oyyko.com/posts/texmacs_note2/</guid>
-      <description>23_15 1 (get-init-tree &amp;#34;text-at-halign&amp;#34;) 这个与缓存有关。缓存位置在~/.Texmacs/。如果不更改缓存，更改源代码不会生效。</description>
+      <description>23_15 1 (get-init-tree &amp;#34;text-at-halign&amp;#34;) 这个与缓存有关。缓存位置在~/.Texmacs/。如果不更改缓存，更改源代码不会生效。
+23_7 1 2 3 4 5 6 7 8 9 10 (tm-define (graphics-release-left x y) ;;(display* &amp;#34;Graphics] Release-left &amp;#34; x &amp;#34;, &amp;#34; y &amp;#34;\n&amp;#34;) (if (inside-graphical-text?) (with-innermost t graphical-text-context? (let* ((ps (select-first (s2f x) (s2f y))) (p (and ps (car ps)))) (if (and p (list-starts? p (tree-&amp;gt;path t))) (go-to p) (tree-go-to t :start)))) (edit_left-button (car (graphics-mode)) x y))) 1 2 3 4 5 (tm-define (get-keyboard-modifiers) the-keyboard-modifiers) (tm-define (set-keyboard-modifiers mods) (set!</description>
     </item>
     
     <item>
