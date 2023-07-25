@@ -2,7 +2,7 @@
 title: ICS 笔记3
 date: 2021-12-19
 tags: [ICS]
-mathjax: true
+enableLaTeX: true
 ---
 ICS笔记3
 <!--more-->

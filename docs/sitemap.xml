@@ -2,29 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.oyyko.com/tags/code/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/tags/mogan/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/tags/note/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
-  </url><url>
     <loc>https://blog.oyyko.com/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/vscode/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/posts/vscode2/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/code/</loc>
+    <lastmod>2023-07-17T16:30:02+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/mogan/</loc>
+    <lastmod>2023-07-17T16:30:02+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.oyyko.com/tags/note/</loc>
+    <lastmod>2023-07-17T16:30:02+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/texmacs/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
+    <lastmod>2023-07-17T16:30:02+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/texmacs_note2/</loc>
-    <lastmod>2023-07-13T18:40:55+08:00</lastmod>
+    <lastmod>2023-07-17T16:30:02+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/tags/archlinux/</loc>
     <lastmod>2023-07-13T18:40:55+08:00</lastmod>
@@ -78,9 +84,6 @@
     <lastmod>2023-04-15T07:59:07+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/posts/use-cpp17-on-vscode-clangd/</loc>
-    <lastmod>2023-04-15T07:59:07+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.oyyko.com/tags/vscode/</loc>
     <lastmod>2023-04-15T07:59:07+08:00</lastmod>
   </url><url>
     <loc>https://blog.oyyko.com/about/</loc>

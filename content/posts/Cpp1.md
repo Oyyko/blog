@@ -2,7 +2,7 @@
 title: C++ Note 1
 date: 2021-01-05
 tags: [Cpp]
-mathjax: true
+enableLaTeX: true
 ---
 
 本文是我的C++笔记的第一篇

@@ -62,16 +62,16 @@ yay -S rime-cloverpinyin
 配置fcitx5的环境变量：
 
 ```text
-nano ~/.pam_environment
+sudo vim /etc/environment
 ```
 
 内容为：
 
 ```text
-GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE  DEFAULT=fcitx
-XMODIFIERS    DEFAULT=\@im=fcitx
-SDL_IM_MODULE DEFAULT=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
 ```
 
 创建并写入rime-cloverpinyin的输入方案：
@@ -182,6 +182,23 @@ chsh -s /usr/bin/zsh
 
 由于manjaro i3有自带的zsh配置已经够用，因此这里我们暂时不使用oh my zsh
 
+### 配置zsh为manjaro风格
+安装了archlinux之后如果想把zsh配置为manjaro风格，可以安装`yay -S manjaro-zsh-config`这个包。
+之后把`~/.zshrc`更改为：
+
+```
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+```
+
 ### 输出炫酷neofetch 
 
 ```
@@ -192,7 +209,7 @@ yay -S lolcat neofetch
 neofetch | lolcat
 ```
 
-你会得到炫酷的manjaro图案和你的电脑的基本信息显示。
+你会得到炫酷的manjaro/Archlinux图案和你的电脑的基本信息显示。
 
 ### GIT配置
 

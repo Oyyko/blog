@@ -41,7 +41,7 @@ routines for managing the graphical object.
 
 
 # 研究图形移动功能
-在edit-move函数中有下面一段
+在edit_move函数中有下面一段
 ```scheme
 (cond ((== (cadr mode) 'move)
                   (sketch-transform

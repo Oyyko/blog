@@ -41,11 +41,11 @@
     
     <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.9c328fb82e98f07fc0cd43f0def0cc0a91f05d8843a3aaf8d43743461d3df658.css" integrity="sha256-nDKPuC6Y8H/AzUPw3vDMCpHwXYhDo6r41DdDRh099lg=" media="screen">
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
 
 
 <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira&#43;Mono%7cMaterial&#43;Icons%7cJetbrains&#43;Mono%7cRoboto&#43;Slab%7cSpecial&#43;Elite">
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
 
 
 
@@ -287,6 +287,24 @@
 							<li>
 								<a href="#%e5%ae%89%e8%a3%85zsh" class="nav-安装zsh">
 									安装zsh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%85%8d%e7%bd%aezsh%e4%b8%bamanjaro%e9%a3%8e%e6%a0%bc" class="nav-配置zsh为manjaro风格">
+									配置zsh为manjaro风格
 								</a>
 							</li>
 						
@@ -598,7 +616,7 @@ yay -S rime-cloverpinyin
 <pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nano ~/.pam_environment
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo vim /etc/environment
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>内容为：</p>
@@ -610,10 +628,10 @@ yay -S rime-cloverpinyin
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GTK_IM_MODULE DEFAULT=fcitx
-</span></span><span style="display:flex;"><span>QT_IM_MODULE  DEFAULT=fcitx
-</span></span><span style="display:flex;"><span>XMODIFIERS    DEFAULT=\@im=fcitx
-</span></span><span style="display:flex;"><span>SDL_IM_MODULE DEFAULT=fcitx
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GTK_IM_MODULE=fcitx
+</span></span><span style="display:flex;"><span>QT_IM_MODULE=fcitx
+</span></span><span style="display:flex;"><span>XMODIFIERS=@im=fcitx
+</span></span><span style="display:flex;"><span>SDL_IM_MODULE=fcitx
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>创建并写入rime-cloverpinyin的输入方案：</p>
@@ -691,10 +709,23 @@ yay -S google-chrome
 <pre tabindex="0"><code>chsh -s /usr/bin/zsh
 </code></pre><p>对于Konsole需要修改它的配置文件来改变它启动的时候默认使用的shell</p>
 <p>由于manjaro i3有自带的zsh配置已经够用，因此这里我们暂时不使用oh my zsh</p>
-<h3 id="输出炫酷neofetch">输出炫酷neofetch</h3>
+<h3 id="配置zsh为manjaro风格">配置zsh为manjaro风格</h3>
+<p>安装了archlinux之后如果想把zsh配置为manjaro风格，可以安装<code>yay -S manjaro-zsh-config</code>这个包。
+之后把<code>~/.zshrc</code>更改为：</p>
+<pre tabindex="0"><code># Use powerline
+USE_POWERLINE=&#34;true&#34;
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+</code></pre><h3 id="输出炫酷neofetch">输出炫酷neofetch</h3>
 <pre tabindex="0"><code>yay -S lolcat neofetch
 </code></pre><pre tabindex="0"><code>neofetch | lolcat
-</code></pre><p>你会得到炫酷的manjaro图案和你的电脑的基本信息显示。</p>
+</code></pre><p>你会得到炫酷的manjaro/Archlinux图案和你的电脑的基本信息显示。</p>
 <h3 id="git配置">GIT配置</h3>
 <pre tabindex="0"><code>git config --global  user.name &#34;111&#34; 
 git config --global  user.email &#34;111@111.111&#34;   
@@ -1056,6 +1087,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 							<li>
 								<a href="#%e5%ae%89%e8%a3%85zsh" class="nav-安装zsh">
 									安装zsh
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%85%8d%e7%bd%aezsh%e4%b8%bamanjaro%e9%a3%8e%e6%a0%bc" class="nav-配置zsh为manjaro风格">
+									配置zsh为manjaro风格
 								</a>
 							</li>
 						

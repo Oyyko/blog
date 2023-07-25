@@ -6,9 +6,26 @@
     <description>Recent content on Oyyko&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://blog.oyyko.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>https://blog.oyyko.com/about/</link>
+        <pubDate>Sun, 24 Jul 2022 16:00:55 +0800</pubDate>
+        
+        <guid>https://blog.oyyko.com/about/</guid>
+        <description>Oyyko&#39;s Blog https://blog.oyyko.com/about/ -&lt;p&gt;Hi. Oyyko here. You can find out more about me &lt;a href=&#34;https://oyyko.com/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of my favorite Latin aphorisms is: &amp;ldquo;Memento mori&amp;rdquo;. It means remember you are mortal.&lt;/p&gt;
+&lt;p&gt;The name Oyyko was randomly typed by me. Since then, I have been using it as my nickname.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;My OS: Windows7 -&amp;gt; Windows10 -&amp;gt; Manjaro -&amp;gt; Ubuntu -&amp;gt; mac OS -&amp;gt; Archlinux -&amp;gt; Manjaro
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;My Laptop: Some HP -&amp;gt; Legion Y7000P -&amp;gt; Macbook Pro 13 -&amp;gt; ThinkPad X1 Carbon (9th) -&amp;gt; mechrevo Code 01
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Programming language: C, C++, Rust, Python, Lisp, Haskell, Ruby, Java, Typescript
+&lt;/code&gt;&lt;/pre&gt;- https://blog.oyyko.com/about/ - </description>
+        </item>
     
     
     
@@ -1004,152 +1021,6 @@ C++ 的 Concept 不可能做到这样，因为：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;- https://blog.oyyko.com/posts/linklist/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>ICS 笔记3</title>
-        <link>https://blog.oyyko.com/posts/ics3/</link>
-        <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.oyyko.com/posts/ics3/</guid>
-        <description>Oyyko&#39;s Blog https://blog.oyyko.com/posts/ics3/ -&lt;p&gt;ICS笔记3&lt;/p&gt;
-&lt;h2 id=&#34;chapter8-1-subroutines&#34;&gt;Chapter8-1 Subroutines&lt;/h2&gt;
-&lt;h3 id=&#34;adt-abstract-data-types&#34;&gt;ADT Abstract Data Types&lt;/h3&gt;
-&lt;p&gt;Up to now, we have processed a single value&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;an integer&lt;/li&gt;
-&lt;li&gt;a floating point number, or&lt;/li&gt;
-&lt;li&gt;an ASCII character&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The real world is &lt;strong&gt;abstract data types&lt;/strong&gt;, or more colloquially data structures，far more complex than simple, single numbers. E.g.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a company’s organization chart&lt;/li&gt;
-&lt;li&gt;a list of items arranged in alphabetical order&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In this chapter, we will study three abstract data types:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;stacks&lt;/li&gt;
-&lt;li&gt;queues&lt;/li&gt;
-&lt;li&gt;and character strings&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Before we get to stacks, queues, and character strings, however, we introduce a new concept that will prove very useful in manipulating data structures: &lt;strong&gt;subroutines, or what is also called functions&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;subroutine&#34;&gt;Subroutine&lt;/h3&gt;
-&lt;p&gt;A subroutine is a program fragment that. . .&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Resides in user space (i.e, not in OS)&lt;/li&gt;
-&lt;li&gt;Performs a well-defined task&lt;/li&gt;
-&lt;li&gt;Is invoked (called) multiple times by a user program&lt;/li&gt;
-&lt;li&gt;Returns control to the calling program when finished&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Virtues:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reuse code without re-typing it (and debugging it!)&lt;/li&gt;
-&lt;li&gt;Divide task into parts (or among multiple programmers)&lt;/li&gt;
-&lt;li&gt;Use vendor-supplied library of useful routines that one software engineer writes a program that requires such fragments and another software engineer writes the fragments.
-&lt;ul&gt;
-&lt;li&gt;math library&lt;/li&gt;
-&lt;li&gt;square root, sine, and arctangent,etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Important: &lt;strong&gt;The Call/Return Mechanism&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;相关的指令&#34;&gt;相关的指令&lt;/h3&gt;
-&lt;p&gt;JSR,JSRR,RET&lt;/p&gt;
-&lt;h3 id=&#34;jsr&#34;&gt;JSR&lt;/h3&gt;
-&lt;p&gt;0100 1 PCoffset11
-作用：跳转，并且把之前的PC保存在R7&lt;/p&gt;
-&lt;h3 id=&#34;jsrr&#34;&gt;JSRR&lt;/h3&gt;
-&lt;p&gt;0100 0 00 BaseR 000000
-作用：根据BaseR的值跳转，并且把PC的值保存在R7&lt;/p&gt;
-&lt;h3 id=&#34;ret&#34;&gt;RET&lt;/h3&gt;
-&lt;p&gt;1100 000 111 000000
-作用：把R7的值赋给PC&lt;/p&gt;
-&lt;h3 id=&#34;例子取负数&#34;&gt;例子：取负数&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;Negate&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,#&lt;span style=&#34;color:#d19a66&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;RET&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;; &lt;span style=&#34;color:#c1abea&#34;&gt;call&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;subroutine&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;compute&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;R3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,#&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color:#c1abea&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R3&lt;/span&gt; ; &lt;span style=&#34;color:#c1abea&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;R3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;JSR&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;Negate&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;,#&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt; ; &lt;span style=&#34;color:#c1abea&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;&lt;span style=&#34;color:#c7bf54&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d19a66&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c1abea&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R4&lt;/span&gt;,&lt;span style=&#34;color:#c1abea&#34;&gt;R0&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;如何使用&#34;&gt;如何使用&lt;/h3&gt;
-&lt;p&gt;Programmer must know&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Address: or at least a label that will be bound to its address&lt;/li&gt;
-&lt;li&gt;Function: what it does
-&lt;ul&gt;
-&lt;li&gt;NOTE: The programmer does not need to know how the subroutine works, but what changes are visible in the machine’s state after the routine has run&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Arguments: what they are and where they are placed&lt;/li&gt;
-&lt;li&gt;Return values: what they are and where they are placed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;调用时的信息传递&#34;&gt;调用时的信息传递&lt;/h3&gt;
-&lt;p&gt;Argument(s)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Value passed in to a subroutine is called an argument&lt;/li&gt;
-&lt;li&gt;This is a value needed by the subroutine to do its job&lt;/li&gt;
-&lt;li&gt;Examples&lt;/li&gt;
-&lt;li&gt;TwosComp: R0 is number to be negated&lt;/li&gt;
-&lt;li&gt;OUT: R0 is character to be printed&lt;/li&gt;
-&lt;li&gt;PUTS: R0 is address of string to be printed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;传递方法：
-How?
-In registers (simple, fast, but limited number)
-In memory (many, but awkward, expensive)
-Both&lt;/p&gt;
-&lt;p&gt;寄存器和内存进行传递参数&lt;/p&gt;
-&lt;p&gt;Return Values&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A value passed out of a subroutine is called a return value&lt;/li&gt;
-&lt;li&gt;This is the value that you called the subroutine to compute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;How?
-Registers, memory, or both
-Single return value in register most common
-通常，采用寄存器保存返回值&lt;/p&gt;
-&lt;h3 id=&#34;caller-save-and-caller-save&#34;&gt;caller-save and caller-save&lt;/h3&gt;
-&lt;p&gt;在调用和返回的过程中势必会对寄存器产生修改，那么如何分配保存与恢复现场的责任呢？
-一般有两种办法：
-caller-save和callee-save
-即责任在谁？
-caller-save要求调用者来保存相关的寄存器的信息，并且恢复现场。
-callee-save要求被调用者来存在相关的信息并且恢复现场。&lt;/p&gt;
-&lt;p&gt;一般都采用callee-save，只有对于函数返回值R7采用的是caller-save&lt;/p&gt;
-&lt;p&gt;Generally use “callee-save” strategy, except for return values
-Same as trap service routines
-Save anything that subroutine alters internally that shouldn’t be visible when the subroutine returns
-Restore incoming arguments to original values (unless overwritten by return value)&lt;/p&gt;
-&lt;p&gt;Remember
-&lt;strong&gt;You MUST save R7 if you call any other subroutine or trap&lt;/strong&gt;
-Otherwise, you won’t be able to return!&lt;/p&gt;
-&lt;h2 id=&#34;chapter8-2-memory-model-for-program-execution--the-stack&#34;&gt;Chapter8-2 Memory Model for Program Execution &amp;amp; the Stack&lt;/h2&gt;- https://blog.oyyko.com/posts/ics3/ - </description>
         </item>
     
     

@@ -2,7 +2,7 @@
 title: C++ Note 4
 date: 2022-07-07
 tags: [Cpp]
-mathjax: true
+enableLaTeX: true
 ---
 C++ 笔记4
 

@@ -25,7 +25,7 @@ yay -S clash-for-windows-bin 之后导入已有的订阅。 之后在终端中�
 export https_proxy=http://127.0.0.1:7890; export http_proxy=http://127.0.0.1:7890; export all_proxy=socks5://127.0.0.1:7890; 对于i3wm等无法设置系统级代理的桌面环境，请把chrome的启动改为
 bindsym $mod+F2 exec google-chrome-stable --proxy-server=&amp;#34;socks5://127.0.0.1:7890&amp;#34; 这样chrome也可以自动使用代理上网了。
 安装输入法 yay -S fcitx5-im yay -S base-devel yay -S fcitx5-rime yay -S rime-cloverpinyin 配置fcitx5的环境变量：
-1 nano ~/.</description>
+1 sudo vim /etc/environment 内容为：</description>
     </item>
     
     <item>
